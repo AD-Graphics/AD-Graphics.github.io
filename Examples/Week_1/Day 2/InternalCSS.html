@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Internal CSS Example</title>
+
+    <style>
+      /* HTML SELECTOR: targets every item within this code with the name given */
+      h1 {
+        color: red;
+      }
+      p {
+        color: blue;
+      }
+      /* ID SELECTOR: style for id attributes in code */
+      #p1 {
+        font-style: italic;
+      }
+      .boldText {
+        font-weight: bold;
+      }
+
+      /* BOX (Margin, Border, Padding) multiple values to a CSS. can use HEX codes. "Outset"=border style*/
+      .card {
+        background-color: lightblue;
+        border: 5px outset grey;
+        /* Border-Radius: shapes the corners of the border. If NO BORDER, shapes the edge of Padding */
+        border-radius: 10px;
+        /* BOX SHADOW: offset-x, offset-y, blur-radius, spread-radius, color */
+          /* Horizontal, Vertical, Blur, Stretch, color name/rgba: color channels (alpha channel: transparency %) */
+          /* rgba -> r/g/b: 0-255, a: 0-1 Opaque */
+        box-shadow: 10px 10px 12px 4px rgba(0, 0, 0, 0.5);
+        /* Margin: 24px of space around the border-outside */
+        margin: 24px;
+        /* Padding: 48px around (block level) */
+        padding: 48px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>This is an example page for Internal CSS.</h1>
+    <!-- id attribute VALUE should only be used ONCE in your code! -->
+    <p id="p1"> Example P tag 1</p>
+    <p class="boldText">Example P tag 2</p>
+    <p class="boldText">Example P tag 3</p>
+
+    <div class="card">
+      This is an example of a card.
+    </div>
+
+    <div class="card">
+      This is another example of a card.
+    </div>
+
+    <p class="card">
+      This is a p tag with the card styles.
+    </p>
+
+  </body>
+</html>
