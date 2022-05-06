@@ -1,0 +1,48 @@
+/* must save in order to see changes on .html preview */
+h1 {
+  color: red;
+}
+p {
+  color: blue;
+}
+#p1 {
+  font-style: italic;
+}
+.boldText {
+  font-weight: bold;
+}
+
+.card {
+  background-color: lightblue;
+  border: 5px outset grey;
+  border-radius: 10px;
+  box-shadow: 10px 10px 12px 4px rgba(0, 0, 0, 0.5);
+  margin: 24px;
+  padding: 48px;
+}
+
+body {
+  background: linear-gradient(to bottom, red, yellow, orange);
+  height: 100vh;
+}
+
+.button {
+  /* specifies dierection,#deg=changes orientation of gradient, to top/btm/left/right*/
+  background: linear-gradient(to right, red 50%, blue, green 60%);
+  border: 5px outset grey;
+  border-radius: 10px;
+  box-shadow: 10px 10px 12px 4px rgba(0, 0, 0, 0.5);
+  margin: 24px;
+  padding: 48px;
+***
+}
+
+/* pseudo-class: hover state - visual change */
+.button:hover {
+  opacity: 0.8;
+}
+
+/* once clicked this style is applied. Gives illusion of click */
+.button:active {
+  background: linear-gradient(to bottom, forestgreen, lightgreen);
+}
