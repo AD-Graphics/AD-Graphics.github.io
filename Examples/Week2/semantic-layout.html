@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Semantic Layout Example</title>
+    <style>
+      body {
+        font-family: Verdana, san-serif;
+        margin: 0px;
+      }
+      header {
+        background-color: black;
+        text-align: center;
+        padding-top: 48px;
+        padding-bottom: 24px;
+        color: white;
+        font-size: 25px;
+        font-family: monospace;
+      }
+      header img {
+        border: 0px solid black;
+        border-radius: 50%
+      }
+      nav {
+        background-color: black;
+        border-top: 4px solid white;
+      }
+      /* list inside the nav */
+      nav ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+      }
+      /* each list item in the nav*/
+      nav ul li {
+        display: inline-block;
+        margin: 0px 12px;
+        padding: 12px 8px;
+      }
+      /* link (last selector in list!)*/
+      nav ul li a {
+        color: red;
+        display: inline-block;
+        text-decoration: none;
+      }
+      nav ul li:hover {
+        background-color: red;
+      }
+      nav ul li:hover a {
+        color: black;
+      }
+      nav ul li:active {
+        background-color: darkred;
+      }
+      aside,
+      section {
+        display: inline-block;
+      }
+      aside {
+        padding-top: 12px;
+        vertical-align: top;
+        width: 25%;
+      }
+      section {
+        width: 70%;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="../../images/redcloud.png" alt="red cloud">
+      <h1>Red Cloud Productions</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#"> Projects</a></li>
+        <li><a href="#"> About</a></li>
+        <li><a href="#"> Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <aside>
+        <ol>
+          <li>Events</li>
+          <li>Patreon</li>
+          <li>Social Media</li>
+        </ol>
+      </aside>
+      <section>
+        <h2> Gamescom: Summer 2023 Release</h2>
+        <p>
+          Summis mandaremus voluptate ab quamquam minim et possumus
+          philosophari ab mentitum non labore proident do est laboris
+          nam ingeniis ne tamen comprehenderit possumus quae
+          incurreret ea deserunt veniam ex possumus philosophari quo
+          litteris sempiternum quo eiusmod te doctrina arbitrantur non
+          constias. A officia se laborum, nam velit deserunt
+          sempiternum. Est labore relinqueret o velit id ullamco, do
+          proident graviterque iis te offendit concursionibus,
+          deserunt fore an quibusdam philosophari se commodo fugiat
+          aute e tempor ut duis id probant, incididunt familiaritatem
+          si pariatur. Pariatur quid expetendis ullamco.A pariatur an
+          proident. Sed do sunt laborum. Ne quid incididunt ab iis
+          commodo est quamquam.
+        </p>
+        <p>
+          Ita anim sint ad excepteur iis in malis admodum pariatur ea
+          ubi hic sunt sunt quorum, si aute elit iis officia o
+          voluptate cillum anim a culpa aut doctrina quo sunt,
+          cernantur esse singulis senserit, possumus culpa arbitror.
+          Quae in incurreret ex magna mentitum si magna fugiat. Qui
+          proident se probant a ut aliqua tractavissent. Probant ab
+          cupidatat et tamen voluptatibus deserunt ipsum
+          quamquam.Consequat in velit incididunt e te eram proident.
+          Ne admodum quo mentitum, aliqua deserunt singulis, fabulas
+          labore fabulas cernantur, senserit se fabulas. Duis nescius
+          eu mentitum, aliqua est ne sint ingeniis, mentitum tamen
+          minim nam velit, iis non familiaritatem.
+        </p>
+      </section>
+    </main>
+    <footer>This is a footer.</footer>
+  </body>
+</html>

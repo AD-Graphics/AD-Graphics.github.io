@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Semantic Layout Example</title>
+    <style>
+      /* Combine SELECTORS with spaces in-between. Classes are the same. */
+      /* SELCTORS all with same style. You can lump them together with (,) and give them the same styel.*/
+      #header,
+      #nav,
+      #main,
+      #footer {
+        background-color: lightgrey;
+        margin: 12px;
+        padding: 24px;
+      }
+
+      .section {
+        background-color: darkgrey;
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <!-- all <div>'s were turned into their NAMES (SEMANTIC) for accessibility on page! -->
+  <body>
+    <header id="header">
+      <h1>Semantic Layout Example</h1>
+    </header>
+    <nav id="nav">NAVIGATION</nav>
+    <main id="main">
+      <!-- Headings are semnatic by default. They create a table of contents. -->
+      <h2>MAIN SECTION</h2>
+      <section class="section">SUBSECTION 1</section>
+      <section class="section">SUBSECTION 2</section>
+    </main>
+    <footer id="footer">FOOTER</footer>
+  </body>
+</html>

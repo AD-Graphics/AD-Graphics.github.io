@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Navbar Example</title>
+    <style>
+      nav ul {
+        /* added to hide space added by list being on seperate lines. program thing. */
+        background-color: skyblue;
+        /* "none" deletes bullets */
+        list-style-type: none;
+        /* 0 -> resets margin */
+        margin: 0px;
+        /* 0 = no space around textbox */
+        padding: 0px;
+      }
+
+      /* changes list to in line horizonatally "display: inline-block" = inline, but applies stlys*/
+      nav ul li {
+        background-color: skyblue;
+        display: inline-block;
+        /* want slightly wider on sides and bottom. 1st is T&B 2 is left & right */
+        padding: 12px 24px;
+      }
+
+      /* HOVER ELEMENT: must be ALL TOGETHER, no spaces! (li:hover) */
+      nav ul li:hover {
+        background-color: navy;
+        color:white;
+      }
+
+      /* CLICK APPEARANCE: changes color */
+      nav ul li:active {
+        background-color: blue;
+        color:white;
+      }
+
+      #myFirstLink {
+        color: red;
+        text-decoration: none;
+      }
+
+      div a {
+        color: green;
+        /* "NONE" erases autopop underline applied to links */
+        text-decoration: none;
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navtag -->
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Gallery</li>
+        <li>About Me</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <!-- "#" = dummy link -->
+  <a id="myFirstLink" href="#">This is a link that we are going to restyle</a>
+  <div>
+    <a href="#">This is a link that we are going to restyle</a>
+  </div>
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Lists Example</title>
+    <style>
+      /* this SELECTOR changes the style of the bullet (you can create custom) */
+      #fruitsBasket {
+        list-style-type: circle
+      }
+      /* this SELECTOR changes the color of the whole list */
+      #fruitsBasket li {
+        color: red;
+      }
+      /* SELECTOR to change the color of the text selected with <span> */
+      #fruitsBasket li span{
+        color: green;
+    </style>
+  </head>
+  <body>
+    <!-- ol=ordered list -->
+    <ol>
+      <li>Mecury</li>
+      <li>Venus</li>
+      <li>Earth</li>
+      <li>Mars</li>
+    </ol>
+
+    <!-- ul=unordered list (bullets) -->
+        <!-- id connected to SELECTOR to apply styles -->
+    <ul id="fruitsBasket">
+      <li><span>Apples</span></li>
+      <li>Bananas</li>
+      <li>Strawberries</li>
+      <li>Pineapples</li>
+    </ul>
+  </body>
+</html>

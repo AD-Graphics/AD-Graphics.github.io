@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Font Family Examples</title>
+    <style>
+      h1 {
+        font-family: Helvetica;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a basic "Hello World" template for an HTML file.</h1>
+  </body>
+</html>
