@@ -38,6 +38,16 @@
         color: red;
         text-decoration: none;
       }
+      /* added */
+      li a {
+        color: black;
+        text-decoration: none;
+      }
+
+      li:hover a,
+      li:active a {
+        color: white;
+      }
 
       div a {
         color: green;
@@ -51,17 +61,24 @@
     <!-- navtag -->
     <nav>
       <ul>
-        <li>Home</li>
-        <li>Gallery</li>
-        <li>About Me</li>
-        <li>Contact</li>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Gallery</a>
+        </li>
+        <li>
+          <a href="#">About Me</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
       </ul>
     </nav>
     <!-- "#" = dummy link -->
-  <a id="myFirstLink" href="#">This is a link that we are going to restyle</a>
-  <div>
-    <a href="#">This is a link that we are going to restyle</a>
-  </div>
-
+    <a id="myFirstLink" href="#">This is a link that we are going to restyle</a>
+    <div>
+      <a href="#">This is a link that we are going to restyle</a>
+    </div>
   </body>
 </html>

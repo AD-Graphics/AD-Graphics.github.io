@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Float and Clear Exampples</title>
+    <!-- id or class selector for multiple images, instead of "img"-->
+    <style>
+      img {
+        width: 200px;
+        float: left;
+        margin: 24px;
+        opacity: 50%;
+      }
+      p {
+        background-color: pink;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        background-color: rgba(0,0,255,0.5);
+        text-align:center;
+        font-size: 36px
+      }
+      .floatLeft {
+        float: left;
+      }
+      .floatRight {
+        float: right;
+      }
+      /* FLOAT has a sibling property you may see next to it... */
+      /* can be used for both sides, but commonly used on whole page */
+      .clear {
+        clear: both;
+      }
+      .column {
+        float: left;
+        width: 50%
+      }
+      /* FunFact: "*" {} selects EVERYTHING on page! */
+    </style>
+  </head>
+  <body>
+    <img src="../../Images/Soup2.png" alt="soup">
+    <p>
+      Cernantur enim aliqua ita malis, minim senserit
+      tractavissent te offendit fore arbitror ab doctrina ne
+      senserit. Ingeniis anim officia, expetendis do tamen, ad si
+      quae quis magna, ullamco non pariatur. Eiusmod labore
+      occaecat quamquam, fore consequat hic quem tempor non fugiat
+      nam iudicem te ingeniis aliqua legam de illum, non eu amet
+      offendit, iis sed fugiat cupidatat, admodum multos senserit
+      aliquip, nescius nisi ita occaecat familiaritatem.Occaecat
+      instituendarum si ingeniis, minim et quibusdam si quis. Amet
+      fidelissimae proident summis excepteur. Quorum appellat
+      voluptatibus, anim eiusmod philosophari. Sint eiusmod
+      incurreret, doctrina quae tempor te cillum ad admodum ad
+      legam occaecat, nisi appellat iis exquisitaque aut irure
+      expetendis non fugiat tempor, te export possumus
+      comprehenderit, occaecat ex noster ab iis ita elit probant.
+    </p>
+    <!-- add multiple elements with a space in-between -->
+    <div class="box floatLeft">1</div>
+    <div class="box floatLeft">2</div>
+    <div class="box floatLeft">3</div>
+    <div class="box floatLeft">4</div>
+    <div class="box floatLeft">5</div>
+    <!-- CLEAR class: clears out the floating behavior-->
+    <div class="clear"></div>
+    <div class="box floatRight">6</div>
+    <div class="box floatRight">7</div>
+    <div class="box floatRight">8</div>
+    <div class="box floatRight">9</div>
+    <div class="clear"></div>
+    <p class="column">
+      Laborum veniam culpa si irure ea eu sint laborum senserit,
+      vidisse quo duis, nam o culpa incididunt. Fabulas enim quae
+      litteris duis. Dolore ullamco ne irure fugiat.Officia legam
+      ex nescius adipisicing. Quae sed admodum eu illum ubi do
+      quorum nisi quid possumus aut ne culpa constias, consequat
+      si multos voluptate, summis et quamquam non dolor, fugiat
+      incurreret cernantur, ubi velit transferrem do id quamquam
+      in eiusmod. Fugiat cupidatat senserit.
+    </p>
+    <p class="column">
+      Culpa ad et velit occaecat ita velit vidisse ita
+      comprehenderit a se ex export mandaremus, quo nescius
+      imitarentur. Incurreret tamen pariatur iudicem. Quorum et ad
+      sunt appellat.Admodum illum est ullamco cohaerescant ut an
+      sint export nulla doctrina. Proident ex labore doctrina, sed
+      senserit arbitrantur, nisi mandaremus domesticarum, quo
+      malis illum non aliquip nam velit id e labore litteris id si
+      culpa singulis est te nam fugiat aliqua labore ut quis an
+      mentitum. Velit distinguantur aliquip cillum aliquip,
+      mentitum te probant, doctrina summis duis ut aliqua o duis
+      do incididunt, et aut familiaritatem, quis cupidatat
+      relinqueret si ex an elit minim minim an et nisi sint se
+      incididunt. A ipsum voluptate do admodum ipsum aute deserunt
+      eram nam appellat noster sint id sunt, ipsum et fabulas.
+    </p>
+
+    <div class="clear"></div>
+    <p>This is the end</p>
+  </body>
+</html>

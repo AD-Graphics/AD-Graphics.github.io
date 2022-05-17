@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Quiz 3 Review</title>
+    <style>
+      .box {
+        background-color: skyblue;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 50px;
+        margin-bottom: 36px;
+      }
+      .padding1Value {
+      /* 1 value gets set to all 4 sides */
+      padding: 24px
+      }
+      .padding2Values {
+        /* 1st value sets top/bottom */
+        /* 2nd value set left/right */
+        padding: 12px 36px;
+      }
+      .padding3Values {
+        /* 1st value sets top */
+        /* 2nd value sets left/right */
+        /* 3rd value sets bottom */
+        padding: 12px 24px 36px;
+      }
+      .padding4Values {
+        /* 1st value sets top, and then goes clockwise */
+        padding: 12px 24px 36px 48px;
+      }
+
+      /* -------------------- BORDER RADIUS ----------------------------*/
+      .br1Value {
+        /* 1 value gets set to all 4 corners */
+        border-radius: 12px;
+      }
+      .br2Values {
+        /* 1st value sets top-left/bottom right */
+        /* 2nd value sets top-right/bottom-left */
+        border-radius: 12px 36px;
+      }
+      .br3Values {
+        /* 1st value sets top-left */
+        /* 2nd value sets top-right/bottom-left */
+        /* 3rd value sets bottom-right */
+        border-radius: 12px 36px 0px;
+      }
+      .br4Values {
+        /* 1st value sets top-left */
+        /* other corners get set clockwise (left to top right ...etc.) */
+        border-radius: 12px 50% 36px 10%;
+      }
+      /* ------------ BOX SHADOW ----------------------*/
+      .boxShadowExample {
+        /* offset-x (left-right), offset-y (up and down), blur-radius, spread-radius, color */
+        box-shadow: 10px 50px 10px 10px grey;
+      }
+      /* ------------------------- LINEAR GRADIENT ------------------------- */
+      /* work along a line */
+      .linearGradientExample1 {
+        /* first value are keyboard indicating direction */
+        /* other examples are to "bottom left" or "to top" */
+        /* remaining values are called color stops? */
+        background: linear-gradient(to right, red, yellow, purple);
+      }
+      .linearGradientExample2 {
+        /* first value can be degrees */
+        /* color stops can use percentages to indicate location */
+        background: linear-gradient(45deg, aquamarine 50%, blue);
+      }
+      /* ------------------------- RADIAL GRADIENT ---------------------------- */
+      /* radiate from a specific point */
+      .radialGradientExample {
+        background: radial-gradient(yellow, orange 20%, black);
+      }
+      .transparentBox {
+        /* first value specifies red from 0-255 */
+        /* second value specifies green from 0-255 */
+        /* third value specifies blue from 0-255 */
+        /* fourth value specifies alpha (transparency) from 0-1 */
+        background-color: rgba(255, 255, 0.5);
+        margin: 36px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- you can add 2 classes by adding within the same (ex:)"BOX PADDING.." with a space -->
+    <div class="box padding1Value">Padding 1 Value</div>
+    <div class="box padding2Values">Padding 2 Value</div>
+    <div class="box padding3Values">Padding 3 Value</div>
+    <div class="box padding4Values">Padding 4 Value</div>
+    <br>
+    <div class="box br1Value">Border Radius 1 Value</div>
+    <div class="box br2Values">Border Radius 2 Value</div>
+    <div class="box br3Values">Border Radius 3 Value</div>
+    <div class="box br4Values">Border Radius 4 Value</div>
+    <br>
+    <div class="box boxShadowExample">Box Shadow</div>
+    <br>
+    <div class="box linearGradientExample1">Linear Gradient 1</div>
+    <div class="box linearGradientExample2">Linear Gradient 2</div>
+    <div class="box radialGradientExample">Radial Gradient</div>
+    <br>
+    <div class="box">
+      <div class="box transparentBox">See Through</div>
+    </div>
+  </body>
+</html>
