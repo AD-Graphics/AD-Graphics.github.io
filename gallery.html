@@ -2,9 +2,108 @@
 <html lang="en-US">
   <head>
     <title>Gallery</title>
+    <style>
+      body {
+        font-family: Verdana, san-serif;
+        margin: 0px;
+        background-color: #275029;
+      }
+      header {
+        background-color: black;
+        text-align: center;
+        font-family: Montserrat;
+        padding-top: 24px;
+        padding-bottom: 12px;
+      }
+      header img {
+        border: 0px solid black;
+        border-radius: 0%;
+        height: 55px;
+      }
+      nav {
+        background-color: #275029;
+        border-top: 4px;
+      }
+      /* list inside the nav */
+      nav ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+      }
+      /* each list item in the nav*/
+      nav ul li {
+        display: inline-block;
+        margin: 0px 12px;
+        padding: 12px 8px;
+        font-family: Montserrat;
+      }
+      /* link (last selector in list!)*/
+      nav ul li a {
+        color: #eed9d3;
+        display: inline-block;
+        text-decoration: none;
+      }
+      nav ul li:hover {
+        background-color: #eed9d3;
+      }
+      nav ul li:hover a {
+        color: #275029;
+      }
+      nav ul li:active {
+        background-color: #1B371C;
+        color: white;
+      }
+      h1 {
+        font-size: 80px;
+        font-family: Montserrat;
+        font-weight: normal;
+        text-align: center;
+        background-color: #eed9d3;
+        margin: 0px;
+        padding: 30px;
+      }
+      main img {
+        height: 500px;
+        margin-bottom: 0px;
+      }
+      h2 {
+        text-align: center;
+        background-color: #275029;
+        color: #eed9d3;
+        font-family: Montserrat;
+        font-weight: normal;
+        margin: 10px;
+        margin-bottom: 15px;
+      }
+      main {
+        font-family: Montserrat;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        font-family: Montserrat;
+        padding: 12px 24px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h1 style="text-align: center">Coming Soon: "Gallery" Page</h1>
-    <img src="images/caution.png" alt="caution sign">
+    <header>
+      <img src="images/Logo_Skull.png" alt="Skull Logo">
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html"> HOME</a></li>
+        <li><a href="gallery.html"> GALLERY</a></li>
+        <li><a href="about.html"> ABOUT</a></li>
+        <li><a href="#"> CONTACT</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1 style="text-align: center">Coming Soon: "Gallery" Page</h1>
+      <img src="images/caution.png" alt="caution sign">
+    </main>
+    <footer>DuckMedia.net</footer>
   </body>
 </html>
