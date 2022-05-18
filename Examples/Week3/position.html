@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Examples Index</title>
+    <style>
+      .positionContainer {
+        border: 1px solid black;
+        margin-bottom: 48px;
+        padding: 48px;
+        position: relative;
+        max-width: 600px;
+      }
+      .overflow {
+        height: 300px;
+        overflow: visible scroll;
+      }
+      .yellowBox,
+      .greenBox,
+      .redBox,
+      .pinkBox,
+      .orangeBox,
+      .purpleBox {
+        display: inline-block;
+        height: 100px;
+        margin: 24px 24px 24px 0;
+        width: 100px;
+      }
+      .yellowBox {
+        background-color: yellow;
+      }
+      /* STATIC: default behavior (not effected by z index) */
+      .greenBox {
+        background-color: green;
+      }
+      .redBox {
+        background-color: red;
+      }
+      .pinkBox {
+        background-color: pink;
+      }
+      /* retains space as if still in original position */
+      .orangeBox {
+        background-color: orange;
+      }
+      /* used for nav bars most times, or scrollable content */
+      .purpleBox {
+        background-color: purple;
+      }
+      /* TIP!: Z-index can be used with everything except Static */
+      .relative {
+        left: -100px;
+        position: relative;
+        top: 50px;
+        z-index: 10;
+      }
+      .absolute {
+        left: 100px;
+        position: absolute;
+        top: 140px;
+        z-index: -10;
+      }
+      .fixed {
+        left: 420px;
+        position: fixed;
+        top: 240px;
+        z-index: -10;
+      }
+      .sticky {
+        position: sticky;
+        top: 0px;
+        z-index: 5;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="positionContainer">
+      <div>
+        I am a little red box with <b>fixed</b> positioning.
+        I used to be in the middle, but whatever.
+        <br /><br />
+        I don't care if other blocks take my space, but I'm not moving from
+        this spot; everything else can move past me for all I care
+        (because that's what happens with <b>fixed</b> positioning).
+        <br /><br />
+        I'm cool with not standing out, so I used <b>z-index: -10</b>
+        to stay in the back.
+        <br /><br />
+      </div>
+      <div class="yellowBox"></div>
+      <div class="redBox fixed"></div>
+      <div class="yellowBox"></div>
+    </div>
+    <div class="positionContainer">
+      <div>
+        I am a little green box with the default <b>static</b> positioning.
+        <br /><br />
+        ...I don't have anything particularly exciting to say about myself.
+      </div>
+      <div class="yellowBox"></div>
+      <div class="greenBox"></div>
+      <div class="yellowBox"></div>
+    </div>
+    <div class="positionContainer">
+      <div>
+        I am a little orange box with <b>relative</b> positioning.
+        <br /><br />
+        I won't give up my space, even if I move away from it,
+        because I'm possessive like that (and that's how <b>relative</b>
+        positioning works).
+        <br /><br />
+        I'm an attention seeker, so I used <b>z-index: 10</b> to be out in
+        front.
+      </div>
+      <div class="yellowBox"></div>
+      <div class="orangeBox relative"></div>
+      <div class="yellowBox"></div>
+    </div>
+    <div class="positionContainer">
+      <div>
+        I am a little pink box with <b>absolute</b> positioning.
+        <br /><br />
+        I used to be in the middle, but I'm a bit of a pushover;
+        other blocks always take up my space
+        (because that's what happens with <b>absolute</b> positioning).
+        <br /><br />
+        I'm shy, so I used <b>z-index: -5</b> to hide out in back.
+      </div>
+      <div class="yellowBox"></div>
+      <div class="pinkBox absolute"></div>
+      <div class="yellowBox"></div>
+    </div>
+
+    <div class="positionContainer overflow">
+      <div>
+        I am a little purple box with <b>sticky</b> positioning.
+        <br /><br />
+        I don't mind going with the crowd, but I won't move too far away;
+        I have my boundaries after all, and I want to keep my space
+        (and that's how <b>sticky</b> positioning works).
+        <br /><br />
+        I like to stand out, so I used <b>z-index: 5</b> to be out in
+        front.
+      </div>
+      <div class="yellowBox"></div>
+      <div class="purpleBox sticky"></div>
+      <div class="yellowBox"></div>
+      <div>
+        Deserunt sunt appellat nescius, quamquam ipsum duis admodum
+        anim. Ut ea exercitation. Non incurreret illustriora, quae
+        quamquam arbitror de export est laboris o o qui anim
+        officia. Id ad nisi aliqua esse sed nam tempor appellat
+        concursionibus.In fabulas te incurreret de pariatur hic
+        quis, esse ad commodo ut nisi, tamen eiusmod constias,
+        constias ipsum quo incurreret arbitrantur eu iudicem veniam
+        ita appellat despicationes, ea quis mentitum mentitum ne
+        fore te voluptate ea labore. Singulis ex possumus eu ne sed
+        eram duis duis ab ne ullamco relinqueret, cillum proident
+        praetermissum e admodum nulla vidisse, deserunt enim aut
+        ullamco familiaritatem a hic anim litteris litteris ex
+        occaecat ita enim arbitror. Quem coniunctione mentitum aute
+        proident ita sunt expetendis eu sunt anim.
+
+        Si do consectetur, ubi malis magna anim fabulas. Esse
+        fabulas quo arbitrantur ubi hic aliqua multos hic occaecat,
+        tempor an pariatur aut summis commodo se singulis, voluptate
+        tempor pariatur litteris, est quibusdam ne arbitror, nam
+        nulla eu dolore ita do tempor relinqueret. Qui cillum
+        excepteur instituendarum. Do duis aliquip, ipsum quo si quis
+        deserunt ex ne aliqua legam quem singulis, iis et aute
+        multos elit.An de quis consequat ita deserunt quem nescius.
+        Officia labore cupidatat, hic de exquisitaque. Quorum
+        fidelissimae proident aute eiusmod, commodo tamen tamen
+        voluptate malis est occaecat quid pariatur excepteur o
+        probant veniam amet ad tamen, o ullamco ne mandaremus,
+        commodo domesticarum in laborum ad et ex firmissimum,
+        deserunt quae pariatur. An nam aliqua deserunt ne officia
+        quae offendit ingeniis, quo summis aute hic appellat a qui
+        ab malis velit dolore et export arbitror si distinguantur,
+        aliquip iis veniam an sint appellat consectetur, te quorum
+        aliquip imitarentur.
+      </div>
+    </div>
+
+  </body>
+</html>
