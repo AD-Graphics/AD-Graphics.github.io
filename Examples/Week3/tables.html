@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Tables Example</title>
+    <style>
+      /* Ugly table CSS */
+      #uglyTable,
+      #uglyTable caption,
+      #uglyTable th,
+      #uglyTable td {
+        border: 1px solid black;
+        /* "collapse" erases odd borders and combines all */
+        border-collapse: collapse;
+        padding: 12px;
+      }
+      #tableHead {
+        background-color: pink;
+      }
+      #tableCell {
+        background-color: skyblue;
+      }
+      #column {
+        background-color: grey;
+      }
+      #uglyTable {
+        margin-bottom:48px;
+      }
+      #uglyColSpan {
+        background-color: grey;
+      }
+/* PRETTY TABLE CSS */
+      #prettyTable {
+        border-collapse: collapse;
+      }
+      #prettyTable th {
+        padding-bottom: 12px;
+        padding-right: 24px;
+      }
+      #prettyTbale td {
+        padding: 4px 0px;
+      }
+      /* effects only the even rows */
+      #prettyTable tr:nth-child(even) {
+        background-color: #F0F0F0;
+      }
+      /* highlights as your scroll over */
+      #prettyTable tr:hover {
+        background-color: #E0FFE0;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="uglyTable">
+      <!-- Semantic - to explain the table: -->
+      <caption>I am an ugly table</caption>
+      <!-- Column Groups/Tags -->
+      <colgroup>
+        <!-- col tag is a BOYD tag, does not need a closing tag -->
+        <col id="uglyColSpan" span="2">
+        <col>
+        <col>
+      </colgroup>
+      <!-- header row in a table = TABLE HEADER = thead -->
+      <thead>
+        <!-- table row -->
+          <!-- specify each column inside -->
+        <tr id="tableHead">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Favorite Animal</th>
+          <th>Least Favorite Food</th>
+        </tr>
+      </thead>
+      <!-- body of the table = table body = tbody -->
+      <tbody>
+        <tr>
+          <!-- TIP! match the amount of columns with your amount of rows (same)-->
+          <!-- td = table data -->
+          <td id="tableCell">John</td>
+          <td>Smith</td>
+          <td>Dog</td>
+          <td>Tomatoes</td>
+        </tr>
+<!-- 2nd Table -->
+        <tr>
+          <td>Oliver</td>
+          <td>Popkins</td>
+          <td>Lion</td>
+          <td>Beans</td>
+        </tr>
+
+        <tr>
+          <td>Lady</td>
+          <td>Mellow</td>
+          <td>Bluebirds</td>
+          <td>Avacado</td>
+        </tr>
+
+        <tr>
+          <td>Shawn</td>
+          <td>Dawn</td>
+          <td>Dolphin</td>
+          <td>Popcorn</td>
+        </tr>
+      </tbody>
+
+    <table id="prettyTable">
+      <!-- Semantic - to explain the table: -->
+      <caption>I am an pretty table</caption>
+      <!-- Column Groups/Tags -->
+      <colgroup>
+        <!-- col tag is a BOYD tag, does not need a closing tag -->
+        <col id="prettyColSpan" span="2">
+        <col>
+        <col>
+      </colgroup>
+      <!-- header row in a table = TABLE HEADER = thead -->
+      <thead>
+
+        <tr id="prettyTableHead">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Favorite Animal</th>
+          <th>Least Favorite Food</th>
+        </tr>
+      </thead>
+          <!-- body of the table = table body = tbody -->
+      <tbody>
+        <tr>
+          <!-- TIP! match the amount of columns with your amount of rows (same)-->
+          <!-- td = table data -->
+          <td id="tableCell">John</td>
+          <td>Smith</td>
+          <td>Dog</td>
+          <td>Tomatoes</td>
+        </tr>
+  <!-- 2nd Table -->
+        <tr>
+          <td>Oliver</td>
+          <td>Popkins</td>
+          <td>Lion</td>
+          <td>Beans</td>
+        </tr>
+
+        <tr>
+          <td>Lady</td>
+          <td>Mellow</td>
+          <td>Bluebirds</td>
+          <td>Avacado</td>
+        </tr>
+
+        <tr>
+          <td>Shawn</td>
+          <td>Dawn</td>
+          <td>Dolphin</td>
+          <td>Popcorn</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
