@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Layouts: Table vs. Float</title>
+    <style>
+      /* CSS common to both layouts */
+      .header {
+        background-color: lightgreen;
+        padding: 12px 24px
+      }
+      .nav {
+        padding: 12px 24px
+      }
+      .nav a {
+        padding-right: 36px;
+      }
+      .content {
+        padding: 36px;
+      }
+      .footer {
+        background-color: green;
+        padding: 12px 24px
+      }
+
+      /* CSS specific to the Table Layout */....
+      img.ChiaPud {
+        float: right;
+        margin-left: 12px;
+        width: 300px;
+      }
+      img.PanSalmon {
+        float: left;
+        margin-right: 12px;
+        width: 300px;
+      }
+      .clear {
+        clear: both;
+        margin: 48px;
+      }
+
+      /* CSS specific to the Table Layout */
+      #oldTableLayout {
+        border-collapse: collapse;
+        margin-bottom: 48px;
+      }
+      #oldTableLayout .nav {
+        background-color: #DDFFDD;
+      }
+
+      /* CSS specific to the Float Layout */
+      #oldFloatLayout .nav {
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+      }
+      #oldFloatLayout .content {
+        box-sizing: border-box;
+        float: left;
+        width: 80%;
+      }
+      #oldFloatLayout .main {
+        background: linear-gradient(to right, #DDFFDD 20%, white 20.0001%);
+      }
+      /*
+        FIX!: This CSS below is called the "clearfix",
+        which is used after containers with floats inside.
+        It addresses a bug that has never been resolved
+        within most browsers. You can add content IN the CSS.
+      */
+      #oldFloatLayout .main:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Old-fashioned Layout using a Table -->
+    <table id="oldTableLayout">
+      <tr>
+        <!-- colspan: will span 2 columns with data -->
+        <td class="header" colspan="2">
+          <h1>This is how page layouts used to be done (with tables)</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="nav">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Gallery</a></div>
+          <div><a href="#">About Me</a></div>
+          <div><a href="#">Contact</a></div>
+        </td>
+        <td class="content" colspan="1">
+          <img class="ChiaPud" src="../../images/ChiaPud.png" alt="chia seed pudding with fruit" />
+          <div>
+            Cillum instituendarum commodo aute laboris, veniam ingeniis
+            familiaritatem. Sint non proident e deserunt consectetur hic
+            vidisse. Ea duis senserit deserunt.Cernantur anim
+            expetendis, consequat quem ullamco, occaecat ea multos
+            eiusmod eu veniam laboris o iudicem. Deserunt tempor dolore
+            laboris illum, ab nostrud te singulis. Ingeniis export ita
+            doctrina voluptatibus hic officia o irure, eu nostrud
+            consectetur, nam iis enim dolor minim.
+          </div>
+          <div class="clear"></div>
+          <img class="PanSalmon" src="../../images/PanSalmon.webp" alt="pan seared salmon" />
+          <div>
+            Cillum instituendarum commodo aute laboris, veniam ingeniis
+            familiaritatem. Sint non proident e deserunt consectetur hic
+            vidisse. Ea duis senserit deserunt.Cernantur anim
+            expetendis, consequat quem ullamco, occaecat ea multos
+            eiusmod eu veniam laboris o iudicem. Deserunt tempor dolore
+            laboris illum, ab nostrud te singulis. Ingeniis export ita
+            doctrina voluptatibus hic officia o irure, eu nostrud
+            consectetur, nam iis enim dolor minim.
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer" colspan="2">
+          copyright &copy; Symphori Games 2022
+        </td>
+      </tr>
+    </table>
+
+    <!-- Old-fashioned Layout using Floats -->
+    <div id="oldFloatLayout">
+      <div class="header">
+        <h1>This is how page layouts used to be done (with floats)</h1>
+      </div>
+      <div class="main">
+        <div class="nav">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Gallery</a></div>
+          <div><a href="#">About Me</a></div>
+          <div><a href="#">Contact</a></div>
+        </div>
+        <div class="content">
+          <img class="ChiaPud" src="../../images/ChiaPud.png" alt="Chia Seed Pudding with Fruit" />
+          <div>
+            Cillum instituendarum commodo aute laboris, veniam ingeniis
+            familiaritatem. Sint non proident e deserunt consectetur hic
+            vidisse. Ea duis senserit deserunt.Cernantur anim
+            expetendis, consequat quem ullamco, occaecat ea multos
+            eiusmod eu veniam laboris o iudicem. Deserunt tempor dolore
+            laboris illum, ab nostrud te singulis. Ingeniis export ita
+            doctrina voluptatibus hic officia o irure, eu nostrud
+            consectetur, nam iis enim dolor minim.
+          </div>
+          <div class="clear"></div>
+          <img class="PanSalmon" src="../../PanSalmon.webp" alt="Pan Seared Salmon"/>
+          <div>
+            Cillum instituendarum commodo aute laboris, veniam ingeniis
+            familiaritatem. Sint non proident e deserunt consectetur hic
+            vidisse. Ea duis senserit deserunt.Cernantur anim
+            expetendis, consequat quem ullamco, occaecat ea multos
+            eiusmod eu veniam laboris o iudicem. Deserunt tempor dolore
+            laboris illum, ab nostrud te singulis. Ingeniis export ita
+            doctrina voluptatibus hic officia o irure, eu nostrud
+            consectetur, nam iis enim dolor minim.
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        copyright &copy; Symphori Games 2022
+      </div>
+    </div>
+  </body>
+</html>

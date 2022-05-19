@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>HTML Tables Example</title>
+    <style>
+      /* Ugly table CSS */
+      #uglyTable,
+      #uglyTable caption,
+      #uglyTable th,
+      #uglyTable td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 12px;
+      }
+      #uglyTable {
+        margin-bottom: 48px;
+      }
+      #uglyColSpan {
+        background-color: gray;
+      }
+      #uglyTableRow {
+        background-color: pink;
+      }
+      #uglyTableCell {
+        background-color: skyblue;
+      }
+
+      /* Pretty table CSS */
+      #prettyTable {
+        border-collapse: collapse;
+      }
+      #prettyTable th {
+        padding-bottom: 12px;
+        padding-right: 24px;
+      }
+      #prettyTable td {
+        padding: 4px 0px;
+      }
+      #prettyTable tr:nth-child(even) {
+        background-color: #F0F0F0;
+      }
+      #prettyTable tr:hover {
+        background-color: #E0FFE0;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="uglyTable">
+      <caption>I am an ugly table</caption>
+      <colgroup>
+        <col id="uglyColSpan" span="2">
+        <col>
+        <col>
+      </colgroup>
+      <thead>
+        <tr id="uglyTableRow">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Favorite Animal</th>
+          <th>Least Favorite Food</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="uglyTableCell">John</td>
+          <td>Smith</td>
+          <td>Dog</td>
+          <td>Fettuccine</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>Panther</td>
+          <td>Mashed pototoes</td>
+        </tr>
+        <tr>
+          <td>Victor</td>
+          <td>Van Dort</td>
+          <td>Butterfly</td>
+          <td>Fish</td>
+        </tr>
+        <tr>
+          <td>Victoria</td>
+          <td>Everglot</td>
+          <td>Otter</td>
+          <td>Soup</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="prettyTable">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Favorite Animal</th>
+          <th>Least Favorite Food</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Smith</td>
+          <td>Dog</td>
+          <td>Fettuccine</td>
+        </tr>
+        <tr>
+          <td>Jane</td>
+          <td>Doe</td>
+          <td>Panther</td>
+          <td>Mashed pototoes</td>
+        </tr>
+        <tr>
+          <td>Victor</td>
+          <td>Van Dort</td>
+          <td>Butterfly</td>
+          <td>Fish</td>
+        </tr>
+        <tr>
+          <td>Victoria</td>
+          <td>Everglot</td>
+          <td>Otter</td>
+          <td>Soup</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 10</title>
+    <style>
+      #monthlyBills,
+      #monthlyBills caption,
+      #monthlyBills th,
+      #monthlyBills td {
+        border: 2px solid white;
+        border-collapse: collapse;
+        padding: 20px;
+      }
+      #monthlyBills {
+        margin-bottom: 48px;
+      }
+      #greyColSpan {
+        background-color: lightgrey;
+      }
+      #blueColSpan {
+        background-color: lightblue;
+      }
+      .title {
+        border: none;
+        font-size: 35px;
+        font-weight: bold;
+        text-align: left;
+      }
+      caption {
+        text-align: left;
+      }
+      #tableHead {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="monthlyBills">
+      <caption class="title">Monthly Bills</caption>
+
+      <!-- Column Groups/Tags -->
+      <colgroup>
+        <col id="greyColSpan" span="1">
+        <col id="blueColSpan" span="3">
+        <col>
+        <col>
+      </colgroup>
+
+      <thead>
+        <tr id="tableHead">
+          <th>Bill</th>
+          <th>April</th>
+          <th>May</th>
+          <th>June</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="tableHead" "billsTableRow">Phone</td>
+          <td>$120</td>
+          <td>$140</td>
+          <td>$140</td>
+        </tr>
+        <tr>
+          <td id="tableHead">Gas</td>
+          <td>$90</td>
+          <td>$100</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td id="tableHead">Food</td>
+          <td>$280</td>
+          <td>$280</td>
+          <td>$300</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
