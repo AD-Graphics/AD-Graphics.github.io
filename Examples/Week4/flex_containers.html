@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Flex Example - Flex Containers</title>
+    <style>
+      body {
+        font-family: Verdana;
+      }
+      h2:not(:first-child) {
+        padding-top: 72px;
+      }
+      .flexChild {
+        background-color: lavender;
+        border: 2px solid grey;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 24px;
+        font-weight: bold;
+        height: 50px;
+        margin: 10px;
+        padding: 8px 14px;
+        width: 50px;
+      }
+      .flexChildWide {
+        text-align: center;
+        width: 300px;
+      }
+      .flexChildTall {
+        height: 100px;
+      }
+      .flexChildGiant {
+        height: 200px;
+      }
+      .flexContainer {
+        background-color: darksalmon;
+        border-radius: 4px;
+        display: flex;
+      }
+      .flexRow {
+        background-color: pink;
+        flex-direction: row;
+      }
+      .flexRowReverse {
+        background-color: pink;
+        flex-direction: row-reverse;
+      }
+      .flexColumn {
+        background-color: pink;
+        flex-direction: column;
+      }
+      .flexColumnReverse {
+        background-color: pink;
+        flex-direction: column-reverse;
+      }
+      .flexNoWrap {
+        background-color: orchid;
+        flex-wrap: nowrap;
+      }
+      .flexWrap {
+        background-color: orchid;
+        flex-wrap: wrap;
+      }
+      .flexWrapReverse {
+        background-color: orchid;
+        flex-wrap: wrap-reverse;
+      }
+      .flexJustifyStart {
+        background-color: slateblue;
+        justify-content: flex-start;
+      }
+      .flexJustifyEnd {
+        background-color: slateblue;
+        justify-content: flex-end;
+      }
+      .flexJustifyCenter {
+        background-color: slateblue;
+        justify-content: center;
+      }
+      .flexJustifySpaceBetween {
+        background-color: slateblue;
+        justify-content: space-between;
+      }
+      .flexJustifySpaceAround {
+        background-color: slateblue;
+        justify-content: space-around;
+      }
+      .flexJustifySpaceEvenly {
+        background-color: slateblue;
+        justify-content: space-evenly;
+      }
+      .flexAlignItemsStart {
+        background-color: mediumpurple;
+        align-items: flex-start;
+      }
+      .flexAlignItemsEnd {
+        background-color: mediumpurple;
+        align-items: flex-end;
+      }
+      .flexAlignItemsCenter {
+        background-color: mediumpurple;
+        align-items: center;
+      }
+      .flexAlignItemsStretch {
+        background-color: mediumpurple;
+        align-items: stretch;
+        height: 300px;
+      }
+      .flexAlignItemsStretch div {
+        height: auto;
+      }
+      .flexAlignItemsBaseline {
+        background-color: mediumpurple;
+        align-items: baseline;
+      }
+      .flexAlignItemsStart .flexChildTall,
+      .flexAlignItemsEnd .flexChildTall,
+      .flexAlignItemsCenter .flexChildTall,
+      .flexAlignItemsStretch .flexChildTall,
+      .flexAlignItemsBaseline .flexChildTall {
+        padding-top: 50px;
+      }
+      .flexAlignItemsStart .flexChildGiant,
+      .flexAlignItemsEnd .flexChildGiant,
+      .flexAlignItemsCenter .flexChildGiant,
+      .flexAlignItemsStretch .flexChildGiant,
+      .flexAlignItemsBaseline .flexChildGiant {
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Default behavior</h2>
+    <h3>No flexing here</h3>
+    <div>
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+    <br>
+    <h1>Flex Container Properties</h1>
+    <p>
+      To turn on flex behavior for a container, you must set
+      <b>display: flex;</b>
+      on the container in CSS.
+    </p>
+    <h3>Default flexing (display: flex;)</h3>
+    <div class="flexContainer">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+    <p>
+      There are four Flex Container properties we'll learning about
+      in our class.  These properties are:
+      <b>flex-direction, flex-wrap, justify-content, and align-items</b>
+    </p>
+    <p>
+      These properties can only be used on elements that also have
+      <b>display: flex;</b>
+      set on them.
+    </p>
+    <h2>Flex Direction examples</h2>
+    <p>
+      This flex property specifies the <b>main axis</b> for
+      the flexbox, and by extension, the <b>cross axis</b>
+      as well.
+    </p>
+    <p>
+      For example, if you set flex-direction to be a row,
+      then the <b>main axis</b> is horizontal, while the
+      <b>cross axis</b> is vertical.
+    </p>
+    <p>
+      This is important to know, because some flex properties
+      affect the <b>main axis</b>, while other affect <thead>
+      <b>cross axis</b>.
+    </p>
+
+    <h3>flex-direction: row;</h3>
+    <div class="flexContainer flexRow">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+    <h3>flex-direction: row-reverse;</h3>
+    <div class="flexContainer flexRowReverse">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+    <h3>flex-direction: column;</h3>
+    <div class="flexContainer flexColumn">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+    <h3>flex-direction: column-reverse;</h3>
+    <div class="flexContainer flexColumnReverse">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+
+    <h2>Flex Wrap examples</h2>
+    <p>
+      This flex property tell flex whether or not to wrap
+      along the <b>main axis</b>.
+    </p>
+    <p>
+      <i>Note: if you want to wrap vertically (i.e. with a
+      column specified as the <b>main axis</b>), you'll
+      need to specify an explicit or max height.</i>
+    </p>
+    <h3>flex-wrap: nowrap;</h3>
+    <div class="flexContainer flexNoWrap">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildWide">D</div>
+      <div class="flexChild flexChildWide">E</div>
+      <div class="flexChild">F</div>
+    </div>
+    <h3>flex-wrap: wrap;</h3>
+    <div class="flexContainer flexWrap">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildWide">D</div>
+      <div class="flexChild flexChildWide">E</div>
+      <div class="flexChild">F</div>
+    </div>
+    <h3>flex-wrap: wrap-reverse;</h3>
+    <div class="flexContainer flexWrapReverse">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildWide">D</div>
+      <div class="flexChild flexChildWide">E</div>
+      <div class="flexChild">F</div>
+    </div>
+    <h2>Flex Justify Content examples</h2>
+    <p>
+      This flex property specifies the alignment along
+      the <b>main axis</b>.
+    </p>
+    <h3>justify-content: flex-start;</h3>
+    <div class="flexContainer flexJustifyStart">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+    </div>
+    <h3>justify-content: flex-end;</h3>
+    <div class="flexContainer flexJustifyEnd">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+    </div>
+    <h3>justify-content: center;</h3>
+    <div class="flexContainer flexJustifyCenter">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+    </div>
+    <h3>justify-content: space-between;</h3>
+    <div class="flexContainer flexJustifySpaceBetween">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+    </div>
+    <h3>justify-content: space-around;</h3>
+    <div class="flexContainer flexJustifySpaceAround">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+    </div>
+    <h3>justify-content: space-evenly;</h3>
+    <div class="flexContainer flexJustifySpaceEvenly">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+    </div>
+    <h2>Flex Align Items examples</h2>
+    <p>
+      This flex property specifies the alignment
+      along the <b>cross axis</b>.
+    </p>
+    <h3>align-items: flex-start;</h3>
+    <div class="flexContainer flexAlignItemsStart">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildTall">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildGiant">D</div>
+      <div class="flexChild flexChildWide flexChildTall">E</div>
+      <div class="flexChild">F</div>
+    </div>
+    <h3>align-items: flex-end;</h3>
+    <div class="flexContainer flexAlignItemsEnd">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildTall">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildGiant">D</div>
+      <div class="flexChild flexChildWide flexChildTall">E</div>
+      <div class="flexChild">F</div>
+    </div>
+    <h3>align-items: center;</h3>
+    <div class="flexContainer flexAlignItemsCenter">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildTall">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildGiant">D</div>
+      <div class="flexChild flexChildWide flexChildTall">E</div>
+      <div class="flexChild">F</div>
+    </div>
+    <h3>align-items: stretch; (only stretches if heights aren't set)</h3>
+    <div class="flexContainer flexAlignItemsStretch">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildTall">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildGiant">D</div>
+      <div class="flexChild flexChildWide flexChildTall">E</div>
+      <div class="flexChild">F</div>
+    </div>
+    <h3>align-items: baseline; (tries to fit all text on same line)</h3>
+    <div class="flexContainer flexAlignItemsBaseline">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildTall">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildGiant">D</div>
+      <div class="flexChild flexChildWide flexChildTall">E</div>
+      <div class="flexChild">F</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Media Quaries Example</title>
+    <style>
+      header {
+        background-color: skyblue;
+        padding: 12px 48px;
+      }
+      /* to apply to all portions. Group. */
+      #smallScreen,
+      #mediumScreen,
+      #largeScreen {
+        padding: 48px;
+      }
+      footer {
+        background-color: lavender;
+        padding: 12px 48px;
+      }
+
+/* MEDIA QUERY (Break Point). Always start with @media. Type of media targetting: SCREEN. Targetting "min-width". */
+      /* CSS only applied to the selected screen+size */
+      @media screen and (min-width: 800px) {
+        header {
+          font-size: 36px;
+        }
+        #largeScreen {
+          background-color:red;
+          color: white;
+        }
+        #mediumScreen,
+        #smallScreen {
+          background-color: grey;
+          color: grey;
+        }
+      }
+                                    /* 480 px or greater */
+      @media screen and (min-width: 480px) and (max-width: 799px) {
+        /*             upper bound  ^   and   lower bound  ^    */
+        header {
+          font-size: 24px;
+        }
+        #mediumScreen {
+          background-color: darkgreen;
+          color: white;
+        }
+        #largeScreen,
+        #smallScreen {
+          background-color: grey;
+          color: grey;
+        }
+      }
+                                    /* 479 px and below */
+      @media screen and (max-width: 479px) {
+        header {
+          font-size: 16px;
+        }
+        #smallScreen {
+          background-color: blue;
+          color: white;
+        }
+        #largeScreen,
+        #mediumScreen {
+          background-color: grey;
+          color: grey;
+        }
+        footer {
+          /* makes content act as if it does not exist. It will dissapear visually! */
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HEADER</h1>
+    </header>
+    <div id="largeScreen">
+      <h2>This is greater than 800px</h2>
+    </div>
+    <div id="mediumScreen">
+      <h2>This is less than 800px and greater than 480px</h2>
+    </div>
+    <div id="smallScreen">
+      <h2>This is less than 480px</h2>
+    </div>
+    <footer>
+      <h2>I dissapear when the screen gets too small</h2>
+    </footer>
+  </body>
+</html>

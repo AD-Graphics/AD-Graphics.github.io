@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Flex Item Properties Cheatsheet</title>
+    <style>
+      body {
+        font-family: Verdana;
+      }
+      h2:not(:first-child) {
+        padding-top: 72px;
+      }
+      .flexChild {
+        background-color: lavender;
+        border: 2px solid grey;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px;
+        padding: 8px 14px;
+        text-align: center;
+      }
+      .container {
+        background-color: darksalmon;
+        border-radius: 4px;
+        display: flex;
+      }
+      .flexwrap {
+        flex-wrap: wrap;
+      }
+      .flexChildOrder1 {
+        order: 1;
+      }
+      .flexChildOrder2 {
+        order: 2;
+      }
+      .flexChildOrder3 {
+        order: 3;
+      }
+      .flexChildOrder4 {
+        order: 4;
+      }
+      .flexChildGrow1 {
+        flex-grow: 1;
+      }
+      .flexChildGrow2 {
+        flex-grow: 2;
+      }
+      .flexChildGrow5 {
+        flex-grow: 5;
+      }
+      .flexChildShrink1 {
+        flex-shrink: 1;
+      }
+      .flexChildShrink2 {
+        flex-shrink: 2;
+      }
+      .flexChildShrink5 {
+        flex-shrink: 5;
+      }
+      .flexChildBasis30per {
+        flex-basis: 30%;
+      }
+      .flexChildBasis200px {
+        flex-basis: 200px;
+      }
+      .flexChildFlex1 {
+        flex: 1;
+      }
+      .flexChildFlex2 {
+        flex: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex Item Properties</h1>
+
+    <p>
+      There are four Flex Item properties we'll learning about
+      in our class.  These properties are:
+      <b>flex-grow, flex-basis, order, and the flex shorthand property.</b>
+    </p>
+    <p>
+      These properties can only be used on child elements <em>INSIDE</em>
+      Flex Containers.  Also, these child elements must be direct descendants
+      of the parent Flex Container; in other words, they won't work on
+      grandchildren or their descendants.
+    </p>
+    <p>
+      Remember, to turn on flex behavior for a container, you must set
+      <b>display: flex;</b>
+      on the element with CSS.
+    </p>
+    <h2>Flex Item flex-grow property</h2>
+    <h3>flex-grow: 1;</h3>
+    <div class="container">
+      <div class="flexChild flexChildGrow1">1</div>
+      <div class="flexChild flexChildGrow1">1</div>
+      <div class="flexChild flexChildGrow1">1</div>
+    </div>
+    <h3>(flex-grow: 1;) and (flex-grow:2)</h3>
+    <div class="container">
+      <div class="flexChild flexChildGrow1">1</div>
+      <div class="flexChild flexChildGrow2">2</div>
+      <div class="flexChild flexChildGrow1">1</div>
+    </div>
+    <h3>(flex-grow: 1;) and (flex-grow:5)</h3>
+    <div class="container">
+      <div class="flexChild flexChildGrow1">1</div>
+      <div class="flexChild flexChildGrow1">1</div>
+      <div class="flexChild flexChildGrow5">5</div>
+    </div>
+
+    <!-- <h2>Flex Item flex-shrink property</h2>
+    <h3>flex-shrink: 1;</h3>
+    <div class="container">
+      <div class="flexChild flexChildShrink1">1</div>
+      <div class="flexChild flexChildGrow1">flex-grow:1;</div>
+      <div class="flexChild flexChildShrink1">1</div>
+    </div>
+    <h3>(flex-shrink: 1;) and (flex-shrink:2)</h3>
+    <div class="container">
+      <div class="flexChild flexChildShrink1">1</div>
+      <div class="flexChild flexChildShrink2">2</div>
+      <div class="flexChild flexChildGrow1">flex-grow:1;</div>
+    </div>
+    <h3>(flex-shrink: 1;) and (flex-shrink:5)</h3>
+    <div class="container">
+      <div class="flexChild flexChildShrink1">1</div>
+      <div class="flexChild flexChildShrink1">1</div>
+      <div class="flexChild flexChildShrink5">5</div>
+    </div> -->
+    <h2>Flex Item flex-basis property</h2>
+    <h3>flex-basis: 30%;</h3>
+    <div class="container">
+      <div class="flexChild flexChildBasis30per">flex-basis:30%;</div>
+      <div class="flexChild flexChildGrow1">flex-grow:1;</div>
+    </div>
+    <h3>flex-basis: 200px;</h3>
+    <div class="container">
+      <div class="flexChild flexChildBasis200px">flex-basis:200px;</div>
+      <div class="flexChild flexChildBasis200px">flex-basis:200px;</div>
+      <div class="flexChild flexChildGrow1">flex-grow:1;</div>
+    </div>
+    <h2>Flex Item order property</h2>
+    <h3>No ordering (default)</h3>
+    <div class="container flexwrap">
+      <div class="flexChild">A {order:0;}</div>
+      <div class="flexChild">B {order:0;}</div>
+      <div class="flexChild">C {order:0;}</div>
+      <div class="flexChild">D {order:0;}</div>
+    </div>
+    <h3>Reverse ordering (manually)</h3>
+    <div class="container flexwrap">
+      <div class="flexChild flexChildOrder4">A {order:4;}</div>
+      <div class="flexChild flexChildOrder3">B {order:3;}</div>
+      <div class="flexChild flexChildOrder2">C {order:2;}</div>
+      <div class="flexChild flexChildOrder1">D {order:1;}</div>
+    </div>
+    <h3>Custom ordering</h3>
+    <div class="container flexwrap">
+      <div class="flexChild flexChildOrder2">A {order:2;}</div>
+      <div class="flexChild flexChildOrder3">B {order:3;}</div>
+      <div class="flexChild">C {order:0;}</div>
+      <div class="flexChild flexChildOrder3">D {order:3;}</div>
+    </div>
+
+    <h2>Flex Item flex shorthand property (flex-grow)</h2>
+    <h3>(flex:1;) and (flex:2;)</h3>
+    <div class="container">
+      <div class="flexChild flexChildFlex1">flex:1;</div>
+      <div class="flexChild flexChildFlex2">flex:2;</div>
+      <div class="flexChild flexChildFlex1">flex:1;</div>
+    </div>
+    <div class="container">
+      <div class="flexChild flexChildBasis200px">flex-basis:200px;</div>
+      <div class="flexChild flexChildFlex1">flex:1;</div>
+      <div class="flexChild flexChildFlex1">flex:1;</div>
+    </div>
+  </body>
+</html>

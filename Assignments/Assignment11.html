@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 11</title>
+    <style>
+      body {
+        font-family: Montserrat;
+      }
+      h2:not(:first-child) {
+        padding-top: 72px;
+      }
+      .flexChild {
+        background-color: lightgrey;
+        border: 2px solid grey;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 24px;
+        font-weight: bold;
+        height: 50px;
+        margin: 10px;
+        padding: 8px 14px;
+        width: 50px;
+      }
+      .flexChildWide {
+        text-align: center;
+        width: 300px;
+      }
+      .flexContainer {
+        background-color: darksalmon;
+        border-radius: 4px;
+        display: flex;
+      }
+      .flexRowReverse {
+        background-color: teal;
+        flex-direction: row-reverse;
+      }
+      .flexColumn {
+        background-color: pink;
+        flex-direction: column;
+      }
+      .flexWrap {
+        background-color: pink;
+        flex-wrap: wrap;
+      }
+      .flexJustifySpaceBetween {
+        background-color: darkblue;
+        justify-content: space-between;
+      }
+      .flexAlignItemsEnd {
+        background-color: mediumpurple;
+        align-items: flex-end;
+        padding-top: 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h3>flex-direction: row-reverse</h3>
+    <div class="flexContainer flexRowReverse">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+
+    <h3>flex-wrap: row wrap</h3>
+    <div class="flexContainer flexWrap">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildWide">D</div>
+      <div class="flexChild flexChildWide">E</div>
+      <div class="flexChild">F</div>
+    </div>
+
+    <h3>flex-direction/jusitify-content: column/flex end</h3>
+    <div class="flexContainer flexColumn flexAlignItemsEnd">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+
+    <h3>justify-content: space-between</h3>
+    <div class="flexContainer flexJustifySpaceBetween">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+    </div>
+
+  </body>
+</html>
