@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Responsive Flex Layout</title>
+    <style>
+      /* DO NOT TOUCH THE CSS BELOW */
+      body {
+        margin: 0;
+        font-family: Verdana, sans-serif;
+      }
+      header,
+      footer {
+        background-color: skyblue;
+        padding: 12px 24px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 24px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+      }
+      article {
+        padding: 24px;
+      }
+      aside {
+        display: flex;
+        flex-direction: column;
+      }
+      .fakeLink {
+        background: linear-gradient(to bottom, cornflowerblue, darkslateblue);
+        box-sizing: border-box;
+        color: white;
+        cursor: pointer;
+        padding: 12px;
+        text-align: center;
+      }
+      .fakeLink2 {
+        background: linear-gradient(to bottom, yellow, goldenrod);
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 12px;
+        text-align: center;
+      }
+      .fakeLink:hover,
+      .fakeLink2:hover {
+        opacity: 80%;
+      }
+
+      /* your CSS for tablet goes in here */
+      @media screen and (min-width: 480px) and (max-width: 799px) {
+        aside {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        aside .fakeLink,
+        aside .fakeLink2 {
+          padding: 40px;
+          flex-basis: 50%;
+        }
+      }
+
+      /* your CSS for desktop goes in here */
+      @media screen and (min-width: 800px) {
+        nav {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        nav .fakeLink {
+          text-align: center;
+          flex-basis: 33.33%;
+        }
+        aside {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        aside .fakeLink {
+          flex-basis: 100%;
+        }
+        aside .fakeLink2 {
+          flex-basis: 33.33%;
+          padding: 40px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- DO NOT TOUCH THE HTML BELOW -->
+    <header>
+      <h1>Welcome to our Responsive Flex site!</h1>
+    </header>
+    <nav>
+      <div class="fakeLink">Click me!</div>
+      <div class="fakeLink">No, click me instead!</div>
+      <div class="fakeLink">Don't listen to either of them, click me!</div>
+    </nav>
+    <main>
+      <article>
+        <h2>Here is our featured article for today</h2>
+        <p>
+          Quae adipisicing expetendis elit constias. Se in dolore
+          litteris, illum nostrud si sempiternum. Minim laboris nam
+          nisi eram, proident an quem iis anim est proident, est est
+          dolor sint cillum ab cupidatat summis ubi nescius
+          comprehenderit, est culpa mandaremus praetermissum sed et
+          tamen arbitror mentitum, e quorum iudicem adipisicing.Est
+          dolor adipisicing de veniam iudicem eu domesticarum. Magna
+          do iudicem qui labore nam magna nostrud se sint noster. Quo
+          de tempor nulla export.
+        </p>
+      </article>
+      <aside>
+        <div class="fakeLink">Sign up for more awesome content here!</div>
+        <div class="fakeLink2">Related Content 1</div>
+        <div class="fakeLink2">Related Content 2</div>
+        <div class="fakeLink2">Related Content 3</div>
+      </aside>
+    </main>
+    <footer>Thanks for visiting! Come back soon!</footer>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Grid Examples</title>
+    <style>
+      .myGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(50 px, auto)
+      }
+      header {
+        background-color: lightgreen;
+        padding: 36px;
+        grid-column: 1 / 4;
+        grid-row: 1;
+      }
+      nav {
+        background-color: #DDFFDD;
+        padding: 36px;
+        grid-column: 1;
+        grid-row: 2;
+      }
+      main {
+        padding: 36px;
+        grid-column: 2 / 4;
+        grid-row: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myGrid">
+      <header>
+        <h1>This is how page layouts can be done with grids (and lines)</h1>
+      </header>
+      <nav>NAVIGATION GOES HERE</nav>
+      <main>
+        <p>
+          Litteris labore quibusdam arbitror, aut tamen deserunt
+          fidelissimae, nescius qui probant, dolor ita officia qui
+          magna, ita do minim amet culpa, nisi aut litteris nam fugiat
+          se proident velit mentitum ubi aliquip dolor iudicem.
+          Vidisse enim quid aliquip irure. Legam aliquip graviterque
+          sed dolore de litteris, multos e constias, fugiat
+          tractavissent eiusmod velit laborum.Fugiat in vidisse, qui
+          culpa veniam a laborum, nam qui quis cillum aute, in export
+          cillum in aliquip, in id familiaritatem ita id summis
+          nescius ab aut ad fore eram culpa, ex ab instituendarum. Hic
+          duis possumus voluptate, do sint hic duis. Arbitror quo
+          quid, eu constias te nescius, e export laborum ubi irure
+          concursionibus possumus tempor ingeniis. Duis mentitum
+          constias, dolor possumus pariatur, si malis concursionibus,
+          probant irure esse nescius quem.
+        </p>
+        <p>
+          Singulis cillum constias ex se id summis export velit, in
+          quo imitarentur, an senserit imitarentur, ea eu irure export
+          ipsum do ex incididunt a deserunt, litteris ea magna
+          arbitror ab sed sunt do irure. Dolor in aut labore aliquip,
+          a esse admodum proident. Commodo coniunctione si mandaremus,
+          et iudicem sed pariatur, enim de cernantur, veniam
+          incididunt id iudicem. E hic esse export aute.Ubi quem ipsum
+          nam consequat do eiusmod fugiat probant appellat. Mandaremus
+          esse proident ex officia ut occaecat ab esse ullamco
+          mandaremus ne o enim et dolor. Aliquip elit labore in sint,
+          sint iis eu esse pariatur an incurreret ab aute incididunt,
+          et malis mandaremus coniunctione, labore incididunt
+          exercitation, qui aliqua senserit mentitum si admodum ex
+          dolore pariatur, fugiat ullamco ad exercitation. Se quae
+          veniam tempor mandaremus, do iudicem adipisicing.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
