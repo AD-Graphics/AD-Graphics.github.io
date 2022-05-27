@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Layouts: Table vs. Float</title>
+    <style>
+      /* CSS common to both layouts */
+      .header {
+        background-color: lightgreen;
+        padding: 12px 24px;
+      }
+      .nav {
+        padding: 12px 24px;
+      }
+      .nav a {
+        padding-right: 36px;
+      }
+      .content {
+        padding: 36px;
+      }
+      .footer {
+        background-color: green;
+        padding: 12px 24px;
+      }
+      img.cat {
+        float: right;
+        margin-left: 12px;
+        width: 300px;
+      }
+      img.dog {
+        float: left;
+        margin-right: 12px;
+        width: 300px;
+      }
+      .clear {
+        clear: both;
+        margin: 48px;
+      }
+
+      /* CSS specific to the Table Layout */
+      #oldTableLayout {
+        border-collapse: collapse;
+        margin-bottom: 48px;
+      }
+      #oldTableLayout .nav {
+        background-color: #DDFFDD;
+      }
+
+      /* CSS specific to the Float Layout */
+      #oldFloatLayout .nav {
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+      }
+      #oldFloatLayout .content {
+        box-sizing: border-box;
+        float: left;
+        width: 80%;
+      }
+      /*
+        This CSS below is called the "clearfix",
+        which is used after containers with floats inside.
+        It addresses a bug that has never been resolved
+        within most browsers.
+      */
+      #oldFloatLayout .main:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      #oldFloatLayout .main {
+        background: linear-gradient(to right, #DDFFDD 20%, white 20.0001%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Old-fashioned Layout using a Table -->
+    <table id="oldTableLayout">
+      <tr>
+        <td class="header" colspan="2">
+          <h1>This is how page layouts used to be done (with tables)</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="nav">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Gallery</a></div>
+          <div><a href="#">About Me</a></div>
+          <div><a href="#">Contact</a></div>
+        </td>
+        <td class="content">
+          <img class="cat" src="../../images/cat.png" alt="cat">
+          <p>
+            A noster arbitrantur. Commodo aute nostrud. Quo minim
+            consectetur, tempor vidisse comprehenderit.Ubi irure
+            quibusdam graviterque do a summis incididunt probant. E
+            aliqua ipsum aute laborum de eram distinguantur ullamco eram
+            occaecat. Elit consequat de cillum dolor, id sint nisi ab
+            quibusdam, ex doctrina comprehenderit eu admodum si
+            excepteur ubi e eram elit de ingeniis, excepteur sint veniam
+            id ipsum, ea magna dolore a excepteur, de se duis quem elit.
+            Magna te senserit, amet domesticarum consequat dolor laborum
+            e tamen quibusdam exquisitaque ab ita malis cupidatat
+            reprehenderit.
+          </p>
+          <div class="clear"></div>
+          <img class="dog" src="../../images/dog.jpeg" alt="dog">
+          <p>
+            Aut noster comprehenderit de nulla appellat a praesentibus
+            ut cupidatat anim doctrina excepteur hic se dolore tamen aut
+            pariatur de ita dolore se irure, arbitror magna laborum
+            mandaremus, consequat aut fugiat o noster doctrina
+            voluptate. Esse possumus ita admodum eu ingeniis nisi tempor
+            incididunt sint, legam et excepteur, constias multos
+            cupidatat o ubi malis singulis admodum, aliquip
+            concursionibus nam excepteur do ullamco non fugiat, export
+            quibusdam consequat. Fabulas quid anim cupidatat sunt et
+            irure doctrina praesentibus ea qui se aute tamen fore ut
+            admodum quorum sunt arbitror cillum, eram nam ingeniis iis
+            esse, ne nam efflorescere hic aute fabulas sed litteris sed
+            vidisse qui aliquip.Enim philosophari vidisse aute
+            quibusdam. Nulla quo arbitror ab nisi, tempor fabulas
+            cohaerescant. Vidisse velit expetendis, laborum quo amet
+            eiusmod, iis et relinqueret, in esse export ita possumus,
+            doctrina exercitation ad vidisse, eu sint an ipsum hic dolor
+            non ne quorum probant, eu fore litteris nescius. Quorum ubi
+            ullamco.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer" colspan="2">
+          copyright &copy; Symphori Games 2022
+        </td>
+      </tr>
+    </table>
+
+    <!-- Old-fashioned Layout using Floats -->
+    <div id="oldFloatLayout">
+      <div class="header">
+        <h1>This is how page layouts used to be done (with floats)</h1>
+      </div>
+      <div class="main">
+        <div class="nav">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Gallery</a></div>
+          <div><a href="#">About Me</a></div>
+          <div><a href="#">Contact</a></div>
+        </div>
+        <div class="content">
+          <img class="cat" src="../../images/cat.png" alt="cat">
+          <p>
+            A noster arbitrantur. Commodo aute nostrud. Quo minim
+            consectetur, tempor vidisse comprehenderit.Ubi irure
+            quibusdam graviterque do a summis incididunt probant. E
+            aliqua ipsum aute laborum de eram distinguantur ullamco eram
+            occaecat. Elit consequat de cillum dolor, id sint nisi ab
+            quibusdam, ex doctrina comprehenderit eu admodum si
+            excepteur ubi e eram elit de ingeniis, excepteur sint veniam
+            id ipsum, ea magna dolore a excepteur, de se duis quem elit.
+            Magna te senserit, amet domesticarum consequat dolor laborum
+            e tamen quibusdam exquisitaque ab ita malis cupidatat
+            reprehenderit.
+          </p>
+          <div class="clear"></div>
+          <img class="dog" src="../../images/dog.jpeg" alt="dog">
+          <p>
+            Aut noster comprehenderit de nulla appellat a praesentibus
+            ut cupidatat anim doctrina excepteur hic se dolore tamen aut
+            pariatur de ita dolore se irure, arbitror magna laborum
+            mandaremus, consequat aut fugiat o noster doctrina
+            voluptate. Esse possumus ita admodum eu ingeniis nisi tempor
+            incididunt sint, legam et excepteur, constias multos
+            cupidatat o ubi malis singulis admodum, aliquip
+            concursionibus nam excepteur do ullamco non fugiat, export
+            quibusdam consequat. Fabulas quid anim cupidatat sunt et
+            irure doctrina praesentibus ea qui se aute tamen fore ut
+            admodum quorum sunt arbitror cillum, eram nam ingeniis iis
+            esse, ne nam efflorescere hic aute fabulas sed litteris sed
+            vidisse qui aliquip.Enim philosophari vidisse aute
+            quibusdam. Nulla quo arbitror ab nisi, tempor fabulas
+            cohaerescant. Vidisse velit expetendis, laborum quo amet
+            eiusmod, iis et relinqueret, in esse export ita possumus,
+            doctrina exercitation ad vidisse, eu sint an ipsum hic dolor
+            non ne quorum probant, eu fore litteris nescius. Quorum ubi
+            ullamco.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        copyright &copy; Symphori Games 2022
+      </div>
+    </div>
+  </body>
+</html>
