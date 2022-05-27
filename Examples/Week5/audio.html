@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Audio & Video Example</title>
+    <style>
+      .smallVideo {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>Audio Player:</p>
+    <!-- to play something you must add a src. add controls attribute.-->
+    <audio controls src="../../audio/flight99.mp3">
+      <!-- alt for the audio player -->
+      Your browser does not support the audio element.
+    </audio>
+    <br>
+
+    <p>Browser Support:</p>
+    <!-- some browsers do not support certain audio files. Must supply multiple options.-->
+      <!-- ogg = OGG is an Ogg Vorbis Compressed Audio File that is saved with the . ogg extension. OGG files are used for storing audio data and can include artist and track information and metadata as well. -->
+      <!-- mpeg = MPEG, which stands for Moving Picture Experts Group, is the name of a family of standards used for encoding audio-visual information (e. g. movies, video, music) in a digital compressed format. -->
+    <audio controls>
+      <source src="../../audio/flight99.mp3" type="audio/mpeg">
+      <source src="../../audio/flight99.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <br>
+
+    <p>Loop:</p>
+    <!-- add loop attribute to loop file -->
+    <audio controls loop>
+      <source src="../../audio/flight99.mp3" type="audio/mpeg">
+      <source src="../../audio/flight99.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <br>
+
+    <p>Autoplay (Do Not Use):</p>
+    <!-- **Do Not Use** auto-play attribute. Auto plays once the page loads. **you should always give your users the choice!!** -->
+    <audio controls loop autopl>
+      <source src="../../audio/flight99.mp3" type="audio/mpeg">
+      <source src="../../audio/flight99.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <br>
+
+<!-- ----------------------------------------------------------------------- -->
+<!-- keep audio and video files in same folder = video tag is similar to the audio tag -->
+
+    <video controls src="../../video/DucksworthA_risk.mp4">
+      Your browser does not support the video tag.
+    </video>
+    <br>
+
+    <p>Multiple Sources</p>
+    <video controls src="../../video/DucksworthA_risk.mp4">
+      <source src="../../video/DucksworthA_risk.mp4" type="video/ogg">
+      <source src="../../video/DucksworthA_risk.mp4" type=video/mp4>
+      Your browser does not support the video tag.
+    </video>
+    <br>
+
+    <p>Loops</p>
+    <video controls loop>
+      <source src="../../video/DucksworthA_risk.mp4" type="video/ogg">
+      <source src="../../video/DucksworthA_risk.mp4" type=video/mp4>
+      Your browser does not support the video tag.
+    </video>
+    <br>
+
+    <video controls loop autopl>
+      <source src="../../video/DucksworthA_risk.mp4" type="video/ogg">
+      <source src="../../video/DucksworthA_risk.mp4" type=video/mp4>
+      Your browser does not support the video tag.
+    </video>
+    <br>
+
+    <video
+      controls
+      loop
+      muted
+      poster="../../Images/tile.png"
+      class="smallVideo"
+
+      <source src="../../video/DucksworthA_risk.mp4" type="video/ogg">
+      <source src="../../video/DucksworthA_risk.mp4" type=video/mp4>
+      Your browser does not support the video tag.
+    </video>
+    <br>
+
+    <video controls loop>
+      <source src="../../video/DucksworthA_risk.mp4" type="video/ogg">
+      <source src="../../video/DucksworthA_risk.mp4" type=video/mp4>
+      Your browser does not support the video tag.
+    </video>
+    <br>
+
+  </body>
+</html>

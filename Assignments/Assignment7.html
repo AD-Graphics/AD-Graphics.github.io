@@ -40,7 +40,7 @@
       }
       nav ul li:active {
         background-color: cornsilk;
-        color: white;
+        color: tan;
       }
       body {
         font-family: Verdana, san-serif;
@@ -48,12 +48,25 @@
       }
       main {
         text-align: center;
+        background-color: tan;
+        border-top: 0px;
+        padding-top: 14px;
       }
-      main h1 {
+      h1 {
+        font-size: 30px;
+        margin: 0px;
+        padding: 10px;
+      }
+      div {
+        background-color: cornsilk;
+        padding-bottom: 20px;
+        margin: 20px;
+      }
+      div h2 {
         text-align: center;
         font-family: Montserrat;
-        font-size: 30px;
-        padding: 20px;
+        font-size: 23px;
+        padding-top: 25px;
       }
       .center {
         display: block;
@@ -64,6 +77,8 @@
       p {
         padding: 30px;
         text-align: center;
+        font-size: 16px;
+        font-weight: normal;
         margin-bottom: 0px;
         padding-bottom: 15px;
       }
@@ -71,9 +86,10 @@
         font-family: Montserrat;
         text-decoration: none;
         color: tan;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bolder;
         padding-bottom: 30px;
+
         /* text-shadow: 4px 4px 4px black; */
       }
       #more:hover {
@@ -81,6 +97,19 @@
       }
       hr {
         margin: 0px;
+      }
+      #socials {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px;
+        width: auto;
+        max-height: 100%;
+      }
+      #foot {
+        padding-bottom: 20px;
+        margin: 0px;
+        background-color: tan;
       }
         /* background-color: */
     </style>
@@ -97,27 +126,30 @@
     </nav>
     <hr></hr>
     <main>
-      <h1>Hand Glazed Over Machine Pressed</h1>
-      <img src="../Images/Tile.png" alt="tile" class = "center">
-      <p>
-        A proident relinqueret, labore admodum offendit. Sed quid
-        ubi illum. Te aut quid fore noster ex e ea distinguantur iis
-        nam de esse voluptate, cupidatat magna cupidatat.Elit
-        pariatur mandaremus in occaecat summis se eiusmod
-        fidelissimae. Enim ea a malis deserunt, in ullamco iis
-        senserit hic quo summis philosophari, constias culpa summis
-        voluptate nulla ubi eram consequat despicationes ad fugiat
-        relinqueret doctrina quis ullamco nam sunt incididunt hic
-        tamen aliqua, fugiat quibusdam id noster irure. Culpa
-        vidisse ita tractavissent ad aut ex ipsum tempor quorum aut
-        incididunt nulla de nescius voluptatibus, ab nulla qui
-        noster.
-      </P>
-      <a id="more" href="#"> Read More</a>
-
-      <h1>Traditional Tile Meets Modern</h1>
-      <img src="../Images/greenTiles.jpeg" alt="green kitchen tile" class = "center">
-        <p>
+      <h1>Beyond The Clay: Spring 2022</h1>
+        <div>
+          <h2>Hand Glazed Over Machine Pressed</h1>
+          <img src="../Images/Tile.png" alt="tile" class = "center">
+          <p id="p1">
+            A proident relinqueret, labore admodum offendit. Sed quid
+            ubi illum. Te aut quid fore noster ex e ea distinguantur iis
+            nam de esse voluptate, cupidatat magna cupidatat.Elit
+            pariatur mandaremus in occaecat summis se eiusmod
+            fidelissimae. Enim ea a malis deserunt, in ullamco iis
+            senserit hic quo summis philosophari, constias culpa summis
+            voluptate nulla ubi eram consequat despicationes ad fugiat
+            relinqueret doctrina quis ullamco nam sunt incididunt hic
+            tamen aliqua, fugiat quibusdam id noster irure. Culpa
+            vidisse ita tractavissent ad aut ex ipsum tempor quorum aut
+            incididunt nulla de nescius voluptatibus, ab nulla qui
+            noster.
+          </P>
+          <a id="more" href="#"> Read More</a>
+      </div>
+      <div>
+        <h2>Traditional Tile Meets Modern</h2>
+        <img src="../Images/greenTiles.jpeg" alt="green kitchen tile" class = "center">
+        <p id="p2">
           Aliqua pariatur commodo, export despicationes incurreret
           magna commodo, fore occaecat ex possumus, singulis ea nisi.
           Magna ubi offendit hic appellat quorum offendit. Esse
@@ -132,6 +164,13 @@
           ad senserit eram elit incididunt fugiat.
         </p>
         <a id="more" href="#"> Read More</a>
+      </div>
+      <div id="foot">
+        <footer>
+          <p>Follow us on Facebook!</p>
+          <img id="socials" src="../Images/socials.png" alt="social media" class = "center">
+        </footer>
+      </div>
     </main>
   </body>
 </html>
