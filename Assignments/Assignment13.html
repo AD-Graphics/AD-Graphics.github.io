@@ -5,12 +5,12 @@
     <style>
       .myGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-auto-rows: minmax(50px, auto);
         grid-template-areas:
-          "myHeader myHeader myHeader"
-          "sidenav content content"
-          "footer footer footer"
+          "myHeader myHeader myHeader myHeader myHeader"
+          "sidenav content content content content"
+          "footer footer footer footer footer"
       }
       header {
         background-color: lightpink;
@@ -28,6 +28,7 @@
       }
       nav {
 
+        grid-template-columns: 180px repeat(4, 1fr);
         background-color: #DDFFDD;
         padding: 36px;
         grid-area: sidenav;
