@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>GRRM Redesign</title>
+    <!-- external style sheet recommended -->
+    <style>
+      #gridLayout {
+        display: grid;
+        /* fractional unit | middle 3 columns repeat */
+        grid-template-columns: 1fr repeat(3, 333px) 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+          /* "."=leaves grid area empty */
+          ". header header header ."
+          ". navbar navbar navbar ."
+          ". banner banner banner ."
+          ". cards  cards  cards  ."
+          ". aside  blog   blog   ."
+          ". footer footer footer ."
+          ". bottom bottom bottom .";
+      }
+      header,
+      nav,
+      #bannerContainer,
+      #cardsContainer,
+      aside,
+      main,
+      footer,
+      #bottom {
+        border: 3px solid grey;
+      }
+      header {
+        grid-area: header;
+        background-image: url("../../Images/header-bg.jpeg");
+        background-position: center top;
+      }
+      header h1 {
+        display: inline-block;
+        color: #032F4C;
+        font-family: Didot;
+        font-size: 55px;
+        padding-left: 20px;
+      }
+      nav {
+        grid-area: navbar;
+      }
+      #bannerContainer {
+        grid-area: banner;
+      }
+      #cardsContainer {
+        grid-area: cards;
+      }
+      aside {
+        grid-area: aside;
+      }
+      main {
+        grid-area: blog;
+      }
+      footer {
+        grid-area: footer;
+      }
+      #bottom {
+        grid-area: bottom;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #gridLayout {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            /* "."=leave that grid area empty | MOST TIMES YO CAN NOT KEEP THINGS IN THE SAME ORDER. WHATEVER WORKS BEST FOR THE USER! */
+            "header"
+            "navbar"
+            "banner"
+            "blog"
+            "cards"
+            "aside"
+            "footer"
+            "bottom";
+        }
+        header {
+          text-align: center;
+        }
+        header h1 {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gridLayout">
+      <header>
+        <img src="../../Images/shield-spin.jpeg" alt="shield">
+        <h1>GEORGE R. R. MARTIN</h1>
+      </header>
+      <nav>NAVIGATION</nav>
+      <section id="bannerContainer">BANNER</section>
+      <section id="cardsContainer">CARDS</section>
+      <aside>ASIDE</aside>
+      <main>BLOGPOSTS</main>
+      <footer>FOOTER</footer>
+      <div id="bottom">BOTTOM</div>
+    </div>
+  </body>
+</html>

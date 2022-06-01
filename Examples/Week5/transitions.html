@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Transitions Example</title>
+    <style>
+      /* slows down & makes smoother */
+      #transition1 {
+        transition-property: color;
+        transition-duration: 2s;
+        transition-delay: 0.5s;
+      }
+      #transition1:hover {
+        color: red;
+      }
+      #box {
+        box-sizing: border-box;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        /* shorthand for PROPERTY/DURATION no (:) needed.*/
+        transition:
+          background-color 2s,
+          border-radius 2s;
+      }
+      #box:hover {
+        background-color: blue;
+        border-radius: 50%;
+      }
+      img {
+        height: 250px;
+        transition: transform 1s;
+      }
+      img:hover {
+        /* scale zooms in, rotate...rotates! */
+        transform: scale(3) rotate(360deg);
+        /* Previous Option --> width: 500px; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="transition1">
+      This is a basic transition.
+    </h1>
+    <div id="box"></div>
+    <img src="../../Images/Sauce.jpeg">
+      <p>
+        Eu dolore multos o ullamco ubi qui ab fore proident an o ne
+        duis illum amet ne te quorum quibusdam mentitum, senserit e
+        aute do est quid possumus doctrina, ad sed aliqua constias
+        iis officia si eram offendit. Nisi excepteur de officia ab
+        ab summis si enim de se culpa constias firmissimum, a
+        appellat efflorescere si quem nescius te instituendarum, in
+        fore cupidatat cupidatat te an nisi graviterque se tempor
+        arbitror vidisse. Nam esse se duis in iis quae expetendis
+        deserunt.Id quem duis a arbitror, o ea tamen arbitror est ad
+        et praetermissum, si se concursionibus. Officia ipsum quorum
+        voluptate enim, amet occaecat distinguantur ubi ullamco anim
+        tempor probant nulla, aut quibusdam graviterque, sunt
+        despicationes pariatur nulla incurreret, te fore aliqua quis
+        aliquip do proident firmissimum e laboris, legam quibusdam
+        ingeniis. Legam qui se culpa senserit sed id non
+        graviterque, quibusdam quem iudicem, hic ut cillum
+        incididunt. Sunt cupidatat ea praesentibus ad ita quid
+        concursionibus.
+      </p>
+  </body>
+</html>

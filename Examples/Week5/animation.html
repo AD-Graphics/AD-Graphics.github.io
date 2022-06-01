@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Animation Example</title>
+    <style>
+      /* @keyframes = creates an animation */
+      @keyframes toRed {
+        /* 0%=frame 1 | you can do more than colors...*/
+        0% {
+          color: black;
+        }
+        25% {
+          color: blue;
+          /* can make text go off the page. use transform-origin to change OR change to in-line block */
+          transform: scale(2);
+        }
+        50% {
+          color: red;
+        }
+        75% {
+          color: green;
+        }
+        100% {
+          color: black;
+        }
+      }
+      #animation1 {
+        /* name of animation | Duration | repeat? */
+        animation: toRed 1s infinite;
+        transform-origin: left;
+      }
+      #box {
+        box-sizing: border-box;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        animation: toCircle 5s infinite;
+        animation-delay: 3s;
+      }
+      @keyframes toCircle {
+        0%, 100% {
+          background-color: red;
+          border-radius: 0px;
+        }
+        25% {
+          border-radius: 50% 0% 50% 75%;
+        }
+        50% {
+          background-color: blue;
+          border-radius: 50px;
+        }
+        75% {
+          transform: translateX(400px) rotate(180deg);
+        }
+    </style>
+  </head>
+  <body>
+    <h1 id="animation1">This is a basic animation.</h1>
+    <div id="box"></div>
+  </body>
+</html>

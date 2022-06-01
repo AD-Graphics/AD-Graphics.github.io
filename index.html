@@ -3,6 +3,26 @@
   <head>
     <title>Index Page</title>
     <style>
+    .myGrid {
+      display: grid;
+      grid-template-columns: 2;
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-areas:
+        "header header"
+        "nav nav nav nav"
+        "h1 h1"
+        "img img"
+        "h2 h2"
+        "footer footer"
+      }
+      .hero1 {
+        background-image: url("Images/collage.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        position: relative;
+      }
       body {
         font-family: Verdana, san-serif;
         margin: 0px;
@@ -54,8 +74,8 @@
         background-color: #1B371C;
         color: white;
       }
-      h1 {
-        font-size: 80px;
+      main h1 {
+        font-size: 70px;
         font-family: Montserrat;
         font-weight: normal;
         text-align: center;
@@ -79,6 +99,16 @@
       main {
         font-family: Montserrat;
       }
+      /* @media screen and (max-width: 480px) {
+        main h1 {
+          font-weight: bolder;
+          padding: 2px;
+        }
+        .hero1 {
+          height: 400px;
+          margin-bottom: 0px;
+        }
+      } */
       footer {
         background-color: black;
         color: white;
@@ -89,22 +119,24 @@
     </style>
   </head>
   <body>
+    <div class=myGrid>
     <header>
-      <img src="Images/Logo_Skull.png" alt="Skull Logo">
+      <img src="Images/DMlogo.png" alt="DM logo">
     </header>
     <nav>
       <ul>
         <li><a href="index.html"> HOME</a></li>
         <li><a href="gallery.html"> GALLERY</a></li>
         <li><a href="about.html"> ABOUT</a></li>
-        <li><a href="#"> CONTACT</a></li>
+        <li><a href="contact.html"> CONTACT</a></li>
       </ul>
     </nav>
-    <h1>AD Graphics</h1>
     <main>
-      <img src="Images/collage.jpg" alt="collage">
+      <h1>Duck Media</h1>
+      <div class="hero1"></div>
       <h2> Your Multimedia Solution</h2>
     </main>
     <footer>DuckMedia.net</footer>
+    <div>
   </body>
 </html>

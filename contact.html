@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Gallery</title>
+    <title>Contact</title>
     <style>
-    .myGrid {
-      display: grid;
-      grid-template-columns: 4;
-      grid-auto-rows: minmax(50px, auto);
-      grid-template-areas:
-        "header header header header"
-        "nav nav nav nav"
-        "h1 h1 h1 h1"
-        "img img img img"
-        "img img img img"
-        "img img img img"
-        "footer footer footer footer"
+      .hero1 {
+        background-image: url("Images/leaf.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        position: relative;
       }
       body {
         font-family: Verdana, san-serif;
         margin: 0px;
-        background-color: #275029;
+        text-align: center;
       }
       header {
         background-color: black;
@@ -68,46 +63,58 @@
         color: white;
       }
       h1 {
-        font-size: 40px;
+        opacity: 100%;
+        font-size: 70px;
         font-family: Montserrat;
         font-weight: normal;
         text-align: center;
-        background-color: white;
+        /* background-color: #eed9d3; */
         margin: 0px;
         padding: 30px;
-        padding-bottom: 15px;
       }
       main img {
         height: 500px;
         margin-bottom: 0px;
       }
       h2 {
+        opacity: 100%;
         text-align: center;
-        background-color: white;
-        color: #1B371C;
+        /* background-color: #275029; */
+        color: #275029;
         font-family: Montserrat;
         font-weight: normal;
         margin: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
       main {
+        opacity: 100%;
         font-family: Montserrat;
-        background-color: white;
+        padding-bottom: 170px;
       }
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-        flex: 50%;
+      form {
+        padding: 15px;
       }
-      .row img {
-        margin-top: 20px;
-        vertical-align: middle;
+      input {
+        font-size: 16px;
+        border-radius: 4px;
       }
-      content img {
-        height: 250px;
-        float: center;
-        margin: 24px;
+      button {
+        height: 40px;
+        width: 100px;
+        color: white;
+        background-color: black;
+        font-family: Montserrat;
+        font-size: 20px;
+        border-radius: 4px;
+        cursor:pointer;
+      }
+      button:hover {
+        background-color: #eed9d3;
+        color: #275029;
+      }
+      button:active {
+        background-color: #275029;
+        color: #eed9d3;
       }
       footer {
         background-color: black;
@@ -116,11 +123,14 @@
         padding: 12px 24px;
         text-align: center;
       }
+      #mess {
+        height: 90px;
+      }
     </style>
   </head>
   <body>
     <header>
-      <img src="Images/DMlogo.png" alt="DM Logo">
+      <img src="Images/DMlogo.png" alt="DM logo">
     </header>
     <nav>
       <ul>
@@ -130,31 +140,25 @@
         <li><a href="contact.html"> CONTACT</a></li>
       </ul>
     </nav>
-    <main>
-      <h1 style="text-align: center">Alexandra Ducksworth</h1>
-      <h2>Your Multimedia Solution<h2>
-      <content>
-        <div class="row">
-          <img src="Images/work1.png" alt="ccc">
-          <img src="Images/work2.png" alt="ccc">
-          <img src="Images/work3.jpg" alt="ccc">
-          <img src="Images/work4.png" alt="ccc">
-        </div>
-        <br>
-        <div class="row">
-          <img src="Images/work5.jpg" alt="ccc">
-          <img src="Images/work6.jpg" alt="ccc">
-          <img src="Images/work7.jpg" alt="ccc">
-          <img src="Images/work8.jpg" alt="ccc">
-        </div>
-        <br>
-        <div class="row">
-          <img src="Images/work9.jpg" alt="ccc">
-          <img src="Images/work10.jpg" alt="ccc">
-          <img src="Images/work11.jpg" alt="ccc">
-          <img src="Images/work12.png" alt="ccc">
-        </div>
-      </content>
+    <main class="hero1">
+      <div>
+        <h1 style="text-align: center">Contact</h1>
+        <h2 opacity="100%">How can I help to support your business or personal needs?<h2>
+        <form>
+          Name*<br>
+          <input type="text" size="50">
+        </form>
+        <form>
+          Email*<br>
+          <input type="text" size="50">
+        </form>
+        <form>
+          Message*<br>
+          <input id="mess" type="text" size="50">
+        </form>
+      <br>
+      <button><a>Submit</a></button>
+      </div>
     </main>
     <footer>DuckMedia.net</footer>
   </body>
