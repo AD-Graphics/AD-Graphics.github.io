@@ -75,8 +75,8 @@
         color: white;
       }
       main h1 {
-        /* font-size:10vw; */
-        font-size: 70px;
+        /* font-size:8vw; */
+        font-size: 80px;
         font-family: 'Montserrat', monospace, sans-serif;
         /* font-family: 'Didot', monospace; */
         font-style: oblique;
@@ -85,6 +85,7 @@
         background-color: #eed9d3;
         margin: 0px;
         padding: 8px;
+        font-weight: bolder;
       }
       main img {
         height: 500px;
@@ -102,6 +103,25 @@
       main {
         font-family: Montserrat;
       }
+      @media screen and (min-width:800px) {
+
+      }
+      @media screen and (min-width: 481px) and (max-width: 799px) {
+        .hero1 {
+          background-image: url("Images/collage.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          height: 500px;
+          position: relative;
+          margin-bottom: 0px;
+        }
+        main h1 {
+          font-weight: bolder;
+          padding: 2px;
+          font-size: 70px;
+        }
+      }
       @media screen and (max-width: 480px) {
         main h1 {
           font-weight: bolder;
@@ -109,7 +129,12 @@
           font-size: 50px;
         }
         .hero1 {
-          height: 400px;
+          background-image: url("Images/collage.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          height: 500px;
+          position: relative;
           margin-bottom: 0px;
         }
       }
