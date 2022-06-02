@@ -2,6 +2,10 @@
 <html lang="en-US">
   <head>
     <title>GRRM Redesign</title>
+<!-- GOOGLE FONTS: PLACE FONT LINK HERE AFTER HEAD TO APPLY FONT STYLE, AND USE IN SECTION. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <!-- external style sheet recommended -->
     <style>
       #gridLayout {
@@ -36,13 +40,26 @@
       }
       header h1 {
         display: inline-block;
+        font-family: 'Montaga', serif;
         color: #032F4C;
-        font-family: Didot;
+        /* font-family: Didot; */
         font-size: 55px;
         padding-left: 20px;
       }
       nav {
         grid-area: navbar;
+      }
+      nav ul {
+        list-style-type: none;
+        padding:0px;
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-family: 'Montaga', serif;
       }
       #bannerContainer {
         grid-area: banner;
@@ -83,6 +100,10 @@
         header h1 {
           display: block;
         }
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     </style>
   </head>
@@ -92,7 +113,18 @@
         <img src="../../Images/shield-spin.jpeg" alt="shield">
         <h1>GEORGE R. R. MARTIN</h1>
       </header>
-      <nav>NAVIGATION</nav>
+      <!-- <nav>NAVIGATION</nav> -->
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">NOT A BLOG</a></li>
+          <li><a href="#">ABOUT GEORGE</a></li>
+          <li><a href="#">BOOKS</a></li>
+          <li><a href="#">FOR FANS</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">MERCHANDISE</a></li>
+        </ul>
+      </nav>
       <section id="bannerContainer">BANNER</section>
       <section id="cardsContainer">CARDS</section>
       <aside>ASIDE</aside>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Grid Area (Responsive)</title>
+    <style>
+      .myGrid {
+        display: grid;
+        /* could use repeat syntax, or write out each */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+          "myHeader myHeader myHeader"
+          "sidenav  content  content"
+      }
+      header {
+        background-color: lightgreen;
+        padding: 36px;
+        grid-area: myHeader;
+      }
+      nav {
+        background-color: #DDFFDD;
+        padding: 36px;
+        grid-area: sidenav;
+      }
+      main {
+        padding: 36px;
+        grid-area: content;
+      }
+      @media screen and (max-width: 480px) {
+        .myGrid {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "myHeader"
+          "sidenav"
+          "content";
+        }
+        header,
+        nav,
+        main {
+          padding: 18px;
+        }
+        header,
+        nav {
+          text-align: center;
+        }
+        header h1 {
+          font-size: 24px;
+          margin: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myGrid">
+      <header>
+        <h1>Grid Areas Responsive Demo</h1>
+      </header>
+      <nav>NAVIGATION GOES HERE</nav>
+      <main>
+        <p>
+          Incididunt quo appellat iis irure consequat do laboris, aut
+          aliquip firmissimum, admodum amet excepteur. O ipsum
+          efflorescere ne aliquip e illum cernantur ubi et quo eram
+          culpa enim ita proident sunt ubi vidisse illustriora. De
+          quae amet aliqua quamquam ea si quibusdam te fabulas.Hic de
+          noster mandaremus, est ex multos ullamco do irure
+          comprehenderit incididunt amet voluptate, de nisi sunt non
+          admodum, nulla e possumus, fugiat relinqueret commodo dolor
+          quibusdam, ab ex velit vidisse ne tamen laborum qui commodo.
+          Dolore appellat in laboris ea malis a do noster cupidatat,
+          doctrina hic tempor quamquam do et quem an minim. Offendit
+          reprehenderit in proident, ingeniis velit do singulis
+          adipisicing, ex de philosophari ad appellat minim laboris
+          ingeniis.Cupidatat irure nostrud. Et fabulas praesentibus, excepteur
+          velit eram fabulas legam ab ingeniis iis expetendis ita de
+          multos enim an cupidatat. Sunt et cernantur qui amet ab ea
+          velit quorum fugiat constias.E cillum fabulas a si proident
+          et probant. Ut e anim probant et est enim comprehenderit,
+          non multos export esse pariatur ab aut irure nulla in
+          incurreret. Amet hic laboris nam eram, ad ipsum duis aute
+          officia ex et eram amet hic senserit, si multos senserit.
+          Quae constias relinqueret ea ubi fore probant proident.
+        </p>
+        <p>
+          Eu hic noster incididunt iis eiusmod relinqueret non
+          constias ex export cernantur id magna irure, offendit
+          coniunctione sed voluptate. Illum doctrina ne voluptate, ne
+          aute probant. Enim tractavissent excepteur labore fabulas
+          est se est graviterque. Ex tamen doctrina occaecat.Et
+          expetendis relinqueret id ea fugiat ullamco sed quem
+          incididunt te imitarentur ab qui fugiat hic elit se do sunt
+          mentitum illustriora, quo an dolore quamquam in export
+          proident offendit, senserit dolor senserit. Sed magna an
+          labore ut elit sed consequat aut legam. An et sint vidisse.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
