@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 14</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background-image: url("../Images/ocean1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+      }
+      .textInput label {
+        display: block;
+      }
+      .textInput input {
+                /* top - then clockwise */
+        margin: 4px 0px 12px 0px;
+        padding: 8px;
+        width: 200px;
+      }
+      .textInput input:focus-visible {
+        outline: 0;
+        background-color: skyblue;
+      }
+      h1 {
+        font-family: 'East Sea Dokdo', cursive;
+        font-size: 100px;
+        margin-bottom: 0px;
+        text-shadow: 3px 3px 10px lightblue;
+      }
+      #buttonClearContainer {
+        cursor: pointer;
+        display: block;
+        float: right;
+        margin-top: 8px;
+        margin-right: 5px;
+
+
+      }
+      fieldset {
+        margin: 0 auto;
+      }
+      div {
+        margin: 10px;
+      }
+      #box1 {
+        margin-top: 28px;
+      }
+      #box2 div #gothRadio {
+        margin-bottom: 25px;
+      }
+      #accountContainer input {
+        border: 4px solid pink;
+        border-width: 0 0 4px 0;
+      }
+      form {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+      }
+      #titleFont {
+        font-family: 'East Sea Dokdo', cursive;
+        font-size: 60px;
+        margin: 45px;
+        margin-top: 25px;
+      }
+      legend#titleFont {
+        margin-bottom: 25px;
+      }
+      #tail,
+      p {
+        font-size: 23px;
+        font-weight: bold;
+      }
+      select#tailColorId {
+        font-size: 20px;
+      }
+      /* fieldset div select {
+        color: red;
+      } */
+      #buttonContainer input:focus-visible {
+        outline: 0;
+      }
+      #buttonContainer input[type=submit] {
+        border: 0;
+        border-radius: 8px;
+        margin: 12px;
+        margin-bottom: 24.5px;
+        padding: 12px 48px;
+        cursor: pointer;
+        background: linear-gradient(to bottom, pink, skyblue);
+        font-family: 'East Sea Dokdo', cursive;
+        font-size: 35px;
+      }
+      #buttonContainer input[type=submit]:active {
+        background: linear-gradient(to bottom, skyblue, pink);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the MerUniverse</h1>
+    <form>
+      <div id="buttonClearContainer">
+        <input type="reset" value="Clear Form">
+      </div>
+      <br>
+
+      <fieldset id="box1" style="max-width:480px">
+        <h2 id="titleFont">Account</h2>
+        <div id="accountContainer" class="textInput">
+          <label for="usernameId">Username:</label>
+          <input type="text" id="usernameId" name="username">
+        </div>
+        <div id="accountContainer" class="textInput">
+          <label for="passwordId">Password:</label>
+          <input type="text" id="passwordId" name="password">
+        </div>
+        <div id="accountContainer" class="textInput">
+          <label for="emailId">Email:</label>
+          <input type="text" id="emailId" name="email">
+        </div>
+      </fieldset>
+
+      <br>
+
+      <fieldset id="box2">
+        <legend id="titleFont">  Your MerPerson  </legend>
+        <div>
+          <label for="tailColorId" id="tail">Tail Color:</label>
+          <select id="tailColorId" name"tailColor">
+            <option value="">--Select a Color--</option>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="pink">Pink</option>
+            <option value="brown">Brown</option>
+            <option value="grey">Grey</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+          </select>
+        </div>
+        <br>
+
+        <p>Personality:</p>
+        <div>
+          <input type="radio" id="sportyRadio" name="personality" value="sporty">
+          <label for="sportyRadio">
+            Sporty
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="homebodyRadio" name="homebody" value="homebody">
+          <label for="homebodyRadio">
+            Homebody
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="adventurerRadio" name="adventurer" value="adventurer">
+          <label for="adventurerRadio">
+            Adventurer
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="kawaiiRadio" name="kawaii" value="kawaii">
+          <label for="kawaiiRadio">
+            Kawaii
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="gothRadio" name="goth" value="goth">
+          <label for="gothRadio">
+            Goth
+          </label>
+        </div>
+
+        <p>How do you indentify?</p>
+        <div>
+          <input type="checkbox" id="feminineCheckbox" name="feminine" value="feminine">
+          <label for="feminineCheckbox">Feminine</label>
+        </div>
+        <div>
+          <input type="checkbox" id="masculineCheckbox" name="masculine" value="masculine">
+          <label for="masculineCheckbox">Masculine</label>
+        </div>
+        <div>
+          <input type="checkbox" id="nonBinaryCheckbox" name="nonBinary" value="nonBinary">
+          <label for="nonBinaryCheckbox">Non-Binary</label>
+        </div>
+      </fieldset>
+
+      <br>
+
+      <div id="buttonContainer">
+        <input type="submit" value="CREATE">
+      </div>
+
+    </form>
+  </body>
+</html>

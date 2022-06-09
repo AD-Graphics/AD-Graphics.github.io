@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Function Examples</title>
+  </head>
+  <body id="myBackground">
+    <input type="button" id="button1"
+    value="Button1">
+    <script type="text/javascript">
+    <!-- // function is equal to ACTION/verb
+    // function | the name of the function you want to create | {.....} -->
+      function sayHello() {
+        console.log("Hello");
+      }
+
+      // to execute function:
+      sayHello();
+
+      // REPEAT(clean):
+      function sayHello() {
+        console.log("Hello");
+      }
+      sayHello();
+
+      function addTwo(numberToAdd) {
+        console.log(numberToAdd + 2);
+      }
+
+      addTwo(5);
+      addTwo(1000);
+      addTwo(-40);
+
+      function log(textToLog) {
+        console.log(textToLog);
+      }
+
+      log("Here is some text to log");
+
+      function addTwoAndReturn(number) {
+        return number + 2;
+      }
+
+      // debugger;
+      addTwoAndReturn(5);
+      log(
+        addTwoAndReturn(12)
+      );
+
+      // allows you to place elements on your doc with .getElementById
+      // . = excessor operator | reach into the __ . to find/access __
+      let myButton1 = document.getElementById("button1");
+      myButton1.style.backgroundColor = "yellow";
+      myButton1.style.borderRadius = "50%";
+
+      let body = document.getElementById("myBackground");
+      body.style.backgroundColor = "teal";
+
+      function getRandomNumberBetween(lowValue, highValue) {
+        let range = highValue - lowValue;
+        let randomValue = Math.random() * range;
+        return Math.floor(lowValue + randomValue);
+      }
+
+      // anything created outside of the function can be used in the function, anything created in the function can NOT be used outside the function
+      // creates random background color every visit to page
+      function setRandomBackgroundColor() {
+        let r = getRandomNumberBetween(0, 255);
+        let g = getRandomNumberBetween(0, 255);
+        let b = getRandomNumberBetween(0, 255);
+        body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      }
+      setRandomBackgroundColor();
+
+// --- ALLOWS RANDOM BACKGROUND COLORS TO BE NOTED IN YOUR CONSOLE ---
+      // function setRandomBackgroundColor() {
+      //   let r = getRandomNumberBetween(0, 255);
+      //   let g = getRandomNumberBetween(0, 255);
+      //   let b = getRandomNumberBetween(0, 255);
+      //   let rgb = "rgb(" + r + "," + g + "," + b + ")";
+      //   console.log(rgb);
+      //   body.style.backgroundColor = rgb;
+      // }
+      // setRandomBackgroundColor();
+
+      button1.onclick = setRandomBackgroundColor;
+    </script>
+  </body>
+</html>

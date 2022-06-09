@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <!-- external style sheet recommended -->
     <style>
+      body {
+        background-image: url("../../Images/granite.jpeg");
+        background-size: cover;
+      }
       #gridLayout {
         display: grid;
         /* fractional unit | middle 3 columns repeat */
@@ -23,6 +27,10 @@
           ". footer footer footer ."
           ". bottom bottom bottom .";
       }
+      body div p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+      }
       header,
       nav,
       #bannerContainer,
@@ -35,8 +43,8 @@
       }
       header {
         grid-area: header;
-        background-image: url("../../Images/header-bg.jpeg");
-        background-position: center top;
+        /* background-image: url("../../Images/header-bg.jpeg");
+        background-position: center top; */
       }
       header h1 {
         display: inline-block;
@@ -48,6 +56,7 @@
       }
       nav {
         grid-area: navbar;
+        display: inline-block;
       }
       nav ul {
         list-style-type: none;
@@ -64,11 +73,80 @@
       #bannerContainer {
         grid-area: banner;
       }
+      #bannerContainer img {
+        width: 100%;
+      }
       #cardsContainer {
         grid-area: cards;
+        display: flex;
+      }
+      #cardsContainer img {
+        flex-grow: 1;
       }
       aside {
         grid-area: aside;
+      }
+      #moreAppearancesContainer {
+        background-image: url("../../Images/events-bg.jpeg");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-color: black;
+        text-align: left;
+        /* padding: 24px; */
+        padding: 20px 10px;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
+      #moreAppearancesContainer h3 {
+        font-family: 'Montaga', serif;
+        color: white;
+      }
+      .yellow {
+        color: #dbbf73;
+      }
+      .underline a {
+        text-decoration: none;
+        text-decoration: underline;
+        color: white;
+      }
+      .white {
+        color: white;
+      }
+      #nextPublicationContainer {
+        background-image: url("../../Images/releases-bg.jpeg");
+        height: 350px;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        text-align: left;
+        padding: 0 10px;
+        margin: 0px;
+        background-color: black;
+        line-height: 18px;
+        margin-bottom: 10px;
+        font-family: 'Montaga', serif;
+        text-align: left;
+        color: white;
+      }
+      #nextPublicationContainer img {
+        width: 70px;
+        height: auto;
+        float:left;
+        margin: 0 20px 20px 0;
+        border: 1px solid #39382e;
+      }
+      .blue {
+        font-family: 'Montaga', serif;
+        color: #92add1;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .bold {
+        color: white;
+      }
+      .thin {
+        font-weight: lighter;
+        color: #a1a1a1;
+        font-size: 12px
       }
       main {
         grid-area: blog;
@@ -100,9 +178,19 @@
         header h1 {
           display: block;
         }
+        nav {
+          display: inline-block;
+        }
         nav ul {
           flex-direction: column;
           align-items: center;
+        }
+        #cardsContainer {
+          flex-direction: column;
+        }
+        #cardsContainer img {
+          /* flex-grow: 0; */
+          width: 100%;
         }
       }
     </style>
@@ -125,9 +213,42 @@
           <li><a href="#">MERCHANDISE</a></li>
         </ul>
       </nav>
-      <section id="bannerContainer">BANNER</section>
-      <section id="cardsContainer">CARDS</section>
-      <aside>ASIDE</aside>
+      <section id="bannerContainer">
+        <img src="../../Images/FandB-banner1.jpeg" alt="banner image">
+      </section>
+      <section id="cardsContainer">
+        <img src="../../Images/GRRM-SMALL-cocteau3.jpeg" alt="the jean cocteau cinema">
+        <img src="../../Images/newsletter-home.png" alt="george rr martin newsletter">
+        <img src="../../Images/callout-sample-3.jpeg" alt="darksword miniatures">
+      </section>
+      <aside>
+        <div id="moreAppearancesContainer">
+          <h3>NEXT APPEARANCE</h3>
+          <p class="yellow">August 26 - 28th, 2022</p>
+          <!-- having 2 classes applies both styles | "underline" & "white" -->
+          <p>
+            <span class="underline white">
+              <a href="#">Bubonicon 53</a>
+            </span>
+            <span class="white">Guest</span>
+          </p>
+          <img src="../../Images/more-appearances.jpeg" alt="more appearances">
+        </div>
+
+        <div id="nextPublicationContainer">
+          <h3>NEXT PUBLICATION</h3>
+          <img src="../../Images/wildcards2022001_cvr-scaled.jpeg" alt="wild cards">
+          <p class="blue">June 15, 2022</p>
+          <p class="bold">WILD CARDS Marvel</p>
+          <p class="bold">Comic Book 1</p>
+          <p class="thin">(Comic Monthly)</p>
+          <img src="../../Images/view-pubs.png" alt="next publication">
+        </div>
+
+        <div>
+        </div>
+
+      </aside>
       <main>BLOGPOSTS</main>
       <footer>FOOTER</footer>
       <div id="bottom">BOTTOM</div>

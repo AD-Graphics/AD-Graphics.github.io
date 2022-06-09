@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Forms Example - Part 1</title>
+    <style>
+      .textInput label {
+        display: block;
+      }
+      .textInput input {
+                /* top - then clockwise */
+        margin: 4px 0px 12px 0px;
+        padding: 8px;
+        width: 200px;
+      }
+      .textInput input:focus-visible {
+        outline: 0;
+        background-color: skyblue;
+      }
+      /* error-state example */
+      #firstNameContainer input {
+        border: 2px solid red;
+        border-radius: 4px;
+      }
+      #lastNameContainer input {
+        border: 4px solid blue;
+        border-width: 0 0 4px 0;
+      }
+      textarea {
+        font-family: Verdana, sans-serif;
+        margin-top: 4px;
+        padding; 8px;
+        width: 400px;
+      }
+      /* triggers "radio" buttons */
+      input[type=radio] {
+        margin-left: 16px;
+      }
+      /* input {
+        background-color : lightgrey;
+        color: black;
+        font-family: monospace;
+      } */
+      #buttonContainer {
+                /* top & bottom .. left & right */
+        margin: 24px 0px;
+      }
+      #buttonContainer input[type=button] {
+        border: 1px solid black;
+        border-radius: 6px;
+        padding: 12px;
+        margin-right: 12px;
+        cursor: pointer;
+      }
+      /* to get rid of default color border when clicked (*preview only seen in browser!)*/
+      #buttonContainer input:focus-visible {
+        outline: 0;
+      }
+      #buttonContainer input[type=reset] {
+        border: 1px solid black;
+        border-radius: 6px;
+        margin-right: 12px;
+        padding: 12px;
+        cursor: pointer;
+        /* liner gradient */
+        background: linear-gradient(to bottom, pink, orange);
+      }
+      /* illusion for gradients, to look "clicked" | reverse colors */
+      #buttonContainer input[type=reset]:active {
+        background: linear-gradient(to bottom, orange, pink);
+      }
+      #buttonContainer input[type=submit] {
+        border: 0;
+        border-radius: 8px;
+        margin-right: 12px;
+        margin-top: 12px;
+        padding: 12px 48px;
+        cursor: pointer;
+        background: linear-gradient(to bottom, skyblue, teal);
+      }
+      #buttonContainer input[type=submit]:active {
+        background: linear-gradient(to top, skyblue, teal);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Let's look at forms!</h1>
+    <!-- "action" = the name of the file u want to process form on server-->
+    <form action="submission_action.php">
+      <fieldset>
+        <!-- LEGEND: creates outside border/line (only visual)-->
+        <legend>Form Fields</legend>
+        <h2>Text Input</h2>
+        <p>What is your name?</p>
+        <div id="firstNameContainer" class="textInput">
+          <!-- label places text in front of the box | "for" = selects box when you click text -->
+          <label for="firstNameId">First Name:</label>
+          <!-- VOID ELEMENT = DOES NOT NEED A CLOSING TAG -->
+          <!-- input | type attribute  | id attribute | name attribute = value of the textbox-->
+          <input type="text" id="firstNameId" name="firstname">
+        </div>
+        <div id="lastNameContainer" class="textInput">
+          <label for="lastNameId">Last Name:</label>
+          <input type="text" id="lastNameId" name="lastname">
+        </div>
+
+        <h2>Textarea Input</h2>
+        <label for="codeFeelingsId">
+          How do you feel about programming?
+        </label>
+        <div>
+          <!-- Text field | Place ALL-TOGETHER for text to appear without bug!-->
+          <!-- Text Field by default can be stretched out -->
+          <!-- THIS SIZES YOUR TEXTBOX: <textarea id="codeFeelingsId" name="codeFeelings"rows="5" cols="50">Default Text</textarea> -->
+          <textarea id="codeFeelingsId" name="codeFeelings">Default Text</textarea>
+        </div>
+
+        <!-- label (text) is clickable along with radio button -->
+        <!-- VALUE Attribute = is tied to name -->
+        <!-- Select Multiple Radio Buttons: If you take away the "name" your buttons are no longer grouped/linked -->
+        <h2>Radio Inputs</h2>
+        <p>What program are you in?</p>
+        <div>
+          <input type="radio" id="raspRadio" name="program" value="rasp">
+          <label for="raspRadio">
+            Reording Arts and Show Production
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="dfvpRadio" name="program" value="dfvp">
+          <label for="dfvpRadio">
+            Digital Filmaking and Video Production
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="gdwdRadio" name="program" value="gdwd">
+          <label for="gdwdRadio">
+            Graphic Design and Web Development
+          </label>
+        </div>
+
+        <h2>Checkbox Inputs</h2>
+        <p>How do you get to class?</p>
+        <div>
+            <!-- no need for closing tag | "name" values must have different names so you can select multiple -->
+          <input type="checkbox" id="bikeCheckbox" name="vehicleOption1" value="bike">
+          <label for="bikeCheckbox">Bike</label>
+        </div>
+        <div>
+          <input type="checkbox" id="busCheckbox" name="vehicleOption2" value="bus">
+          <label for="busCheckbox">Bus</label>
+        </div>
+        <div>
+          <input type="checkbox" id="carCheckbox" name="vehicleOption3" value="car">
+          <label for="carCheckbox">Car</label>
+        </div>
+        <div>
+          <input type="checkbox" id="bedCheckbox" name="vehicleOption4" value="bed">
+          <label for="bedCheckbox">Roll out of bed and open my laptop</label>
+        </div>
+
+        <h2>Date Input</h2>
+        <div>
+          <label for="dateId">When is your birthday?</label>
+          <input type="date" id="dateId" name="bday">
+        </div>
+        <div>
+          <label for="dateId">When do you wake up?</label>
+          <input type="time" id="timeId" name="wakeup">
+        </div>
+
+        <h2>Dropdown Input (select)</h2>
+        <div>
+          <label for="foodGroupId">What is your favorite food group?</label>
+          <!-- if you add multiple to the end after "foodGroup", no "", it creates a list you can select multiple -->
+          <select id="foodGroupId" name"foodGroup">
+            <!-- option with no value to have a (blank) instead of an option pre-selected -->
+            <option value="">--Select an Option--</option>
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Veggies</option>
+            <option value="meats">Meats</option>
+            <option value="grains">Grains</option>
+            <option value="dairy">Dairy</option>
+            <option value="snacks">Snackies</option>
+          </select>
+        </div>
+
+        <h2>Button Input</h2>
+        <div id="buttonContainer">
+          <input type="button" value="Normal Button">
+          <input type="reset" value="This will reset everything">
+          <input type="submit" value="This will trigger the form action">
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
