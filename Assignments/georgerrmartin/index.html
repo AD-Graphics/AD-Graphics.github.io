@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>GRRM Redesign</title>
+<!-- GOOGLE FONTS: PLACE FONT LINK HERE AFTER HEAD TO APPLY FONT STYLE, AND USE IN SECTION. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    <!-- external style sheet recommended -->
+    <style>
+      body {
+        background-image: url("../../Images/granite.jpeg");
+        background-size: cover;
+      }
+      #gridLayout {
+        display: grid;
+        /* fractional unit | middle 3 columns repeat */
+        grid-template-columns: 1fr repeat(3, 333px) 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+          /* "."=leaves grid area empty */
+          ". header header header ."
+          ". navbar navbar navbar ."
+          ". banner banner banner ."
+          ". cards  cards  cards  ."
+          ". aside  blog   blog   ."
+          ". footer footer footer ."
+          ". bottom bottom bottom .";
+      }
+      body div p {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 13px;
+      }
+      header,
+      nav,
+      #bannerContainer,
+      #cardsContainer,
+      aside,
+      main,
+      footer,
+      #bottom {
+        border: 3px solid grey;
+      }
+      header {
+        grid-area: header;
+        border: none;
+        /* background-image: url("../../Images/header-bg.jpeg");
+        background-position: center top; */
+      }
+      header h1 {
+        display: inline-block;
+        font-family: 'Montaga', serif;
+        color: #032F4C;
+        /* font-family: Didot; */
+        font-size: 55px;
+        padding-left: 20px;
+      }
+      #socialSection {
+        text-align: right;
+      }
+      nav {
+        grid-area: navbar;
+        display: inline-block;
+        height: 23px;
+        align-content: center;
+        text-align: center;
+        border: none;
+        border-top: 1px solid black;
+      }
+      nav ul {
+        list-style-type: none;
+        padding:0px;
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-family: 'Montaga', serif;
+      }
+      #bannerContainer {
+        background-color: grey;
+        grid-area: banner;
+      }
+      #bannerContainer img {
+        width: 100%;
+      }
+      #cardsContainer {
+        grid-area: cards;
+        display: flex;
+      }
+      #cardsContainer img {
+        flex-grow: 1;
+      }
+      aside {
+        background-size: cover;
+        grid-area: aside;
+        width: 100%;
+        background-color: grey;
+      }
+      #moreAppearancesContainer {
+        background-image: url("../../Images/events-bg.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+        width: 100%;
+        text-align: left;
+        /* padding: 24px; */
+        padding: 20px 10px;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
+      #moreAppearancesContainer h3 {
+        font-family: 'Montaga', serif;
+        color: white;
+      }
+      .yellow {
+        color: #dbbf73;
+      }
+      .underline a {
+        text-decoration: none;
+        text-decoration: underline;
+        color: white;
+      }
+      .white {
+        color: white;
+      }
+      #nextPublicationContainer {
+        background-image: url("../../Images/releases-bg.jpeg");
+        height: 290px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+        text-align: left;
+        padding: 10px 10px;
+        margin: 0px;
+        background-color: black;
+        line-height: 18px;
+        margin-bottom: 10px;
+        font-family: 'Montaga', serif;
+        text-align: left;
+        color: white;
+      }
+      #nextPublicationContainer p {
+        padding-left: 100px;
+        text
+      }
+      #wildCard {
+        width: 70px;
+        height: auto;
+        float:left;
+        margin: 0px;
+        border: 1px solid #39382e;
+      }
+      #nextPub {
+        float: left;
+      }
+      .blue {
+        font-family: 'Montaga', serif;
+        color: #92add1;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .bold {
+        color: white;
+      }
+      .thin {
+        font-weight: lighter;
+        color: #a1a1a1;
+        font-size: 12px
+      }
+      .asideContainer img {
+        width: 100%;
+      }
+      main {
+        grid-area: blog;
+        background-color: lightgrey;
+        padding: 24px;
+      }
+      main h2 {
+        font-family: 'Montaga', serif;
+      }
+      main h3 a,
+      main p a {
+        color: #1c4268;
+      }
+      main h3 a {
+        text-decoration: none;
+      }
+      main img {
+        margin-top: 55px;
+      }
+      footer {
+        background: linear-gradient(to bottom, lightgrey, grey);
+        opacity: 80%;
+        grid-area: footer;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid black;
+        height: 25px;
+        padding-bottom: 17px;
+      }
+      #bottom {
+        grid-area: bottom;
+        background-image: url("../../Images/footer-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 60%;
+        border: none;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #gridLayout {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            /* "."=leave that grid area empty | MOST TIMES YO CAN NOT KEEP THINGS IN THE SAME ORDER. WHATEVER WORKS BEST FOR THE USER! */
+            "header"
+            "navbar"
+            "banner"
+            "blog"
+            "cards"
+            "aside"
+            "footer"
+            "bottom";
+        }
+        header {
+          text-align: center;
+        }
+        header h1 {
+          display: block;
+        }
+        #socialSection {
+          text-align: center;
+        }
+        nav {
+          display: inline-block;
+          height: 170px;
+        }
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+          font-size: 19px;
+          font-weight: bold;
+        }
+        #cardsContainer {
+          flex-direction: column;
+        }
+        #cardsContainer img {
+          /* flex-grow: 0; */
+          width: 100%;
+        }
+        aside {
+          background-size: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gridLayout">
+      <header>
+        <img src="../../Images/shield-spin.png" alt="shield">
+        <h1>GEORGE R. R. MARTIN</h1>
+        <div id="socialSection">
+          <a href="#"><img src="../../Images/facebook-overall.png" alt="facebook"></a>
+          <a href="#"><img src="../../Images/twitter-overall.png" alt="twitter"></a>
+          <a href="#"><img src="../../Images/app-overall.png" alt="westeros"></a>
+          <form>
+            <input type="text" id="searchbar" name="searchQuery" placeholder="Search...">
+            <input type="submit" id="searchButton" value="SEARCH">
+          </form>
+        </div>
+
+      </header>
+      <!-- <nav>NAVIGATION</nav> -->
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">NOT A BLOG</a></li>
+          <li><a href="#">ABOUT GEORGE</a></li>
+          <li><a href="#">BOOKS</a></li>
+          <li><a href="#">FOR FANS</a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">MERCHANDISE</a></li>
+        </ul>
+      </nav>
+      <section id="bannerContainer">
+        <img src="../../Images/FandB-banner1.jpeg" alt="banner image">
+      </section>
+      <section id="cardsContainer">
+        <img src="../../Images/GRRM-SMALL-cocteau3.jpeg" alt="the jean cocteau cinema">
+        <img src="../../Images/newsletter-home.png" alt="george rr martin newsletter">
+        <img src="../../Images/callout-sample-3.jpeg" alt="darksword miniatures">
+      </section>
+
+      <aside>
+        <div id="moreAppearancesContainer">
+          <h3>NEXT APPEARANCE</h3>
+          <p class="yellow">August 26 - 28th, 2022</p>
+          <!-- having 2 classes applies both styles | "underline" & "white" -->
+          <p>
+            <span class="underline white">
+              <a href="#">Bubonicon 53</a>
+            </span>
+            <span class="white">Guest</span>
+          </p>
+          <a href="#"><img src="../../Images/more-appearances.jpeg" alt="more appearances"></a>
+        </div>
+
+        <div id="nextPublicationContainer">
+          <h3>NEXT PUBLICATION</h3>
+          <img id="wildCard" src="../../Images/wildcards2022001_cvr-scaled.jpeg" alt="wild cards">
+          <p class="blue">June 15, 2022</p>
+          <p class="bold">WILD CARDS Marvel</p>
+          <p class="bold">Comic Book 1</p>
+          <p class="thin">(Comic Monthly)</p>
+          <a href="#"><img id="nextPub" src="../../Images/view-pubs.png" alt="next publication"></a>
+        </div>
+
+        <div class="asideContainer">
+          <img src="../../Images/YT.png" alt="Youtube Video">
+        <div/>
+
+        <div class="asideContainer">
+          <img src="../../Images/valyrian-steel-v3.jpeg" alt="Valyrian Steel">
+        </div>
+
+        <div class="asideContainer">
+          <img src="../../Images/stagecoach-v2.jpeg" alt="Stagecoach">
+        </div>
+
+      </aside>
+      <main>
+        <h2>CURRENT GRRM BLOG POSTS</h2>
+        <h3><a href="#">Six Days to Joe</a></h3>
+        <p>Six days to go.  Six days to Joe. Leaphorn, that is. It is June 6 as I type this.   Next weekend, JUNE 12, will see the debut of DARK WINDS on AMC  and AMC+. Yes, it has “Winds” in the…<a href="#">Read more>></a></p>
+        <h3><a href="#">Stonemaiden Is Back</a></h3>
+        <p>There’s a brand new treat for Wild Cards fans over at Tor.com. “Hearts of Stone” is a terrific new novelette from Emma Newman. It marks the return of Stonemaiden, the Cornish ace first introduced in KNAVES OVER QUEENS. That was…<a href="#">Read more>></a></p>
+        <h3><a href="#">Here Come The Dragons</a></h3>
+        <p>Are those dragons I see? Yes indeed. It’s May, which means the August 21 premiere of HOUSE OF THE DRAGON is only a few months away. And HBO has just released a new trailer, to give you another taste of… <a href="#">Read more>></a></p>
+        <h3><a href="#">The Winds of June</a></h3>
+        <p>The Dark Winds will start blowing in June. June 12, to be precise. That’s the day that DARK WINDS, a new series based on the classic bestselling Navajo detective novels by Tony Hillerman, will premiere on AMC and AMC+. I…<a href="#">Read more>></a></p>
+        <h3><a href="#">The Dragons Are Coming…</a></h3>
+        <p>… they’re on the wing, and will be arriving in August. Details here: https://variety.com/2022/tv/news/game-of-thrones-house-of-the-dragon-premiere-date-1235215983/ <a href="#">Read more>></a></p>
+        <h3><a href="#">THE RISE OF THE DRAGON</a></h3>
+        <p>We’re so excited to announce The Rise of The Dragon, a lavish visual history of House Targaryen – the iconic family at the heart of HBO’s Game of Thrones prequel series, House of the Dragon – featuring over 180 all-new… <a href="#">Read more>></a></p>
+        <h3><a href="#">Dealer Takes Two</a></h3>
+        <p>Kings and deuces may not be as iconic… or ominous… a poker hand as aces and eights, but it’s not a bad hand to be dealt… and Tor will be dealing those cards to all the Wild Cards fans out…<a href="#">Read more>></a></p>
+        <a href="#"><img src="../../Images/not-a-blog.png" alt="Not A Blog"></a>
+      </main>
+      <footer>
+        <p>© 2022 GEORGE R.R. MARTIN. ALL RIGHTS RESERVED.</p>
+      </footer>
+      <div id="bottom"></div>
+    </div>
+  </body>
+</html>
