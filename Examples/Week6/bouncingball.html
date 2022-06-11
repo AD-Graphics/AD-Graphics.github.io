@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Bouncing Ball</title>
+    <style>
+      #ball {
+        background-color: green;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ball"></div>
+    <script type="text/javascript">
+      let ball = document.getElementById("ball");
+      // starting position:
+      let ballX = 0;
+      let ballY = 0;
+      // XVel = velocity
+      let ballXVel = 2;
+      let ballYVel = 2;
+
+      function updateBall() {
+        ball.style.top = ballY + "px";
+        ball.style.left = ballX + "px";
+
+        // ballX = ballX + ballXVel;
+        ballX += ballXVel;
+        ballY += ballYVel;
+
+        // width of screen | "||" = PIPE (or) | && = and
+        if (
+          // 50 offsets window boundary
+          ballX > window.innerWidth - 50
+          || ballX < 0
+        ) {
+          ballXVel *= -1;
+          setRandomBackgroundColor();
+        }
+
+        if (
+          // 50 offsets window boundary
+          ballY > window.innerHeight - 50
+          || ballY < 0
+        ) {
+          ballYVel *= -1;
+          setRandomBackgroundColor();
+        }
+      }
+
+      function getRandomNumberBetween(lowValue, highValue) {
+        let range = highValue - lowValue;
+        let randomValue = Math.random() * range;
+        return Math.floor(lowValue + randomValue);
+      }
+
+      // anything created outside of the function can be used in the function, anything created in the function can NOT be used outside the function
+      // creates random background color every visit to page
+      function setRandomBackgroundColor() {
+        let r = getRandomNumberBetween(0, 255);
+        let g = getRandomNumberBetween(0, 255);
+        let b = getRandomNumberBetween(0, 255);
+        ball.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+      }
+
+      // repeat every 10 seconds
+      setInterval(updateBall, 10);
+    </script>
+  </body>
+</html>
