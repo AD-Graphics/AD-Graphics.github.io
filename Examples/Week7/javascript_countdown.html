@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>COUNTDOWN</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      #hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+        height: 500px;
+      }
+      #countdown {
+        display: inline-block;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hero">
+      <h1 id="countdown">PLACEHOLDER</h1>
+    </div>
+    <script type="text/javascript">
+      let deadline = new Date('June 23, 2022 23:00:00');
+      let countdown = document.getElementById("countdown");
+      // this replaces/or shows nothing("") over your set html
+      countdown.innerHTML = "";
+
+      // name of function can be anything *(use a VERB of some kind)
+      function setCountdown() {
+        let now = new Date();
+
+        // # of milliseconds between deadline and now
+        let timeLeft = deadline.getTime() - now.getTime();
+
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor(
+          (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        let seconds = Math.floor(
+          (timeLeft % (1000 * 60)) / 1000
+        );
+
+        countdown.innerHTML =
+          // + sign used due to length of code
+          `${days} days ${hours} hours ` +
+          `${minutes} minutes ${seconds} seconds left`;
+
+      }
+
+      setInterval(setCountdown, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 15: Graduation Countdown</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-image: url("../Images/graduation.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 600px;
+        background-color: #432F48;
+        text-align: center;
+      }
+      #header {
+        display: block;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 50px;
+        padding-top: 10px;
+      }
+      #countdown {
+        display: block;
+        color: gold;
+        font-family: 'Press Start 2P', monospace;
+        padding-top: 370px;
+      }
+      img {
+        padding-top: 60px;
+        height: 125px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="header">F.I.R.S.T. Graduation:</h1>
+      <h1 id="countdown">Graduation Countdown</h1>
+    </div>
+    <script type="text/javascript">
+      let deadline = new Date('January 7, 2023 00:00:00');
+      let countdown = document.getElementById("countdown");
+      // this replaces/or shows nothing("") over your set html
+      countdown.innerHTML = "";
+
+      // name of function can be anything *(use a VERB of some kind)
+      function setCountdown() {
+        let now = new Date();
+
+        // # of milliseconds between deadline and now
+        let timeLeft = deadline.getTime() - now.getTime();
+
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor(
+          (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        let seconds = Math.floor(
+          (timeLeft % (1000 * 60)) / 1000
+        );
+
+        countdown.innerHTML =
+          // + sign used due to length of code
+          `${days} days <br> ${hours} hours ` +
+          `<br> ${minutes} minutes <br> ${seconds} seconds left`;
+
+      }
+
+      setInterval(setCountdown, 1000);
+
+    </script>
+    <img id="AD" src="../Images/AD_logo_pink.png" alt="A D Logo">
+  </body>
+</html>
