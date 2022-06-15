@@ -15,7 +15,7 @@ function showCurrentSlide() {
   if (currentSlideIndex >= slides.length) {
     currentSlideIndex = 0;
   }
-  
+
   for (let i = 0; i < slides.length; i++) {
     let loopSlide = slides[i];
     // DOES NOT EQUAL
@@ -23,6 +23,8 @@ function showCurrentSlide() {
       loopSlide.style.display = "none";
     } else {
       loopSlide.style.display = "inline-block";
+      // SETS BUTTONS ON BASE OF IMAGES IN SLIDESHOW
+      slideshow.style.height = loopSlide.offsetHeight + "px";
     }
   }
 }
