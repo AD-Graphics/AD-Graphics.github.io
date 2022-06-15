@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+                          // Index's
+      let myFirstArray = ["My name is", "Reptar", "!!!"];
+
+      console.log(myFirstArray);
+
+      console.log("First value: " + myFirstArray[0]);
+      console.log("Last value: " + myFirstArray[2]);
+      console.log("Array length: " + myFirstArray.length);
+
+      // iterator = checks to make sure loop is still running or done
+      // WHILE LOOPS:
+      let i = 0;
+      while (i < myFirstArray.length) {
+        // debugger;
+        console.log(myFirstArray[i]);
+        i = i + 1;
+      }
+
+      // FOR LOOPS:
+                                               // i++ is abbrev.| i = i + 1
+      for (let i = 0; i < myFirstArray.length; i++) {
+        console.log(myFirstArray[i]);
+      }
+    </script>
+  </body>
+</html>

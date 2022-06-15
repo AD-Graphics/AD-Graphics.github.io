@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Javascript Slideshow</title>
+    <link type="text/css" rel="stylesheet" href="../../css/slideshow.css>"
+  </head>
+  <body>
+    <div id="slideshow">
+      <img id="slide1" class="slideshowImage" src="../../Images/apoca.jpeg" alt="3D render: apocalyptic">
+      <img id="slide2" class="slideshowImage" src="../../Images/pipes.jpeg" alt="3D render: pipes">
+      <img id="slide3" class="slideshowImage" src="../../Images/room.jpeg" alt="3D render:room">
+      <img id="slide4" class="slideshowImage" src="../../Images/man.jpeg" alt="3D render: fireman">
+    </div>
+    <input
+      type="button"
+      id="previous"
+      value="Previous"
+      onclick="showPreviousSlide()">
+    <input
+      type="button"
+      id="next"
+      value="Next"
+      onclick="showNextSlide()">
+
+    <script type="text/javascript" src="../../js/slideshow.js"></script>
+  </body>
+</html>
