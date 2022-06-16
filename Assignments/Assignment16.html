@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Javascript Slideshow</title>
+    <link type="text/css" rel="stylesheet" href="../css/Assignment16.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Puppy Love</h1>
+    <div id="slideshow">
+      <img id="slide1" class="slideshowImage" src="../Images/pup_ears.jpeg" alt="puppy ears">
+      <img id="slide2" class="slideshowImage" src="../Images/pup_hoodie.jpeg" alt="puppy in hoodie">
+      <img id="slide3" class="slideshowImage" src="../Images/pup_smile.jpeg" alt="puppy smile">
+      <img id="slide4" class="slideshowImage" src="../Images/pup_yawn.jpeg" alt="puppy yawn">
+    </div>
+    <input
+      type="button"
+      id="previous"
+      value="Previous"
+      onclick="showPreviousSlide()">
+    <input
+      type="button"
+      id="next"
+      value="Next"
+      onclick="showNextSlide()">
+
+    <script type="text/javascript" src="../js/Assignment16.js"></script>
+  </body>
+</html>

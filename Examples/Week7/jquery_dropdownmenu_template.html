@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>jQuery - Dropdown Menu</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      nav,
+      .navLink {
+        background-color: navy;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+      }
+      .navLink {
+        color: white;
+        flex:1;
+        position: relative;
+      }
+      .mainLink {
+        background-color: navy;
+      }
+      .mainLink:hover {
+        background-color: blue;
+        cursor: pointer;
+      }
+      .mainLink,
+      .dropdown {
+        padding: 12px;
+      }
+
+      .dropdown {
+        background-color: lightblue;
+        position: absolute;
+        width: 100%;
+        /* added: display is to hide stagnant dropdowns*/
+        display: none;
+      }
+      .dropdown div {
+        cursor: pointer;
+        margin-bottom: 12px;
+      }
+      /* added: displays dropdowns when hover*/
+      .navLink.dropdownOpen .dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navLink">
+        <div class="mainLink">Home</div>
+      </div>
+      <div class="navLink hoverDropdown">
+        <div class="mainLink">Portfolio</div>
+        <div class="dropdown">
+          <div>Portraits</div>
+          <div>Landscapes</div>
+          <div>Modeling</div>
+          <div>Events</div>
+        </div>
+      </div>
+      <div class="navLink hoverDropdown">
+        <div class="mainLink">Portfolio 2</div>
+        <div class="dropdown">
+          <div>Portraits</div>
+          <div>Landscapes</div>
+          <div>Modeling</div>
+          <div>Events</div>
+        </div>
+      </div>
+      <div class="navLink clickDropdown">
+        <div class="mainLink">Projects</div>
+        <div class="dropdown">
+          <div>Photoshop</div>
+          <div>Illustrator</div>
+          <div>AfterEffects</div>
+          <div>Programming</div>
+          <div>Websites</div>
+        </div>
+      </div>
+      <div class="navLink">
+        <div class="mainLink">Other Link</div>
+      </div>
+      <div class="navLink">
+        <div class="mainLink">Another Link</div>
+      </div>
+    </nav>
+    <!-- added script -->
+      <!-- hover function: what happens when you hover -->
+    <script type="text/javascript">
+      $(".hoverDropdown").hover(
+        function() {
+          $(this).addClass("dropdownOpen");
+        },
+        function() {
+          $(this).removeClass("dropdownOpen");
+        }
+      );
+
+      // click dropdown demo
+      $(".clickDropdown").click(
+        function() {
+          if ($(this).hasClass("dropdownOpen")) {
+            $(this).removeClass("dropdownOpen");
+          } else {
+            $(this).addClass("dropdownOpen");
+          }
+        }
+      );
+    </script>
+  </body>
+</html>

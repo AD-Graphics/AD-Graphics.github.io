@@ -1,0 +1,18 @@
+#slideshow {
+  height: 500px;
+  text-align: center;
+}
+
+.slideshowImage {
+  height: 600px;
+}
+
+body {
+  text-align: center;
+  background-image: url("../Images/pawprints.png");
+}
+
+h1 {
+  font-family: 'Fascinate', cursive;
+  font-size: 70px;
+}
