@@ -16,3 +16,13 @@ h1 {
   font-family: 'Fascinate', cursive;
   font-size: 70px;
 }
+
+input {
+  font-family: sans-serif;
+  font-weight: bolder;
+  padding: 5px;
+  background: #F2E3CC;
+  color: black;
+  border-width: thin;
+  border-style: ridge;
+}
