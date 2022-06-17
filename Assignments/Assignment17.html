@@ -3,47 +3,41 @@
   <head>
     <title>iQuery - Popup</title>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
     <style>
       * {
         box-sizing: border-box;
       }
       body {
-        /* text-align: center; */
+        text-align: center;
         background-image: url("../Images/nightSky.jpeg");
-        /* background-position: center; */
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 100vh;
+
         height:100vh;
         color: white;
         font-family: monospace;
         font-size: 20px;
       }
       h1 {
-        /* display: inline-block; */
-        font-family: 'Rubik Microbe', cursive;
+        display: block;
         font-size: 50px;
         color: white;
+        margin-top: 250px;
       }
       .popupTrigger {
         cursor: pointer;
-        color: skyblue;
+        width: 120px;
         text-decoration: underline dotted skyblue;
+        margin-top: 60px;
       }
       #popupContainer {
-        /* was display: flex */
         display: none;
         justify-content: center;
-        /* centers x & y */
         align-items: center;
-        /* pulls stuff behind container */
         position: absolute;
         top: 0;
         left: 0;
-        /* fills whole viewable screen*/
         width: 100vw;
         height: 100vh;
       }
@@ -51,7 +45,6 @@
         display: flex;
       }
       #popupBackground {
-        /* color overlay & transparency/opacity */
         background-color: rgba(5,7,9,1);
         background: linear-gradient(to top right, rgb(5, 7, 9), rgb(5, 7, 9), rgb(5, 7, 9), rgb(23, 42, 49));
         position: absolute;
@@ -66,39 +59,40 @@
         background-size: contain;
         background-repeat: no-repeat;
         color: white;
-        /* border: 3px solid black; */
         padding: 200px;
         position: relative;
         text-align: center;
         width: 100%;
-        /* on top of background */
         z-index: 1;
+      }
+      #h1 {
+        font-size: 50px;
+        font-weight: bold;
       }
       #popup .closePopup {
         cursor: pointer;
-        float:
-        margin-top: 300px;
+        margin-top: 650px;
         text-decoration: underline;
+        color: skyblue;
       }
     </style>
   </head>
   <body>
-    <h1>You know what everyone needs ...</h1>
-    <div class="popupTrigger">Click</div>
-    <!-- invisible container with popup elements -->
+    <h1>You know what everyone needs?</h1>
+    <div>
+      <img class="popupTrigger" src="../Images/powerButton.png" alt="DM logo">
+    </div>
     <div id="popupContainer">
-      <!-- class closePopup added to add behavior to close popup -->
       <div id="popupBackground" class="closePopup"></div>
       <div id="popup">
-        <div>a night drive.</div>
-        <div>Thanks for joining me.</div>
+        <div id="h1">A Night Drive</div>
+        <br>
+        <div id="h2">Thanks for joining me</div>
         <div class="closePopup">Exit</div>
     </div>
     <script type="text/javascript">
-      // jQuery $ | click: event to happen upon click |
       $(".popupTrigger").click(
         function() {
-          // popupOpen will trigger the display to go from none to flex
           $("#popupContainer").addClass("popupOpen");
         }
       );
