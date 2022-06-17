@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+    /* div direct descendents of row */
+      .row > div {
+        background-color: skyblue;
+        border: 1px solid grey;
+      }
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- * Hero Module Example:   ......................................... -->
+    <!-- invisible 12 column structure -->
+    <div class="container text-center bg-dark text-white mb-5">
+                      <!-- p=padding | mb=margin bottom  ^ | -->
+      <div class="col p-5">
+        <h1>Hello World!</h1>
+        <p>Isn't this nifty?</p>
+      </div>
+    </div>
+
+    <nav
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Gallery</a></li>
+        <li class="breadcrumb-item">Photography</li>
+      </ol>
+    </nav>
+
+<!-- ...................................................................... -->
+    <!-- ** TO SWITCH FROM ROW TO COLUMN ** -->
+    <!-- any amount of columns will stretch across page -->
+    <!-- Ex.) adding -6 to "col" will take up 6 columns and the remaining columns fill the sapce evenly -->
+    <!-- you can add BREAK POINTS (bp and ABOVE: page size)(media query-ish) to change size of nav at page size -->
+    <!-- Sizes: xs sm md l xl -->
+    <!-- additional rows:  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="../../Images/skull.jpeg" alt="3d render">
+        </div>
+        <div class="col-md-6">
+          Nam occaecat qui doctrina, se cillum efflorescere, aute ad
+          ubi elit cupidatat, aute do incididunt ut export. Export
+          praetermissum pariatur noster expetendis aut laborum nulla
+          occaecat, nulla expetendis litteris te malis ex nostrud quo
+          senserit si tempor arbitror, dolor eu arbitror ad tempor,
+          hic id quid velit summis, excepteur culpa ipsum quamquam
+          ipsum. Malis nam senserit sed labore, velit vidisse
+          eruditionem ex eu noster imitarentur et te ubi quae aliquip.
+          Quibusdam praetermissum o quibusdam.Esse e expetendis.
+          Ullamco ut iudicem. An ipsum imitarentur, mentitum quis
+          malis se veniam.
+        </div>
+        <div class="col">Column 3</div>
+      </div>
+      <!-- only columns at small break point: -->
+      <div class="row">
+        <div class="col-sm">Small Column</div>
+        <div class="col-sm">Small Column</div>
+        <div class="col-sm">Small Column</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">Medium Column</div>
+        <div class="col-md">Medium Column</div>
+        <div class="col-md">Medium Column</div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
