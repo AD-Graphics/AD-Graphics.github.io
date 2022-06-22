@@ -11,11 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <title>Assignment 18</title>
     <style>
-      .row > div {
-        background-color: white;
-        border: 5px solid blue;
-        color: black;
-      }
       img {
         width: 100%;
       }
@@ -32,9 +27,27 @@
         background-position: center;
         background-size: cover;
       }
+      #ballot {
+        display: flex;
+      }
       .navbar-toggler {
-        background-color: red;
-        color: blue;
+        background: linear-gradient(45deg, #085B92 0 50%, #B8333C 50% 100%);
+        margin-right: 20px;
+        border: none;
+      }
+      .nav-item {
+        margin-right: 20px;
+      }
+      .navbar-brand {
+        padding: 0px;
+      }
+      .navbar-brand img {
+        width: 100px;
+        padding-left: 20px;
+      }
+      .navbar-nav {
+        display: flex;
+        align-items: flex-end;
       }
       .row > div{
         margin-bottom: 20px;
@@ -46,6 +59,7 @@
       h2 {
         font-family: 'Staatliches', sans-serif;
         margin-bottom: 13px;
+        font-size: 30px;
       }
       h6 {
         color: #9b9b9b;
@@ -66,6 +80,9 @@
         text-decoration: none;
         opacity: .75;
       }
+      p.learnMore {
+        font-size: 16px;
+      }
       .readMore {
         padding-left: 5px;
         font-family: 'Staatliches', sans-serif;
@@ -74,15 +91,69 @@
       }
       .contPTitle {
         font-family: 'Staatliches', sans-serif;
-        font-size: 25px;
+        font-size: 30px;
         margin-top: 10px;
+        background: none;
+      }
+      .container .row .col-md-4 {
+        color: black;
+        border-spacing: 5px 1rem;
+        background-color: #e8f4fc
+      }
+      #camp {
+        background-image: url("../Images/bullhorn1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      #debates {
+        background-image: url("../Images/debate1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      #electionDay {
+        background-image: url("../Images/vote1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .btmLinks {
+        font-family: 'Staatliches', sans-serif;
+        text-decoration: none;
+        opacity: 0.9;
+        margin: 20px;
+      }
+      .btmHeading {
+        font-family: 'Staatliches', sans-serif;
+        text-decoration: none;
+        font-size: 30px;
+        opacity: 0.75;
+      }
+      .btmHeadingV {
+        font-family: 'Staatliches', sans-serif;
+        text-decoration: none;
+        font-size: 30px;
+        padding-top: 10px;
+      }
+      @media screen and (max-width: 575px) {
+        /* p {
+          color: red;
+        } */
+        #ballot {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
       }
     </style>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <div class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Logo/Co. Name</a>
+      <div class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand">
+          <img id="ballot" src="../Images/ballot.png" alt="ballot">
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -116,7 +187,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div id="camp" class="col-md-4">
           <p class="contPTitle">CAMPAIGN</p>
           <p>Int doctrina consectetur. Id te consectetur, te quid
             appellat e quae o arbitror non amet et a ut tamen voluptate.
@@ -124,8 +195,8 @@
             in o magna laborum, sint malis domesticarum.
           </p>
           <p class="learnMore"><a href="#">Learn More</a></p>
-          </div>
-        <div class="col-md-4">
+        </div>
+        <div id="debates" class="col-md-4">
           <p class="contPTitle">DEBATES</p>
           <p>Possumus illum nescius ingeniis, ingeniis ab instituendarum,
             incididunt ubi doctrina, se cupidatat distinguantur. Culpa adipisicing
@@ -134,7 +205,7 @@
           </p>
           <p class="learnMore"><a href="#">Learn More</a></p>
         </div>
-        <div class="col-md-4">
+        <div id="electionDay" class="col-md-4">
           <p class="contPTitle">ELECTION DAY</p>
           <p>
             Quamquam legam dolor senserit quae ex iis o reprehenderit,
@@ -163,21 +234,35 @@
           excepteur. Malis a non veniam appellat ut veniam fabulas
           offendit, est quamquam ubi fabulas, ab quem probant, eiusmod
           in noster probant, te eu fidelissimae, litteris labore quid
-          non labore, si eu tamen appellat. Se appellat sed cupidatat ...<a href="#" class="readMore">Read More</a></p>
+          non labore, si eu tamen appellat. Se appellat sed cupidatat ...
+        <a href="#" class="readMore">Read More</a>
         </p>
       </div>
 
-      <div class="row">
+      <div id="btmRow" class="row">
         <div class="col-6">
-          <img src="../../Images/skull.jpeg" alt="3d render">
+          <a class="btmLinks" href="#">
+          <p class="btmHeading">2022 U.S. Senate Elections</p>
+          </a>
+          <img src="../Images/map.png" alt="senate elections">
         </div>
         <div class="col-2">
-          <img src="../../Images/skull.jpeg" alt="3d render">
+          <a href="#">
+          <img src="../Images/thermometer.png" alt="fundraiser thermometer">
+          </a>
         </div>
         <div class="col-4">
-          <img src="../../Images/skull.jpeg" alt="3d render">
+          <h5 class="btmHeadingV">Ballot Measures in Florida:</h5>
+          <a class="btmLinks" href="#">
+            <p>Florida Amendment 1, Disregard Flood Resistance Improvements in Property Value Assessments Measure (2022)</p>
+          </a>
+          <a class="btmLinks" href="#">
+            <p>Florida Amendment 2, Abolish the Constitution Revision Commission Measure (2022)</p>
+          </a>
+          <a class="btmLinks" href="#">
+            <p>Florida Amendment 3, Additional Homestead Property Tax Exemption for Certain Public Service Workers Measure (2022)</p>
+          </a>
         </div>
       </div>
-
   </body>
 </html>
