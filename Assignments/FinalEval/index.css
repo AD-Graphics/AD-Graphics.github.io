@@ -3,8 +3,8 @@
 }
 
 body {
-  background-color: #DDDDDD;
-  font-family: ;
+  background-color: #c9f2cd;
+  font-family: sans-serif;
   margin: 0;
 }
 
@@ -23,7 +23,7 @@ body {
 
 /* TODO@: need to set grid-area for nav */
 #nav {
-  background-color: #BBBBBB;
+  background-color: lightgreen;
   display: flex;
   flex-direction: row;
   grid-area: nav;
@@ -44,7 +44,7 @@ body {
 
 .navItem:hover,
 #navCtas a.navCta {
-  background-color: #999999;
+  background-color: green;
   color: white;
 }
 
@@ -65,7 +65,8 @@ body {
 
 /* TODO@: should be hidden by default */
 .navDropdown {
-  background-color: #999999;
+  background-color: green;
+  box-shadow: 2px 2px 5px black;
   position: absolute;
   width: 200px;
   display: none;
@@ -97,7 +98,7 @@ body {
 
 /* TODO@: need to set grid-area for banner1 */
 #bannerItem1 {
-  border-right: 3px solid #666666;
+  border-right: 3px solid darkgreen;
   grid-area: banner1;
 }
 
@@ -108,14 +109,14 @@ body {
 
 /* TODO@: need to set grid-area for banner3 */
 #bannerItem3 {
-  border-left: 3px solid #666666;
+  border-left: 3px solid darkgreen;
   grid-area: banner3;
 }
 
 #bannerItem1,
 #bannerItem2,
 #bannerItem3 {
-  background: linear-gradient(to bottom, #BBBBBB, #999999);
+  background: linear-gradient(to bottom, lightgreen, green);
   display: flex;
   flex-direction: column;
   padding: 12px 24px 36px 24px;
@@ -125,10 +126,21 @@ body {
 .bannerItem p {
   flex: 1;
 }
-
+.bannerActions a.downloadButton,
+.bannerActions a.learnMoreButton {
+  background-color: rgba(102, 102, 102, 0.5);
+  color: white;
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+}
+.bannerActions a.socialMediaLink {
+  padding: 0px;
+}
 /* TODO@: need to add :hover behavior for links */
-.bannerActions a:hover {
-  background-color: #999999;
+.bannerActions a.downloadButton:hover,
+.bannerActions a.learnMoreButton:hover {
+  background-color: darkgreen;
   color: white;
   display: inline-block;
   padding: 12px;
@@ -139,9 +151,10 @@ a.socialMediaLink img {
 }
 
 a.socialMediaLink:hover {
-  background-color: #999999;
+  box-shadow: 2px 2px 5px darkgreen;
   display: inline-block;
   padding: 6px;
+  margin: 0px;
 }
 
 a.socialMediaLink img:hover {
@@ -170,7 +183,7 @@ a.socialMediaLink img:hover {
   to configure how many cards fit per row
 */
 #shopGrid .shopItemCard {
-  background-color: #999999;
+  background-color: green;
   margin-bottom: 24px;
   padding: 12px;
   flex: 4 auto;
@@ -217,7 +230,7 @@ margin-bottom: 36px;
 
 #blog .blogPost .blogPostImage {
   background-color: #BBBBBB;
-  border: 4px solid #999999;
+  border: 4px solid darkgreen;
   flex: 2;
   height: 350px;
 }
@@ -246,13 +259,13 @@ margin-bottom: 36px;
 }
 
 #blog .blogPost .blogPostPreview a {
-    color: #666666;
+    color: darkgreen;
 }
 
 /* TODO@: need to set grid-area for footer */
 #footer {
-  background: linear-gradient(to bottom, #BBBBBB, #999999);
-  border-right: 3px solid #666666;
+  background: linear-gradient(to bottom, lightgreen, green);
+  border-right: 3px solid darkgreen;
   padding: 48px 24px 24px 24px;
   grid-area: footer;
 }
@@ -269,7 +282,7 @@ margin-bottom: 36px;
 }
 
 #footer .footerItem a {
-  color: #666666;
+  color: darkgreen;
   display: block;
   margin-left: 24px;
 }
@@ -280,14 +293,14 @@ margin-bottom: 36px;
 
 /* TODO@: need to set grid-area for footerSocial */
 #footerSocialMedia {
-  background: linear-gradient(to bottom, #BBBBBB, #999999);
+  background: linear-gradient(to bottom, lightgreen, green);
   padding: 24px;
   grid-area: footerSocial;
 }
 
 /* TODO@: need to set grid-area for copyright */
 #copyright {
-  background-color: #666666;
+  background-color: darkgreen;
   color: white;
   font-size: 12px;
   padding: 24px;
