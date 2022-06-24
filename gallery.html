@@ -106,7 +106,28 @@
       img {
         align-content: center;
       }
-      .image-grid {
+
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+      /* .image-grid {
         --gap: 16px;
         --num-cols: 3;
         --row-height: 500px;
@@ -129,21 +150,21 @@
       }
       .image-grid-row-2 {
         grid-row: 4;
-      }
+      } */
       /* MOBILE VIEW */
       @media screen and (max-width: 500px) {
         .image-grid {
           --num-cols: 1;
           --row-height: 200px;
         }
-        section img:hover {
+        /* section img:hover {
           grid-column: 1;
           width: 100%;
           height: 100%;
           object-fit: contain;
           transform: scale(1.5);
           position: relative;
-        }
+        } */
         h1 {
           font-size: 45px;
         }
@@ -198,7 +219,7 @@
         h2 {
           font-size: 27px;
         }
-        section img:hover {
+        /* section img:hover {
           grid-column: 2;
           width: 100%;
           height: 100%;
@@ -207,7 +228,7 @@
           position: relative;
           margin: 20px;
           left: auto;
-        }
+        } */
       }
 
 
@@ -222,8 +243,8 @@
         margin-top: 20px; */
         /* vertical-align: middle; */
       /* } */
-      content {
-        justify-content: center;
+      /* content {
+        justify-content: center; */
       }
       /* section img {
         display: inline-block;
@@ -232,15 +253,15 @@
         margin: 24px;
         transition: transform 1s;
       } */
-      section img:hover {
+      /* section img:hover { */
 
         /* scale zooms in, rotate...rotates! */
 
         /* transform: translate(50%, -50%); */
-        position: static;
+        /* position: static;
 
         grid-row: 2;
-        grid-column: 1;
+        grid-column: 1; */
         /* Previous Option --> width: 500px; */
       }
       /* section img { */
@@ -275,21 +296,80 @@
     <main>
       <h1 style="text-align: center">ALEXANDRA DUCKSWORTH</h1>
       <h2>Your Multimedia Solution<h2>
-        <section class="image-grid" class="zoom-click">
-          <img src="Images/work1.png" alt="Disney's Atlantis: The Lost Empire Movie Poster">
-          <img src="Images/work2.png" alt="Wishtree Book Cover">
-          <img src="Images/work3.jpg" alt="Durand Bernarr: Meet the Artist Flyer">
-          <img src="Images/work4.png" alt="Foodie Magazine Cover">
-          <img src="Images/work5.jpg" alt="Moon Juice Mockup">
-          <img src="Images/work6.jpg" alt="Palo Santo Ad">
-          <img src="Images/work7.jpg" alt="Oshun Collage">
-          <img src="Images/work8.jpg" alt="Little Shop of Horrors Movie Poster">
-          <img src="Images/work9.jpg" alt="TAFT Brand Magazine Layout">
-          <img src="Images/work10.jpg" alt="Landscaping Business Card Mockup">
-          <img src="Images/work11.jpg" alt="magazine layout mockup">
-          <img src="Images/work12.png" alt="FIRST Institute GDWD Program Brochure">
-        </section>
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work1.png" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <!-- <div class="desc">Add a description of the image here</div> -->
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_forest.jpg">
+          <img src="Images/work2.png" alt="Forest" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+          <img src="Images/work3.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img src="Images/work4.png" alt="Mountains" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work5.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work6.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work7.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work8.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work9.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work10.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work11.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img src="Images/work12.png" alt="Cinque Terre" width="600" height="400">
+        </a>
+      </div
     </main>
+
     <footer>DuckMedia.net</footer>
   </body>
 </html>
