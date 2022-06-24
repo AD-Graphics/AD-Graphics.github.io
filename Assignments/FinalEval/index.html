@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Green Foundation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div id="pageLayoutGrid">
+
+      <!-- Navigation section of the grid -->
+      <div id="nav">
+        <ul id="navItems">
+          <li class="navItem">
+            <a href="#" class="navLink logo">Green Foundation</a>
+          </li>
+          <li class="navItem">
+            <a href="#" class="navLink">About</a>
+            <div class="navDropdown">
+              <a href="#" class="navDropdownLink">Mission and Vision</a>
+              <a href="#" class="navDropdownLink">History</a>
+            </div>
+          </li>
+          <li class="navItem">
+            <a href="#" class="navLink">Projects</a>
+          </li>
+          <li class="navItem">
+            <a href="#" class="navLink">News</a>
+            <div class="navDropdown">
+              <a href="#" class="navDropdownLink">Events Calendar</a>
+              <a href="#" class="navDropdownLink">Image Gallery</a>
+            </div>
+          </li>
+          <li class="navItem">
+            <a href="#" class="navLink">Get Involved</a>
+            <div class="navDropdown">
+              <a href="#" class="navDropdownLink">Donate</a>
+              <a href="#" class="navDropdownLink">Online Store</a>
+              <a href="#" class="navDropdownLink">Volunteer</a>
+            </div>
+          </li>
+          <li class="navItem">
+            <a href="#" class="navLink">Contact Us</a>
+          </li>
+        </ul>
+        <!-- CTA is short for Call To Action -->
+        <div id="navCtas">
+          <a href="#" class="navCta">DONATE</a>
+        </div>
+      </div>
+
+      <!-- Hero section of the grid -->
+      <div id="header">
+        <div class="eyebrow">Planting the Seeds of the Future</div>
+        <h1 class="heroHeading">
+          Poverty and environmental degradation are intrinsically linked. By
+          healing the environment, we can heal lives as well.
+        </h1>
+        <form>
+          <!-- TODO@: Add in the form inputs for users to subscribe their email -->
+          <div id="emailAddressContainer" class="textInput">
+            <label for="emailAddressId">Email Adress</label>
+            <input type="text" id="emailAddress" name="emailaddress">
+          </div>
+          <div id="buttonContainer">
+            <input type="button" value="Subscribe!">
+          </div>
+        </form>
+      </div>
+
+      <!-- Banner section of the grid -->
+      <div id="bannerItem1" class="bannerItem">
+        <h3>Get Started in Your Community</h3>
+        <p>
+          Curious about what you can do in your neighborhood? Download our
+          free eBook to find out.
+        </p>
+        <div class="bannerActions">
+          <a class="downloadButton" href="#">DOWNLOAD</a>
+        </div>
+      </div>
+      <div id="bannerItem2" class="bannerItem">
+        <h3>Take Part in our<br>Green Thumb Initiative</h3>
+        <p>
+          Community gardens are an excellent opportunity to provide for the
+          needy in your neighborhood, while also providing a chance to educate
+          young people about how food is grown.
+        </p>
+        <div class="bannerActions">
+          <a class="learnMoreButton" href="#">LEARN MORE</a>
+        </div>
+      </div>
+      <div id="bannerItem3" class="bannerItem">
+        <h3>Follow Us on Our<br>Social Media Accounts</h3>
+        <p>
+          Engage with us online!  We post at least once a day, and we'd love to
+          hear from you about how the Green Foundation has helped in your
+          community.
+        </p>
+        <div class="bannerActions">
+          <a class="socialMediaLink" href="#">
+            <!-- TODO@: fix image src -->
+            <img src="images/twitter.png" alt="twitter">
+          </a>
+          <a class="socialMediaLink" href="#">
+            <!-- TODO@: fix image src -->
+            <img src="images/facebook.png" alt="facebook">
+          </a>
+          <a class="socialMediaLink" href="#">
+            <!-- TODO@: fix image src -->
+            <img src="images/instagram.png" alt="instagram">
+          </a>
+        </div>
+      </div>
+
+      <!-- Storefront section of the grid -->
+      <div id="storefront">
+        <h2>Add some GREEN into your life from our online store</h2>
+        <div id="shopGrid">
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="tshirt1" src="images/tshirt.png" />
+            <div class="shopItemBadge">TSHIRT</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="tshirt2" src="images/tshirt.jpg" />
+            <div class="shopItemBadge">TSHIRT</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="tshirt3" src="images/tshirt.jpg" />
+            <div class="shopItemBadge">TSHIRT</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="tshirt4" src="images/tshirt.jpg" />
+            <div class="shopItemBadge">TSHIRT</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="mug1" src="images/mug.jpg" />
+            <div class="shopItemBadge">COFFEE MUG</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="mug2" src="images/mug.jpg" />
+            <div class="shopItemBadge">COFFEE MUG</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="seeds1" src="images/seeds.jpg" />
+            <div class="shopItemBadge">SEEDS</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+          <div class="shopItemCard">
+            <!-- TODO: fix image src -->
+            <img class="shopItemImage" alt="seeds2" src="images/seeds.jpg" />
+            <div class="shopItemBadge">SEEDS</div>
+            <form class="shopItemSelection">
+              <select name="quantity">
+                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+              </select>
+              <!-- TODO: change button text to say "Buy" or "Purchase" -->
+              <input type="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog section of grid -->
+      <div id="blog">
+        <h2>Check out our latest blog posts</h2>
+        <div class="blogPost">
+          <!-- TODO: fix image src -->
+          <img src="images/sapling.jpg" class="blogPostImage" alt="happy plants" />
+          <div class="blogPostPreview">
+            <h3 class="blogPostPreviewTitle">
+              Will talking to plants help them grow?
+            </h3>
+            <p>
+              We've heard some pretty ridiculous urban (and rural) myths when it
+              comes to growing your crops.  But just because they sound silly
+              doesn't mean they aren't true.  So we decided to try them out
+              ourselves to find out just how...
+            </p>
+            <a href="#">Keep reading</a>
+          </div>
+        </div>
+        <div class="blogPost">
+          <div class="blogPostPreview">
+            <h3 class="blogPostPreviewTitle">
+              Arid field becomes radiant garden
+            </h3>
+            <p>
+              An empty barren field on the outskirts of a rural village in the
+              south had been a blight on the poor but otherwise lively town.
+              Fast forward six months, and see what a difference a little
+              irrigation made in the lives of these villagers...
+            </p>
+            <a href="#">Keep reading</a>
+          </div>
+          <!-- TODO: fix image src -->
+          <img src="images/field.jpg" class="blogPostImage" alt="happy people" />
+        </div>
+      </div>
+
+      <!-- Footer section of grid -->
+      <div id="footer">
+        <div id="footerItems">
+          <div class="footerItem">
+            <a href="#" class="footerLink">Green Foundation</a>
+          </div>
+          <div class="footerItem">
+            <a href="#" class="footerLink">About</a>
+            <a href="#" class="footerLink">Mission and Vision</a>
+            <a href="#" class="footerLink">History</a>
+          </div>
+          <div class="footerItem">
+            <a href="#" class="footerLink">Projects</a>
+          </div>
+          <div class="footerItem">
+            <a href="#" class="footerLink">News</a>
+            <a href="#" class="footerLink">Events Calendar</a>
+            <a href="#" class="footerLink">Image Gallery</a>
+          </div>
+          <div class="footerItem">
+            <a href="#" class="footerLink">Get Involved</a>
+            <a href="#" class="footerLink">Donate</a>
+            <a href="#" class="footerLink">Online Store</a>
+            <a href="#" class="footerLink">Volunteer</a>
+          </div>
+          <div class="footerItem">
+            <a href="#" class="footerLink">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div id="footerSocialMedia">
+        <h3>Follow Us on Social Media</h3>
+        <div>
+          <a class="socialMediaLink" href="#">
+            <!-- TODO: fix image src -->
+            <img src="images/twitter.png" alt="twitter" />
+          </a>
+          <a class="socialMediaLink" href="#">
+            <!-- TODO: fix image src -->
+            <img src="images/facebook.png" alt="facebook" />
+          </a>
+          <a class="socialMediaLink" href="#">
+            <!-- TODO: fix image src -->
+            <img src="images/instagram.png" alt="instagram" />
+          </a>
+        </div>
+      </div>
+      <div id="copyright">
+        <span>© 2022 The Green Foundation</span>
+        Terms of Use | Privacy Statement | Charitable Solicitation Disclosures
+        | Mobile Terms & Conditions | Title VI Notice of Nondiscrimination
+      </div>
+    </div>
+    <script type="text/javascript">
+      $('.navItem').hover(
+        function() {
+          // TODO: jQuery to add the 'navOpen' class to $(this) goes here
+        },
+        function() {
+          // TODO: jQuery to remove the 'navOpen' class to $(this) goes here
+        }
+      );
+    </script>
+  </body>
+</html>

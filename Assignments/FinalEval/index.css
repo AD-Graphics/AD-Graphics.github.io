@@ -1,0 +1,436 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #DDDDDD;
+  font-family: ;
+  margin: 0;
+}
+
+#pageLayoutGrid {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 300px) 1fr;
+  grid-template-areas:
+    ". nav         nav         nav ."
+    ". header      header      header ."
+    ". banner1     banner2     banner3 ."
+    ". storefront  storefront  storefront ."
+    ". blog        blog        blog ."
+    ". footer      footer      footerSocial ."
+    ". copyright   copyright   copyright ."
+}
+
+/* TODO@: need to set grid-area for nav */
+#nav {
+  background-color: #BBBBBB;
+  display: flex;
+  flex-direction: row;
+  grid-area: nav;
+}
+
+#nav #navItems {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navItem:hover,
+#navCtas a.navCta {
+  background-color: #999999;
+  color: white;
+}
+
+.navItem:hover a {
+  color: white;
+}
+
+.navItem a,
+#navCtas a.navCta {
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.navItem a {
+  color: black;
+}
+
+/* TODO@: should be hidden by default */
+.navDropdown {
+  background-color: #999999;
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+
+/* TODO@: need to reveal nav when javascript adds 'navOpen' class */
+.navItem.navOpen .navDropdown {
+  display: block;
+}
+
+.navDropdown a {
+  color: white;
+  display: block;
+}
+
+.navDropdown a + a {
+  padding-top: 0;
+}
+
+/* TODO@: need to set grid-area for header */
+#header {
+  /* TODO2@: fix image source url */
+  background-image: url("images/green.jpeg");
+  background-size: cover;
+  padding: 100px 100px;
+  text-align: center;
+  grid-area: header;
+}
+
+/* TODO@: need to set grid-area for banner1 */
+#bannerItem1 {
+  border-right: 3px solid #666666;
+  grid-area: banner1;
+}
+
+/* TODO@: need to set grid-area for banner2 */
+#bannerItem2 {
+  grid-area: banner2;
+}
+
+/* TODO@: need to set grid-area for banner3 */
+#bannerItem3 {
+  border-left: 3px solid #666666;
+  grid-area: banner3;
+}
+
+#bannerItem1,
+#bannerItem2,
+#bannerItem3 {
+  background: linear-gradient(to bottom, #BBBBBB, #999999);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px 36px 24px;
+  text-align: center;
+}
+
+.bannerItem p {
+  flex: 1;
+}
+
+/* TODO@: need to add :hover behavior for links */
+.bannerActions a:hover {
+  background-color: #999999;
+  color: white;
+  display: inline-block;
+  padding: 12px;
+  text-decoration: none;
+}
+a.socialMediaLink img {
+  width: 25px;
+}
+
+a.socialMediaLink:hover {
+  background-color: #999999;
+  display: inline-block;
+  padding: 6px;
+}
+
+a.socialMediaLink img:hover {
+  width: 25px;
+}
+
+
+/* TODO@: need to set grid-area for storefront */
+#storefront {
+  background-color: white;
+  text-align: center;
+  grid-area: storefront;
+}
+
+/*
+  TODO@: need to turn this into a flexbox container,
+  so we can render the shop cards in multiple rows
+*/
+#shopGrid {
+  display: flex;
+}
+
+/*
+  TODO@-: need to set a flexbox item property here
+  to limit the width/flex basis per card,
+  to configure how many cards fit per row
+*/
+#shopGrid .shopItemCard {
+  background-color: #999999;
+  margin-bottom: 24px;
+  padding: 12px;
+  flex: 4 auto;
+  flex-shrink: 1;
+  flex-basis: 25%;
+  /* flex: 4 2 auto; */
+  /* grid-auto-rows: minmax(50px, auto); */
+}
+
+#shopGrid .shopItemCard .shopItemImage {
+  background-color: #BBBBBB;
+  border: 1px solid #999999;
+  display: block;
+  height: 100px;
+  width: 100%;
+}
+
+#shopGrid .shopItemCard .shopItemBadge {
+  background-color: #BBBBBB;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 12px 0;
+  padding: 4px;
+}
+
+/* TODO@: need to set grid-area for blog */
+#blog {
+  background-color: white;
+  padding: 24px;
+  text-align: center;
+  grid-area: blog;
+}
+
+#blog h2 {
+margin-bottom: 36px;
+}
+
+#blog .blogPost {
+  align-items: center;
+  display: flex;
+  margin-bottom: 48px;
+}
+
+#blog .blogPost .blogPostImage {
+  background-color: #BBBBBB;
+  border: 4px solid #999999;
+  flex: 2;
+  height: 350px;
+}
+
+#blog .blogPost:nth-child(even) .blogPostImage {
+  border-radius: 72px 72px 0 72px;
+  margin-right: 48px;
+}
+
+#blog .blogPost:nth-child(odd) .blogPostImage {
+  border-radius: 72px 72px 72px 0;
+  margin-left: 48px;
+}
+
+#blog .blogPost .blogPostPreview {
+  flex: 1;
+  text-align: left;
+}
+
+#blog .blogPost:nth-child(even) .blogPostPreview {
+  margin-right: 48px;
+}
+
+#blog .blogPost:nth-child(odd) .blogPostPreview {
+  margin-left: 24px;
+}
+
+#blog .blogPost .blogPostPreview a {
+    color: #666666;
+}
+
+/* TODO@: need to set grid-area for footer */
+#footer {
+  background: linear-gradient(to bottom, #BBBBBB, #999999);
+  border-right: 3px solid #666666;
+  padding: 48px 24px 24px 24px;
+  grid-area: footer;
+}
+
+#footer #footerItems {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+}
+
+#footer .footerItem {
+  margin-bottom: 24px;
+}
+
+#footer .footerItem a {
+  color: #666666;
+  display: block;
+  margin-left: 24px;
+}
+
+#footer .footerItem a:first-child {
+  margin-left: 0;
+}
+
+/* TODO@: need to set grid-area for footerSocial */
+#footerSocialMedia {
+  background: linear-gradient(to bottom, #BBBBBB, #999999);
+  padding: 24px;
+  grid-area: footerSocial;
+}
+
+/* TODO@: need to set grid-area for copyright */
+#copyright {
+  background-color: #666666;
+  color: white;
+  font-size: 12px;
+  padding: 24px;
+  grid-area: copyright;
+}
+
+
+/* This defines the styles for the mobile view */
+@media screen and (max-width: 900px) {
+  #pageLayoutGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /*
+      TODO@: need to modify the template areas for mobile,
+      probably in a single column
+    */
+    grid-template-areas:
+    "nav"
+    "header"
+    "banner1"
+    "banner2"
+    "banner3"
+    "storefront"
+    "blog"
+    "footer"
+    "footerSocial"
+    "copyright";
+  }
+
+  /* TODO@: change this flexbox's container direction to a column */
+  #nav {
+    flex-direction: column;
+  }
+
+  /* TODO@: change this flexbox's container direction to a column */
+  #nav #navItems {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navDropdown {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  /*
+    This deliberately hides the dropdown menus on mobile,
+    to simplify the navigation
+  */
+  .navItem.navOpen .navDropdown {
+    visibility: hidden;
+  }
+
+  #navCtas a.navCta {
+    display: block;
+    text-align: center;
+  }
+
+  #header {
+    padding: 36px;
+  }
+
+  #header h1 {
+    font-size: 24px;
+  }
+
+  #header form {
+    text-align: center;
+  }
+
+  #header form label {
+    display: block;
+  }
+
+  #header form input {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /*
+    TODO: need to set a flexbox item property here
+    to limit the width/flex basis per card,
+    to configure how many cards fit per row
+    (we need less displayed per row on mobile)
+  */
+  #shopGrid .shopItemCard {
+    display: flex;
+    margin-bottom: 24px;
+    padding: 12px;
+    flex: 2 auto;
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
+
+  /* TODO@: we need to change the direction of the flexbox content to a column */
+  #blog .blogPost {
+    flex-direction: column;
+  }
+
+  #blog .blogPost .blogPostImage {
+    flex-basis: 250px;
+    margin: 24px;
+    width: 100%;
+  }
+
+  /*
+    We change the order here so that on mobile,
+    the images always display first
+  */
+  #blog .blogPost .blogPostPreview {
+    order: 2;
+    text-align: center;
+  }
+
+  #blog .blogPost:nth-child(even) .blogPostImage {
+    margin-right: 24px;
+  }
+
+  #blog .blogPost:nth-child(odd) .blogPostImage {
+    margin-left: 24px;
+  }
+
+  #blog .blogPost:nth-child(even) .blogPostPreview {
+    margin-right: 0;
+  }
+
+  #blog .blogPost:nth-child(odd) .blogPostPreview {
+    margin-left: 0;
+  }
+
+  /*
+    TODO@: we need to remove the wrapping of the flexbox here,
+    as well as reset the height back to the default (auto),
+    so that the footer links render in a column on mobile
+  */
+  #footer #footerItems {
+    flex-wrap: nowrap;
+    text-align: center;
+    height: auto;
+  }
+
+  #footerSocialMedia,
+  #copyright {
+    text-align: center;
+  }
+}

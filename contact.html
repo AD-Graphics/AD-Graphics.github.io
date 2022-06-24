@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <title>Contact</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
+    /* * {
+      box-sizing: border-box;
+    } */
       .hero1 {
         background-image: url("Images/leaf.png");
         background-repeat: no-repeat;
@@ -12,14 +23,14 @@
         position: relative;
       }
       body {
-        font-family: Verdana, san-serif;
+        font-family: 'Verdana', sans-serif;
         margin: 0px;
         text-align: center;
       }
       header {
         background-color: black;
         text-align: center;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         padding-top: 24px;
         padding-bottom: 12px;
       }
@@ -44,7 +55,7 @@
         display: inline-block;
         margin: 0px 12px;
         padding: 12px 8px;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
       }
       /* link (last selector in list!)*/
       nav ul li a {
@@ -65,10 +76,9 @@
       h1 {
         opacity: 100%;
         font-size: 70px;
-        font-family: Montserrat;
-        font-weight: normal;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
         text-align: center;
-        /* background-color: #eed9d3; */
         margin: 0px;
         padding: 30px;
       }
@@ -77,22 +87,26 @@
         margin-bottom: 0px;
       }
       h2 {
-        opacity: 100%;
         text-align: center;
-        /* background-color: #275029; */
-        color: #275029;
-        font-family: Montserrat;
-        font-weight: normal;
+        /* color: #275029; */
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
         margin: 10px;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+      }
+      #h2Top {
+        margin-bottom: 20px;
       }
       main {
-        opacity: 100%;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         padding-bottom: 170px;
+        color: black;
       }
       form {
         padding: 15px;
+        font-size: 23px;
+        font-weight: 500;
       }
       input {
         font-size: 16px;
@@ -103,7 +117,7 @@
         width: 100px;
         color: white;
         background-color: black;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         border-radius: 4px;
         cursor:pointer;
@@ -119,12 +133,79 @@
       footer {
         background-color: black;
         color: white;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;
         padding: 15px 24px;
         text-align: center;
+
       }
-      #mess {
+      #messageBox {
         height: 90px;
+      }
+      .popupTrigger {
+        cursor: pointer;
+        width: 120px;
+        text-decoration: underline dotted skyblue;
+        margin-top: 60px;
+      }
+      #popupContainer {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+      #popupContainer.popupOpen {
+        display: flex;
+      }
+      #popupBackground {
+        background-color: rgba(5,7,9,1);
+        background: linear-gradient(to top right, rgb(5, 7, 9), rgb(5, 7, 9), rgb(5, 7, 9), rgb(23, 42, 49));
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.75;
+      }
+      #popup {
+        background-image: url("../Images/Car Driving GIF_GIPHY_files/giphy.gif");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 200px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+      }
+      #h1 {
+        font-size: 50px;
+        font-weight: bold;
+      }
+      #h2 {
+        color: skyblue;
+      }
+      #popup .closePopup {
+        cursor: pointer;
+        margin-top: 650px;
+        text-decoration: underline;
+        color: #d38daa;
+        /* border: 1px solid white; */
+        border-radius: 24px;
+        /* background-color: white; */
+        /* opacity: 0.5; */
+      }
+      #player {
+        display: block;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top: 70vh;
+        opacity: 0.75;
       }
     </style>
   </head>
@@ -141,25 +222,52 @@
       </ul>
     </nav>
     <main class="hero1">
+      <h1 style="text-align: center">Contact</h1>
+      <h2 id="h2Top">Duck Media is your solution for all things multimedia.</h2>
+      <h2>How can we help?</h2>
+      <form>
+        Name:*<br>
+        <input type="text" size="50">
+      </form>
+      <form>
+        Email:*<br>
+        <input type="text" size="50">
+      </form>
+      <form>
+        Message:*<br>
+        <input id="messageBox" type="text" size="50">
+      </form>
       <section>
-        <h1 style="text-align: center">Contact</h1>
-        <h2 opacity="100%">How can I help to support your business or personal needs?<h2>
-        <form>
-          Name*<br>
-          <input type="text" size="50">
-        </form>
-        <form>
-          Email*<br>
-          <input type="text" size="50">
-        </form>
-        <form>
-          Message*<br>
-          <input id="mess" type="text" size="50">
-        </form>
-      <br>
-      <button><a>Submit</a></button>
-    </section>
+        <button><a class="popupTrigger">Submit</a></button>
+      </section>
     </main>
     <footer>DuckMedia.net</footer>
+
+    <!-- POP-UP WINDOW -->
+
+    <div id="popupContainer">
+      <div id="popupBackground" class="closePopup"></div>
+      <div id="popup">
+        <div id="h1">A Night Drive</div>
+        <br>
+        <div id="h2">Thanks for joining me</div>
+        <div class="closePopup">Exit</div>
+    </div>
+
+    <div id="player">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3KsS9NkC5ZlPAIWpGoL5Sx?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" allowfullscreen=" clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    <script type="text/javascript">
+      $(".popupTrigger").click(
+        function() {
+          $("#popupContainer").addClass("popupOpen");
+        }
+      );
+      $(".closePopup").click(
+        function() {
+          $("#popupContainer").removeClass("popupOpen");
+        }
+      );
+    </script>
   </body>
 </html>

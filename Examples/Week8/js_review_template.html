@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>jQuery Template</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+      .blueText {
+        color: blue;
+      }
+      .greenText {
+        color: green;
+      }
+      .redText {
+        color: red;
+      }
+      .boldText {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <script type="text/javascript">
+    // query/search for anything that matches the jquery "$()" on the page
+    // ".addClass" is a Method here - (a FUNCTION inside an OBJECT):
+    // add boldText class to <p> tags
+    // ***  you'll want your function names to have a Verb - ACTION! | makeBold = function name ***
+    // {} = function body
+      function onHover() {
+        // was "p", now this = this current thing
+        // individually each is bolded when you hover
+        // 1 function = hover state | 2 functions = hover sate and when you retreat from selector
+        $(this).addClass("boldText");
+
+        // cycle through colors everytime you hover over:
+        let hasBlueClass = $(this).hasClass("blueText");
+        let hasGreenClass = $(this).hasClass("greenText");
+        let hasRedClass = $(this).hasClass("redText");
+
+        if (hasBlueClass) {
+          $(this).addClass("greenText");
+          $(this).removeClass("blueText");
+          // else = "otherwise"
+        }
+        else if (hasGreenClass) {
+          $(this).addClass("redText");
+          $(this).removeClass("greenText");
+        }
+        else if (hasRedClass) {
+          $(this).addClass("blueText");
+          $(this).removeClass("redText");
+        }
+        else {
+          $(this).addClass("blueText");
+        }
+      }
+
+      function offHover() {
+        $(this).removeClass("boldText");
+      }
+      // add HOVER functionality:
+      $("p").hover(onHover, offHover);
+
+    </script>
+  </body>
+</html>
