@@ -123,7 +123,10 @@
             <div class="shopItemBadge">TSHIRT</div>
             <form class="shopItemSelection">
               <select name="quantity">
-                <!-- TODO: add <option> tags for selectable values (1,2,3,etc.) -->
+                <!-- TODO@: add <option> tags for selectable values (1,2,3,etc.) -->
+                <option value="qty">1</option>
+                <option value="qty">2</option>
+                <option value="qty">3</option>
               </select>
               <!-- TODO: change button text to say "Buy" or "Purchase" -->
               <input type="submit">
@@ -202,7 +205,7 @@
             </form>
           </div>
           <div class="shopItemCard">
-            <!-- TODO: fix image src -->
+            <!-- TODO@: fix image src -->
             <img class="shopItemImage" alt="seeds2" src="images/seeds.png">
             <div class="shopItemBadge">SEEDS</div>
             <form class="shopItemSelection">
@@ -248,8 +251,8 @@
             </p>
             <a href="#">Keep reading</a>
           </div>
-          <!-- TODO: fix image src -->
-          <img src="images/field.jpg" class="blogPostImage" alt="happy people" />
+          <!-- TODO@: fix image src -->
+          <img src="images/field.jpeg" class="blogPostImage" alt="field">
         </div>
       </div>
 
@@ -287,16 +290,16 @@
         <h3>Follow Us on Social Media</h3>
         <div>
           <a class="socialMediaLink" href="#">
-            <!-- TODO: fix image src -->
-            <img src="images/twitter.png" alt="twitter" />
+            <!-- TODO@: fix image src -->
+            <img src="images/twitter.png" alt="twitter">
           </a>
           <a class="socialMediaLink" href="#">
-            <!-- TODO: fix image src -->
-            <img src="images/facebook.png" alt="facebook" />
+            <!-- TODO@: fix image src -->
+            <img src="images/facebook.png" alt="facebook">
           </a>
           <a class="socialMediaLink" href="#">
-            <!-- TODO: fix image src -->
-            <img src="images/instagram.png" alt="instagram" />
+            <!-- TODO@: fix image src -->
+            <img src="images/instagram.png" alt="instagram">
           </a>
         </div>
       </div>
@@ -309,10 +312,12 @@
     <script type="text/javascript">
       $('.navItem').hover(
         function() {
-          // TODO: jQuery to add the 'navOpen' class to $(this) goes here
+          // TODO@: jQuery to add the 'navOpen' class to $(this) goes here
+          $(this).addClass("navOpen");
         },
         function() {
-          // TODO: jQuery to remove the 'navOpen' class to $(this) goes here
+          // TODO@: jQuery to remove the 'navOpen' class to $(this) goes here
+          $(this).removeClass("navOpen");
         }
       );
     </script>
