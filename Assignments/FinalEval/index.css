@@ -239,7 +239,7 @@ margin-bottom: 36px;
 }
 
 #blog .blogPost .blogPostImage {
-  background-color: #BBBBBB;
+  background-color: lightgreen;
   border: 4px solid darkgreen;
   flex: 2;
   height: 350px;
