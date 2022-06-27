@@ -16,20 +16,21 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: minmax(50px, auto);
         grid-template-areas:
-          "header header header"
-          "nav nav nav"
-          "h1 h1 h1"
-          "img img img"
-          "img img img"
-          "img img img"
-          "footer footer footer"
+          "header  header  header"
+          "nav     nav     nav"
+          "title   title   title"
+          "title   title   title"
+          "section section section"
+          "footer  footer  footer"
       }
       body {
         font-family: 'Verdana', sans-serif;
         margin: 0px;
-        background-color: #275029;
+        background-color: white;
+        align-content: center;
       }
       header {
+        grid-area: header;
         background-color: black;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
@@ -42,6 +43,7 @@
         height: 55px;
       }
       nav {
+        grid-area: nav;
         background-color: #275029;
         border-top: 4px;
       }
@@ -75,102 +77,66 @@
         background-color: #1B371C;
         color: white;
       }
+      main {
+        font-family: 'Montserrat', sans-serif;
+        background-color: white;
+      }
       h1 {
+        grid-area: title;
         font-size: 70px;
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
         text-align: center;
         letter-spacing: 5px;
-        background-color: white;
         margin: 0px;
         padding: 30px;
         padding-bottom: 15px;
       }
-      main img {
-        height: 500px;
-        margin-bottom: 0px;
-      }
       h2 {
+        grid-area: title;
         text-align: center;
-        background-color: white;
         color: #1B371C;
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
         margin: 10px;
         margin-bottom: 20px;
       }
-      main {
-        font-family: 'Montserrat', sans-serif;
+      main section div.gallery {
+        grid-area: section;
         background-color: white;
-      }
-      img {
         align-content: center;
       }
-
+      #gallery {
+        align-items: center;
+      }
       div.gallery {
+        text-align: center;
+        grid-area: section;
         margin: 5px;
         border: 1px solid #ccc;
         float: left;
-        width: 180px;
+        width: 250px;
+        background-color: lightgrey;
       }
-
       div.gallery:hover {
         border: 1px solid #777;
       }
-
       div.gallery img {
         width: 100%;
         height: auto;
       }
-
-      div.desc {
-        padding: 15px;
+      footer {
+        grid-area: footer;
+        background-color: white;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
         text-align: center;
+        padding: 0px;
+        margin: 0px;
+        border: none;
       }
-      /* .image-grid {
-        --gap: 16px;
-        --num-cols: 3;
-        --row-height: 500px;
-
-        box-sizing: border-box;
-        padding: var(--gap);
-
-        display: grid;
-        grid-template-columns: repeat(var(--num-cols), 1fr);
-        grid-auto-rows: var(--row-height);
-        gap: var(--gap);
-      }
-      .image-grid > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .image-grid-col-2 {
-        grid-column: 3;
-      }
-      .image-grid-row-2 {
-        grid-row: 4;
-      } */
       /* MOBILE VIEW */
       @media screen and (max-width: 500px) {
-        .image-grid {
-          --num-cols: 1;
-          --row-height: 200px;
-        }
-        /* section img:hover {
-          grid-column: 1;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transform: scale(1.5);
-          position: relative;
-        } */
-        h1 {
-          font-size: 45px;
-        }
-        h2 {
-          font-size: 25px;
-        }
         .myGrid {
           display: grid;
           grid-template-columns: 1fr;
@@ -178,25 +144,20 @@
           grid-template-areas:
             "header"
             "nav"
-            "h1"
-            "img"
-            "img"
-            "img"
-            "img"
-            "img"
-            "img"
-            "img"
-            "img"
-            "img"
+            "title"
+            "title"
+            "section"
             "footer"
+        }
+        h1 {
+          font-size: 45px;
+        }
+        h2 {
+          font-size: 25px;
         }
       }
       /* TABLET VIEW */
       @media screen and (min-width: 501px) and (max-width: 1300px) {
-        .image-grid {
-          --num-cols: 2;
-          --row-height: 200px;
-        }
         .myGrid {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -204,13 +165,9 @@
           grid-template-areas:
             "header header"
             "nav nav"
-            "h1 h1"
-            "img img"
-            "img img"
-            "img img"
-            "img img"
-            "img img"
-            "img img"
+            "title title"
+            "title title"
+            "section section"
             "footer footer"
         }
         h1 {
@@ -219,65 +176,6 @@
         h2 {
           font-size: 27px;
         }
-        /* section img:hover {
-          grid-column: 2;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transform: scale(1.5);
-          position: relative;
-          margin: 20px;
-          left: auto;
-        } */
-      }
-
-
-      /* .row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-        flex: 50%;
-      }
-      .row img {
-        display: inline-block;
-        margin-top: 20px; */
-        /* vertical-align: middle; */
-      /* } */
-      /* content {
-        justify-content: center; */
-      }
-      /* section img {
-        display: inline-block;
-        box-sizing: border-box;
-        height: 300px;
-        margin: 24px;
-        transition: transform 1s;
-      } */
-      /* section img:hover { */
-
-        /* scale zooms in, rotate...rotates! */
-
-        /* transform: translate(50%, -50%); */
-        /* position: static;
-
-        grid-row: 2;
-        grid-column: 1; */
-        /* Previous Option --> width: 500px; */
-      }
-      /* section img { */
-        /* align-items: center;
-        align-self: center;
-        align-content: center; */
-        /* justify-content: center;
-        height: 250px;
-        margin: 24px;
-      } */
-      footer {
-        background-color: black;
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        padding: 15px 24px;
-        text-align: center;
       }
     </style>
   </head>
@@ -295,81 +193,84 @@
     </nav>
     <main>
       <h1 style="text-align: center">ALEXANDRA DUCKSWORTH</h1>
-      <h2>Your Multimedia Solution<h2>
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work1.png" alt="Cinque Terre" width="600" height="400">
-        </a>
-        <!-- <div class="desc">Add a description of the image here</div> -->
-      </div>
+      <h2>Your Multimedia Solution</h2>
 
-      <div class="gallery">
-        <a target="_blank" href="img_forest.jpg">
-          <img src="Images/work2.png" alt="Forest" width="600" height="400">
-        </a>
-      </div>
+      <section id="gallery">
+        <div class="gallery">
+          <a target="_blank" href="Images/work1.png">
+            <img src="Images/work1.png" alt="Disney's Atlantis movie poster" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_lights.jpg">
-          <img src="Images/work3.jpg" alt="Northern Lights" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work2.png">
+            <img src="Images/work2.png" alt="wishtree book cover" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
-          <img src="Images/work4.png" alt="Mountains" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work3.jpg">
+            <img src="Images/work3.jpg" alt="durand bernarr promo" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work5.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work4.png">
+            <img src="Images/work4.png" alt="foodie magazine" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work6.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work5.jpg">
+            <img src="Images/work5.jpg" alt="moon juice mockup" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work7.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work6.jpg">
+            <img src="Images/work6.jpg" alt="brand ad mockup" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work8.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work7.jpg">
+            <img src="Images/work7.jpg" alt="oshun collage" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work9.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work8.jpg">
+            <img src="Images/work8.jpg" alt="little shop of horrors movie poster" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work10.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work9.jpg">
+            <img src="Images/work9.jpg" alt="taft brand magazine layout" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work11.jpg" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div>
+        <div class="gallery">
+          <a target="_blank" href="Images/work10.jpg">
+            <img src="Images/work10.jpg" alt="business card mockup" width="600" height="400">
+          </a>
+        </div>
 
-      <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-          <img src="Images/work12.png" alt="Cinque Terre" width="600" height="400">
-        </a>
-      </div
+        <div class="gallery">
+          <a target="_blank" href="Images/work11.jpg">
+            <img src="Images/work11.jpg" alt="magazine spread mockup" width="600" height="400">
+          </a>
+        </div>
+
+        <div class="gallery">
+          <a target="_blank" href="Images/work12.png">
+            <img src="Images/work12.png" alt="FIRST Brochure" width="600" height="400">
+          </a>
+        </div>
+      </section>
     </main>
-
-    <footer>DuckMedia.net</footer>
+    <footer>
+      DuckMedia.net
+    </footer>
   </body>
 </html>
