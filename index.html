@@ -44,7 +44,7 @@
       body {
         font-family: 'Verdana', sans-serif;
         margin: 0px;
-        background-color: #275029;
+        background-color: #081C15;
       }
       header {
         background-color: black;
@@ -53,13 +53,21 @@
         padding-top: 24px;
         padding-bottom: 12px;
       }
-      header img {
+      header h1 {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        letter-spacing: 15px;
+        font-weight: lighter;
+        padding: 9px;
+      }
+      /* header img {
         border: 0px solid black;
         border-radius: 0%;
         height: 55px;
-      }
+      } */
       nav {
-        background-color: #275029;
+        background-color: #081C15;
         border-top: 4px;
       }
       /* list inside the nav */
@@ -78,19 +86,18 @@
       }
       /* link (last selector in list!)*/
       nav ul li a {
-        color: #eed9d3;
+        color: white;
         display: inline-block;
         text-decoration: none;
       }
-      nav ul li:hover {
-        background-color: #eed9d3;
-      }
+      /* nav ul li:hover {
+        background-color: #081C15;
+      } */
       nav ul li:hover a {
-        color: #275029;
+        color: #D8F3DC;
       }
-      nav ul li:active {
-        background-color: #1B371C;
-        color: white;
+      nav ul li:active a {
+        color: #ACD336;
       }
       main h1 {
         display:flex;
@@ -114,8 +121,7 @@
       } */
       h2 {
         text-align: center;
-        background-color: #275029;
-        color: #eed9d3;
+        color: #37815F;
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
         margin: 10px;
@@ -146,7 +152,8 @@
       }
       @media screen and (max-width: 489px) {
         main h1 {
-          font-size: 50px;
+          font-size: 40px;
+          letter-spacing: 10px;
         }
         /* .hero1 {
           background-image: url("Images/collage.jpg");
@@ -163,18 +170,18 @@
   <body>
     <section class=myGrid>
     <header>
-      <img src="Images/DMlogo.png" alt="DM logo">
+      <h1>Alexandra Ducksworth</h1>
     </header>
     <nav>
       <ul>
         <li><a href="index.html">HOME</a></li>
-        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="gallery.html">PORTFOLIO</a></li>
         <li><a href="about.html">ABOUT</a></li>
+        <li><a href="https://dev-alex-ducksworth.pantheonsite.io/">BLOG</a></li>
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
     </nav>
     <main>
-      <h1>DUCK MEDIA</h1>
 
       <!-- <div id="slideshow">
         <img id="slide1" class="slideshowImage" src="../../Images/apoca.jpeg" alt="3D render: apocalyptic">
@@ -219,9 +226,9 @@
         </div>
       </section>
 
-      <h2> Your Multimedia Solution</h2>
+      <h2> Your Graphics & Multimedia Solution</h2>
     </main>
-    <footer>DuckMedia.net</footer>
+    <footer>-LinkedIn   Instagram   Facebook   Behance-</footer>
   </section>
   </body>
 </html>

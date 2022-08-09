@@ -22,6 +22,7 @@
         ".      img    ."
         ".      p1     ."
         ".      p2     ."
+        ". projectsLink ."
         "footer footer"
       }
       body {
@@ -44,7 +45,7 @@
         height: 55px;
       }
       nav {
-        background-color: #275029;
+        background-color: #081C15;
         border-top: 4px;
       }
       /* list inside the nav */
@@ -62,26 +63,24 @@
       }
       /* link (last selector in list!)*/
       nav ul li a {
-        color: #eed9d3;
+        color: white;
         display: inline-block;
         text-decoration: none;
       }
-      nav ul li:hover {
-        background-color: #eed9d3;
-      }
       nav ul li:hover a {
-        color: #275029;
+        color: #D8F3DC;
       }
-      nav ul li:active {
-        background-color: #1B371C;
-        color: white;
+      nav ul li:active a {
+        color: #ACD336;
       }
       h1 {
-        font-size: 70px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        text-align: center;
         background-color: white;
+        text-align: center;
+        color: black;
+        font-size: 50px;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 5px;
+        font-weight: normal;
         margin: 0px;
         padding: 30px;
       }
@@ -91,14 +90,6 @@
         margin: 24px;
         padding-left: 30px;
       } */
-      h2 {
-        background-color: #275029;
-        color: #eed9d3;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: normal;
-        margin: 10px;
-        margin-bottom: 15px;
-      }
       main {
         font-family: 'Montserrat', sans-serif;
         background-color: white;
@@ -119,6 +110,7 @@
         display: block;
       }
       #p2 {
+        color: #081C15;
         display: block;
         margin: 30px;
         margin-bottom: 0px;
@@ -130,27 +122,27 @@
         text-align: center;
         float: center;
       }
-      h6 {
+      /* h6 {
         color: grey;
         font-size: 9px;
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 5px;
         font-weight: normal;
         margin-bottom: 50px;
-      }
-      .newsletter {
+      } */
+      .projectsLink {
         display: block;
         justify-content: center;
         text-align: center;
         margin-top: 50px;
         padding-bottom: 30px;
-        color: #275029;
+        color: #1B4332;
       }
       .myGrid.btn {
         display: block;
         justify-content: center;
 
-        background-color: pink;
+        background-color: #ACD336;
       }
       footer {
         background-color: black;
@@ -205,7 +197,7 @@
   <body>
     <section class="myGrid">
       <header>
-        <img src="Images/DMlogo.png" alt="DM Logo">
+        <br>
       </header>
       <nav>
         <ul>
@@ -216,7 +208,7 @@
         </ul>
       </nav>
       <main>
-        <h1 style="text-align: center">The Designer</h1>
+        <h1 style="text-align: center">Alexandra Ducksworth</h1>
         <img class="hero1" src="Images/AD.jpeg" alt="Alexandra Ducksworth">
         <p id="p1">Since the beginning of my career, I’ve focused on channeling my talent
           and creativity into meaningful and powerful results. I take pride in the
@@ -226,15 +218,15 @@
           Connection, and Advancement. Working with others to grow their dreams into
           reality and share their message with the world.</p>
         <p id="p2">- Alexandra Ducksworth -</p>
-        <h6>ALEXANDRA DUCKSWORTH</h6>
+        <!-- <h6>ALEXANDRA DUCKSWORTH</h6> -->
         <hr>
-        <section class="newsletter">
-          <p>Sign up for our newsletter to stay updated on local projects in the community!</p>
+        <section class="projectsLink">
+          <p>Click here for my latest projects!</p>
           <br>
-          <button style="align-content: center;" type="button" class="btn btn-outline-dark">Sign Up!</button>
+          <button style="align-content: center;" type="button" class="btn btn-outline-dark">PROJECTS</button>
         </section>
       </main>
-      <footer>DuckMedia.net</footer>
+      <footer>-LinkedIn   Instagram   Facebook   Behance-</footer>
     </section>
   </body>
 </html>
