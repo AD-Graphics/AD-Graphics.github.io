@@ -45,6 +45,7 @@
       nav {
         grid-area: nav;
         background-color: #081C15;
+        color: white;
         border-top: 4px;
       }
       /* list inside the nav */
@@ -63,19 +64,15 @@
       }
       /* link (last selector in list!)*/
       nav ul li a {
-        color: #eed9d3;
+        color: white;
         display: inline-block;
         text-decoration: none;
       }
-      nav ul li:hover {
-        background-color: #eed9d3;
-      }
       nav ul li:hover a {
-        color: #275029;
+        color: #D8F3DC;
       }
-      nav ul li:active {
-        background-color: #1B371C;
-        color: white;
+      nav ul li:active a {
+        color: #ACD336;
       }
       main {
         font-family: 'Montserrat', sans-serif;
@@ -83,14 +80,13 @@
       }
       h1 {
         grid-area: title;
-        font-size: 70px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: normal;
+        font-size: 60px;
+        letter-spacing: 10px;
+        font-weight: lighter;
         text-align: center;
-        letter-spacing: 5px;
         margin: 0px;
         padding: 30px;
-        padding-bottom: 15px;
+        /* padding-bottom: 15px; */
       }
       h2 {
         grid-area: title;
@@ -150,7 +146,7 @@
             "footer"
         }
         h1 {
-          font-size: 45px;
+          font-size: 40px;
         }
         h2 {
           font-size: 25px;
@@ -171,7 +167,7 @@
             "footer footer"
         }
         h1 {
-          font-size: 55px;
+          font-size: 50px;
         }
         h2 {
           font-size: 27px;
@@ -181,7 +177,7 @@
   </head>
   <body>
     <header>
-      <img src="Images/DMlogo.png" alt="DM Logo">
+      <br>
     </header>
     <nav>
       <ul>
@@ -194,7 +190,6 @@
     </nav>
     <main>
       <h1 style="text-align: center">ALEXANDRA DUCKSWORTH</h1>
-      <h2>Your Multimedia Solution</h2>
 
       <section id="gallery">
         <div class="gallery">
