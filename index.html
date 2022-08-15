@@ -24,23 +24,18 @@
           "h2           h2"
           "footer   footer"
       }
-      .carousel {
+      section {
         display: grid;
         justify-content: center;
       }
-      .carousel-item img {
-        object-fit:cover;
-        min-height: 500px;
-        max-width: 900px;
-      }
-      /* .hero1 {
-        background-image: url("Images/collage.jpg");
+      .hero {
+        background-image: url("Images/work7.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
-        height: 500px;
+        height: 600px;
         position: relative;
-      } */
+      }
       body {
         font-family: 'Verdana', sans-serif;
         margin: 0px;
@@ -61,11 +56,6 @@
         font-weight: lighter;
         padding: 9px;
       }
-      /* header img {
-        border: 0px solid black;
-        border-radius: 0%;
-        height: 55px;
-      } */
       nav {
         background-color: #081C15;
         border-top: 4px;
@@ -90,20 +80,14 @@
         display: inline-block;
         text-decoration: none;
       }
-      /* nav ul li:hover {
-        background-color: #081C15;
-      } */
       nav ul li:hover a {
         color: #37815F;
       }
       nav ul li:active a {
         color: #ACD336;
       }
-      /* main img {
-        height: 500px;
-        margin-bottom: 0px;
-      } */
       h2 {
+        font-size: 25px;
         text-align: center;
         color: #37815F;
         font-family: 'Montserrat', sans-serif;
@@ -121,33 +105,27 @@
         padding: 15px 24px;
         text-align: center;
       }
-      /* @media screen and (min-width:800px) {
-
-      } */
       @media screen and (min-width: 490px) and (max-width: 799px) {
-        /* .hero1 {
-          height: 500px;
-          position: relative;
-          margin-bottom: 0px;
-        } */
-        main h1 {
+        header h1 {
           font-size: 50px;
+          letter-spacing: 15px;
+          font-weight: lighter;
+          padding: 9px;
+        }
+        main h2 {
+          font-size: 22px;
         }
       }
       @media screen and (max-width: 489px) {
-        main h1 {
+        header h1 {
           font-size: 40px;
-          letter-spacing: 10px;
+          letter-spacing: 15px;
+          font-weight: lighter;
+          padding: 9px;
         }
-        /* .hero1 {
-          background-image: url("Images/collage.jpg");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
-          height: 500px;
-          position: relative;
-          margin-bottom: 0px;
-        } */
+        main h2 {
+          font-size: 20px;
+        }
       }
     </style>
   </head>
@@ -167,50 +145,12 @@
     </nav>
     <main>
 
-      <!-- <div id="slideshow">
-        <img id="slide1" class="slideshowImage" src="../../Images/apoca.jpeg" alt="3D render: apocalyptic">
-        <img id="slide2" class="slideshowImage" src="../../Images/pipes.jpeg" alt="3D render: pipes">
-        <img id="slide3" class="slideshowImage" src="../../Images/room.jpeg" alt="3D render:room">
-        <img id="slide4" class="slideshowImage" src="../../Images/man.jpeg" alt="3D render: fireman">
-      </div>
-      <input
-        type="button"
-        id="previous"
-        value="Previous"
-        onclick="showPreviousSlide()">
-      <input
-        type="button"
-        id="next"
-        value="Next"
-        onclick="showNextSlide()">
-
-      <script type="text/javascript" src="../../js/slideshow.js"></script> -->
-
-      <section id="carousel">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="Images/work7.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="Images/work5.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="Images/work9.jpg" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+      <section class="hero" id="displayImage">
+        <!-- <img src="Images/work7.jpg" alt="Oshun Collage"> -->
       </section>
 
       <h2> Your Graphics & Multimedia Solution</h2>
+
     </main>
     <footer>-LinkedIn   Instagram   Facebook   Behance-</footer>
   </section>
