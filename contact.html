@@ -16,11 +16,12 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        height: 500px;
+        background-color: white;
+        height: 550px;
         position: relative;
       }
       body {
-        /* background-color: #F0FAF2; */
+        background-color: black;
         font-family: 'Verdana', sans-serif;
         margin: 0px;
         text-align: center;
@@ -83,6 +84,9 @@
       } */
       #h2Top {
         margin-bottom: 20px;
+      }
+      #space {
+        margin: 20px;
       }
       main {
         font-family: 'Montserrat', sans-serif;
@@ -213,21 +217,21 @@
       <h2>I would love to help and bring your ideas to life.</h1>
       <!-- <h2 id="h2Top">Have a question?</h2> -->
       <!-- <h2>How can I help?</h2> -->
-      <form>
-        Name:*<br>
-        <input type="text" size="50">
+
+      <form action="https://formsubmit.co/a.ducksworth.31@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Web Contact!">
+        Name: *<br>
+        <input id=space type="text" name="name" size="50" required><br>
+        Email: *<br>
+        <input id=space type="email" name="email" size="50" required><br>
+        Message: *<br>
+        <input id="messageBox" id=space type="text" name="message" size="50" required><br>
+        <button><a class="popupTrigger" type="submit">Send</a></button>
       </form>
-      <form>
-        Email:*<br>
-        <input type="text" size="50">
-      </form>
-      <form>
-        Message:*<br>
-        <input id="messageBox" type="text" size="50">
-      </form>
-      <section>
+
+      <!-- <section>
         <button><a class="popupTrigger">Submit</a></button>
-      </section>
+      </section> -->
     </main>
     <footer>-LinkedIn   Instagram   Facebook   Behance-</footer>
 
@@ -241,7 +245,7 @@
         </div>
         <img src="Images/duck_thumbsUp.gif" alt="duck thumbs up"></img>
         <div id="h2">
-          Please allow 48 hours to receive your response.
+          Please allow 48 hours to receive a response.
         </div>
       <div class="closePopup">Exit</div>
     </div>
